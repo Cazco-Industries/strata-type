@@ -2,6 +2,11 @@
 
 Verified on this Mac on 2026-11-12. Local main only; no remote or push. This is an upright baseline workshop, not a release-quality font approval.
 
+The initial workshop measurements below are historical. Their wrapper-only
+font check missed the browser's `pre` font override, and they did not establish
+surface contrast or headline line contact. The specimen harness repair record
+below supersedes those render claims. Original round-0 review files are retained.
+
 ## Commands and timings
 
 | Command | Wall time | Result |
@@ -80,9 +85,9 @@ Final review directory: `~/strata-ml/type-climb/renders/test/`. Lead map: `~/str
 rg -a -i -l 'Strata|Inter|Source|Fira|SF|New[ _-]?York|Lucide|Hugeicons|baseline|reference' "$HOME/strata-ml/type-climb/renders/test"
 ```
 
-Opened and visually inspected the final serif waterfall/paragraphs, weather numerals, mono ligatures on/off and terminal, glass-over-map mockup, glyph points and icon grid. They show real text and actual geometry. FontFace load checks, cmap coverage, computed-family checks and HarfBuzz fingerprints all pass. At 32 px, measured Sans/Serif/Mono widths were 427.234375 / 409.968201 / 511.999969 px; matching expected widths were 427.234375 / 410.016 / 512 px (maximum difference under 0.048 px). Missing specimen glyphs or mismatched fingerprints fail loudly.
+Opened and visually inspected the initial serif waterfall/paragraphs, weather numerals, mono ligatures on/off and terminal, glass-over-map mockup, glyph points and icon grid. FontFace load checks, cmap coverage, wrapper-family checks and HarfBuzz fingerprints passed, but did not prove the face used by descendant `pre` elements. At 32 px, measured Sans/Serif/Mono probe widths were 427.234375 / 409.968201 / 511.999969 px; matching expected widths were 427.234375 / 410.016 / 512 px (maximum difference under 0.048 px). The repaired checks inspect actual text descendants and are recorded below.
 
-Chromium renders candidate and pinned unmodified open-font controls. Its system serif/mono generics fall back on this Mac, so those extra sheets are not emitted. WebKit renders installed system families, including ui-serif; its serif/mono widths differ from the generic fallback fingerprints. Apple font files were never opened, copied or parsed. Apple outline sheets are raster text zooms without point data.
+The initial run rendered candidates and pinned unmodified open-font controls. The repair removes the duplicate open-font label, retaining baseline as the single such control. Chromium's system serif/mono generics fall back on this Mac, so those extra sheets are not emitted. WebKit renders installed system families, including ui-serif; its serif/mono widths differ from the generic fallback fingerprints. Apple font files were never opened, copied or parsed. Apple outline sheets are raster text zooms without point data.
 
 **SF Symbols skipped:** all eight private-use probes produced the same missing-glyph fingerprint through system-ui in WebKit. No symbol app export, SVG, font file or stored outline was used. Hugeicons references use free-package SVG data only; no Pro package was accessed.
 
@@ -93,3 +98,126 @@ A fresh candidate copied the three UFO/designspace trees and imported a hand-wri
 ## Files
 
 Created Makefile, uv/Python lock and version pin, npm/TypeScript lock, fetch/resource/source-conversion/build/gate/render/label/import/inventory/verification scripts, upstream.lock.json, license notices/RFN record, inventory/icons.json, baseline UFO/designspace trees, 272 semantic baseline SVGs, transform instructions, README.md, and this report. Generated fonts, TSX, optimized SVGs, raw gate evidence and HTML stay in ignored build/. Raw upstreams stay in ignored sources/upstream/. No Strata-Weather application files, dev server, cloud resources or remotes were changed.
+
+## Specimen harness repair (2026-11-12)
+
+Fresh reviewer artifacts: `/tmp/type-harness-u9uocgcu/review/SHEETS.md`,
+`review/renders/index.json`, and `review/renders/findings.json` under that same
+scratch root. There are 145 PNGs: 41 for the control, 35 for each submitted
+profile, and 34 retained system/numeric/free-icon control sheets. The fresh
+lead-only map has no `ref:open` key; no duplicate open-font sheets are emitted.
+The guide includes a visible per-surface line-contact table and links the raw
+anonymous findings. These `/tmp` artifacts should be retained by the lead if
+needed beyond this local handoff.
+
+All commands ran locally, with the existing resource guard enabled. No candidate rebuild,
+source-outline change, icon-directory change, dev-server operation, remote,
+commit, push, upload, or production operation was performed. The pre-existing
+`pre{font-family:inherit}` edit was preserved. Before/after SHA-256 comparison
+passed for all 129,226 protected files, including all candidates, all existing
+build icon directories, the two external icon sets, and the complete round-0
+review directory. Evidence: `lead/protected-{before,check}.json` in scratch.
+Root free space was checked with `df -h /` before each render/replay: 19–21 GiB
+reported, above the 14 GiB floor. The first run paused for shared memory pressure
+and the UTC :30–:35 window; the guard remained enabled throughout.
+
+Reproduction commands (from the repository root):
+
+```sh
+make render CAND=baseline REFS=1 OUT=/tmp/type-harness-u9uocgcu/stage-a \
+  MAP=/tmp/type-harness-u9uocgcu/lead/labels.map
+make render CAND=lumen-146 \
+  ICONS_DIR=/Users/rydercaswell/strata-ml/type-climb-work/lumen-146/icons \
+  OUT=/tmp/type-harness-u9uocgcu/stage-b MAP=/tmp/type-harness-u9uocgcu/lead/labels.map
+make render CAND=quartz-571 \
+  ICONS_DIR=/Users/rydercaswell/strata-ml/type-climb-work/quartz-571/icons \
+  OUT=/tmp/type-harness-u9uocgcu/stage-c MAP=/tmp/type-harness-u9uocgcu/lead/labels.map
+make verify
+.venv/bin/python -I scripts/review_set.py \
+  --input /tmp/type-harness-u9uocgcu/stage-a \
+  --input /tmp/type-harness-u9uocgcu/stage-b \
+  --input /tmp/type-harness-u9uocgcu/stage-c \
+  --out /tmp/type-harness-u9uocgcu/review/renders \
+  --guide /tmp/type-harness-u9uocgcu/review/SHEETS.md
+.venv/bin/python -I scripts/blindcheck.py /tmp/type-harness-u9uocgcu/review
+.venv/bin/python -I scripts/blindcheck.py /tmp/type-harness-u9uocgcu/review/renders
+```
+
+OUT must be empty for a repeat; use a new directory and keep the same lead map.
+Render wall times were 763.859 s including guard waits, 31.184 s, and 36.312 s.
+Every render and the assembled guide/PNG/JSON set passed the blind audit. The
+final focused suite passed all 14 tests in 2.371 s. The new browser regression
+checks deliberately restore a generic `pre` override and a nested generic
+reading-face override: both fail loudly. Deliberately low sky/terminal contrast
+also fails. Separated headline lines are clear; compressed lines produce a
+nonfatal finding. A tall component belonging to only one line is not reported
+as a two-line collision.
+
+A fresh replay of 36 representative sheets (all answer-card surfaces, all new
+numeric comparisons, dark code sheets, icon-font sheets, first icon galleries,
+and sky reading samples) produced identical decoded pixels. Recomputed
+collision results were identical, including line boxes and component bounds.
+This also verifies the added line-mask wrapping assertion on the earlier control
+run. Replay evidence: `lead/replay.{py,json,log}` in scratch. Font/contrast reports
+are retained in `build/<id>/render-audit.json` and copied to
+`lead/audit-{a,b,c}.json`; these are outside the reviewer directory.
+
+### Measured results
+
+Every code sheet has seven `pre` elements. Each resolves to the intended `p2`
+face, has a loaded FontFace and covered text, and measures its own first code
+line against generic families. These are the smallest absolute width deltas
+from `monospace` across the seven runs on both light/dark sheets (CSS pixels).
+
+| Opaque label | Code family | Smallest mono width delta | Lowest sky contrast | Terminal contrast | Light / dark / glass headline contacts |
+| --- | --- | ---: | ---: | ---: | --- |
+| dawn-pearl-797 | p2 | 2.040024 px | 5.6573:1 | 14.9257:1 | clear / clear / clear |
+| maple-dawn-749 | p2 | 3.373901 px | 5.6573:1 | 14.9257:1 | clear / clear / clear |
+| fern-elm-968 | p2 | 2.038101 px | 5.6573:1 | 14.9257:1 | 1 / 1 / 1 joined component |
+
+Contrast uses WCAG relative luminance, the computed foreground and ancestor
+opacity, and the actual raster background beneath every text-run rectangle
+with text hidden. It includes neutral captions. The lowest value across every
+rendered sky sheet, including retained controls, is 5.6573:1 (required 4.5:1).
+Every terminal measurement is 14.9257:1 (required 7:1).
+
+Headline analysis uses 2× browser rasters and 8-connected components, with
+black ink below grayscale 128. Each component must contain pixels from separate
+per-line masks for adjacent DOM lines; overlapping font line boxes alone do not
+qualify. Color-only masks are removed before the saved PNG. The real
+`fern-elm-968` result joins lines 1 and 2: 1,958 ink pixels, CSS bounds
+`[113.5, 252, 26.5, 80]` on light/dark and `[142.5, 292, 26.5, 80]` on glass.
+It remains a reviewer-visible font result; no outline or headline spacing was
+changed to hide it. The retained type-only control is clear on all three
+answer-card surfaces.
+
+### Repair evidence
+
+Sheet paths below are relative to `/tmp/type-harness-u9uocgcu/review/renders/`.
+The generated guide links all surfaces and labels.
+
+| Defect | Implementation evidence | Fresh sheet evidence |
+| --- | --- | --- |
+| 1. Descendant font fallback | `scripts/render_audit.py:11`; called by `scripts/render.py:144`; explicit computed-family, loaded-face, cmap and generic-width checks | `dawn-pearl-797-19.png`, `maple-dawn-749-19.png`, `fern-elm-968-19.png` |
+| 2. Icon/text fits | `scripts/specimens.py:105`; 13/15/17 px text crossed with 16/20 px own-set icons; 13 px tab labels; type-only omission | All three labels' `14`, `16`, `17` sheets; type-only `copper-jade-841-14.png` |
+| 3. Semantic icon names and size caption | `scripts/specimens.py:163`, `scripts/specimens.py:172`; named SVG and font tiles, including free-icon control | `dawn-pearl-797-23.png`, `maple-dawn-749-35.png`, `fern-elm-968-32.png`, `jade-cobalt-864-01.png` |
+| 4. Duplicate open-font control | `scripts/render.py:129`; fresh map has no duplicate key; control appears once in the guide | `dawn-pearl-797-01.png`; generated `SHEETS.md` and `index.json` |
+| 5. Accurate icon-font title | `scripts/specimens.py:166`, `scripts/review_set.py:21` | `maple-dawn-749-35.png`, `fern-elm-968-35.png` |
+| 6. Regular/Rounded comparison | `scripts/specimens.py:93`, `scripts/render.py:184`; matching five strings, regular above Rounded at 24/48/96 px | Both submitted labels' `25`, `28`, `31` sheets |
+| 7. Sky contrast | `scripts/specimens.py:27`, `scripts/render_audit.py:76`; light gradient and opaque captions, measured hard gate | All three labels' `03` sheets; both submitted labels' `31` sheets |
+| 8. Terminal contrast | `scripts/specimens.py:29`, `scripts/render_audit.py:103`; transparent inner pre over the dark panel | All three labels' `19` sheets |
+| 9. Explicit units and meaning | `scripts/specimens.py:130`; “72°F” and “20% chance of rain” | All three labels' `14`, `16`, `17` sheets |
+| 10. Nonfatal headline contacts | `scripts/render_audit.py:110`, `scripts/render.py:154`, `scripts/review_set.py:51` | `fern-elm-968-14.png`, `fern-elm-968-16.png`, `fern-elm-968-17.png`; `findings.json` |
+
+Opened and visually inspected all three requested labels' light/dark/glass
+answer cards, dark code/terminal sheets, sky reading samples, the two submitted
+labels' regular/Rounded comparisons on all three surfaces, named icon grids and
+icon-font tiles, the free-icon control, and the type-only answer card. The
+contact at the first/second headline lines is visible in the flagged profile.
+All final PNGs were reopened and decoded by the raster cleaner.
+
+All ten harness defects are addressed. Existing font quality/coverage findings
+remain unchanged. System symbol PUA probes still do not resolve reliably, so no
+system-symbol sheet was emitted; reliable probes without verified semantic
+names are also explicitly skipped rather than emitting unnamed tiles. These
+local renders are specimen evidence, not font-release approval or app integration.

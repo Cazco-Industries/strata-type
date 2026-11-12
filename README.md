@@ -32,7 +32,8 @@ has SHA-256 integrity. Upstreams live in ignored `sources/upstream/`.
 its editable UFO masters. An optional `fonts/sans-rounded/` directory contains
 exactly one Rounded numeric designspace and its masters. Standard build,
 name/RFN and interpolation gates include it. Rendering adds light/dark/sky
-numeric sheets and the same card with regular numerals. Its coverage gate checks
+numeric sheets, the same card with regular numerals, and regular-above-Rounded
+comparisons at 24 / 48 / 96 px. Its coverage gate checks
 the numeric repertoire rather than a full alphabet. `icons/` contains semantic
 SVG names on a 24 grid.
 `inventory/icons.json` records the read-only app scan, mappings, approximations,
@@ -73,15 +74,26 @@ silently supplied from a different face. Metrics are measured, not harmonized.
 Rendering needs an **empty OUT** and a **lead-only JSON MAP outside OUT**.
 `newlabel.py --key <identity> --map /lead/map.json` mints opaque labels; the
 renderer adds missing labels automatically. OUT contains PNGs plus an anonymous
-index only. HTML, fallback checks, engine comparisons and skipped-reference
-reasons stay under `build/<id>/`. Chromium renders the candidate and the three
-unmodified open-font controls. WebKit renders installed system families; a
+index and anonymous headline line-contact findings. HTML, fallback checks,
+contrast measurements, engine comparisons and skipped-reference reasons stay
+under `build/<id>/`. Chromium renders the candidate; baseline is the single
+unmodified open-font control (there is no duplicate `ref:open` label).
+WebKit renders installed system families; a
 Chromium comparison is emitted if system widths differ and every requested system family resolves without fallback. Apple glyph zooms are
 raster text only, never outline diagrams. SF Symbols are emitted only when
 WebKit's system-font PUA probes distinguish them from missing-glyph boxes.
 Every final PNG is decoded after stripping metadata; a lossless IDAT reframing
 also removes accidental identity words from compressed bytes, so literal grep
 of OUT is clean. `python -I scripts/blindcheck.py OUT` repeats the audit.
+
+Every intended text element must resolve to its label face, with loaded font,
+cmap and generic-width checks. Every code `pre` also measures its own first
+line against `monospace`. Metadata captions deliberately use the neutral UI
+face. Sky text is measured against its rendered background at ≥4.5:1; the
+terminal requires ≥7:1. Headline collisions use 8-connected raster ink at 2×,
+with separate masks for each DOM line; components containing ink from adjacent
+lines are findings rather than render failures. `findings.json` travels with
+the PNGs and is linked from the generated guide.
 
 CPU work pauses in UTC :00–:05, :15–:20, :30–:35 and :45–:50 windows, on the
 shared pause flag. Memory pressure ≥2 pauses between bounded units after data collection, so an interrupted allocation does not hold the machine under pressure. The guard checks disk continuously,

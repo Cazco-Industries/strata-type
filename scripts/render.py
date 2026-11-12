@@ -18,6 +18,7 @@ from gate import checked_build
 from icons import huge_svg
 from newlabel import labels
 from blindcheck import clean_png,check
+from render_audit import face_audit,contrast_audit,headline_collisions
 import specimens as s
 
 FONT_TEST='Hamburgefontsiv 0123456789'
@@ -67,17 +68,6 @@ def font_probe(page,fonts):
             if min(abs(report[index]['width']-value) for value in expected)>.65:
                 raise ValueError(f'Font fingerprint mismatch: measured {report[index]["width"]}, expected {expected}')
     return report
-
-
-def text_coverage(page,fonts):
-    if not isinstance(fonts,dict):return
-    texts=page.locator('[data-face]').evaluate_all('(els)=>els.map(e=>({index:Number(e.dataset.face),family:getComputedStyle(e).fontFamily,text:e.textContent}))')
-    for row in texts:
-        if row['family'].strip('\"').split(',')[0] != 'p'+str(row['index']):raise ValueError('Specimen CSS points to the wrong family')
-        path=list(fonts.values())[row['index']]
-        with TTFont(path,lazy=True) as font:cmap=font.getBestCmap()
-        missing={f'U+{ord(c):04X}' for c in row['text'] if not c.isspace() and ord(c) not in cmap}
-        if missing:raise ValueError(f'Would fall back for missing glyphs: {sorted(missing)}')
 
 
 def rounded_probe(page,path=None):
@@ -136,12 +126,12 @@ def main():
     if out.exists() and any(out.iterdir()):raise ValueError('OUT must be empty, to prevent stale labels or leaked files')
     out.mkdir(parents=True,exist_ok=True)
     scratch=build/'render-html';scratch.mkdir(exist_ok=True)
-    keys=[a.cand]+(['ref:open','ref:system','ref:hugeicons','ref:symbols','ref:rounded'] if a.refs=='1' else [])
+    keys=[a.cand]+(['ref:system','ref:hugeicons','ref:symbols','ref:rounded'] if a.refs=='1' else [])
     mapping=labels(mapfile,keys)
     candidatefonts={face:build/buildinfo['faces'][face]['woff2'] for face in FACES}
     if 'sans-rounded' in buildinfo['faces']:candidatefonts['sans-rounded']=build/buildinfo['faces']['sans-rounded']['woff2']
-    svgpaths=sorted((build/'icons/svg').glob('*.svg'));svgs=[p.read_text() for p in svgpaths]
-    rows=[];audit={'controls':{'open':'Pinned unmodified upstream binaries','system':'CSS system-ui/ui-serif/ui-monospace; installed rendering only'},'candidate':a.cand,'font_checks':{},'system_engine_check':{},'skipped':[],'output':str(out)}
+    svgpaths=sorted((build/'icons/svg').glob('*.svg'));svgs={p.stem:p.read_text() for p in svgpaths}
+    rows=[];findings=[];audit={'controls':{'system':'CSS system-ui/ui-serif/ui-monospace; installed rendering only'},'candidate':a.cand,'font_checks':{},'sheet_checks':[],'headline_collisions':[],'system_engine_check':{},'skipped':[],'output':str(out)}
     counters=defaultdict(int)
     def save(page,key,fonts,body,theme,kind,engine):
         checkpoint()
@@ -151,7 +141,7 @@ def main():
         page.set_content(html,wait_until='load');page.evaluate('document.fonts.ready')
         if isinstance(fonts,dict):
             page.evaluate('async () => { await Promise.all([0,1,2].map(i=>document.fonts.load("400 32px p"+i))); }')
-        text_coverage(page,fonts)
+        faces=face_audit(page,fonts,build/'icons/StrataIcons.woff2' if kind=='09' else None)
         if page.locator('[data-face="3"]').count() and isinstance(fonts,dict):
             audit['font_checks'][key+':rounded']=rounded_probe(page,fonts['sans-rounded'])
         # Asset failure must fail the command instead of generating an attractive fallback.
@@ -160,11 +150,17 @@ def main():
                 if not page.evaluate(f'document.fonts.check("400 32px p{i}")'):raise ValueError('Font unloaded during specimen render')
         filename=f'{label}-{number:02}.png';dest=out/filename
         if page.evaluate('document.documentElement.scrollWidth')>1120:raise ValueError('Specimen overflows sheet width')
+        contrast=contrast_audit(page,theme) if theme=='sky' or kind=='06' else None
+        collisions=headline_collisions(page)
+        audit['sheet_checks'].append({'label':label,'image':filename,'sheet':kind,'theme':theme,'faces':faces,'contrast':contrast})
+        if collisions is not None:
+            row={'label':label,'image':filename,'sheet':kind,'theme':theme,**collisions}
+            audit['headline_collisions'].append(row);findings.append(row)
         page.screenshot(path=str(dest),full_page=True,animations='disabled');clean_png(dest)
         with Image.open(dest) as image:width,height=image.size
         rows.append({'label':label,'image':filename,'sheet':kind,'theme':theme,'width':width,'height':height,'scale':2})
         return dest
-    def suite(browser,key,fonts,engine):
+    def suite(browser,key,fonts,engine,icons=None):
         page=browser.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
         page.route('**/*',lambda route:route.abort())
         page.set_content(s.document(mapping[key],fonts,'<p>0123456789</p>'))
@@ -173,43 +169,42 @@ def main():
             for theme in ['light','dark','sky','glass']:save(page,key,fonts,s.waterfall(face),theme,f'{face+1:02}',engine)
         for theme in ['light','dark']:
             save(page,key,fonts,s.weather(),theme,'04',engine)
-            save(page,key,fonts,s.card(),theme,'05',engine)
-        save(page,key,fonts,s.card(),'glass','05',engine)
+            save(page,key,fonts,s.card(icons),theme,'05',engine)
+        save(page,key,fonts,s.card(icons),'glass','05',engine)
         save(page,key,fonts,s.code(),'light','06',engine)
         save(page,key,fonts,s.code(),'dark','06',engine)
         for face in range(3):
             if isinstance(fonts,dict):body=s.outlines(fonts[list(FACES)[face]],face)
-            else:body='<div class="f'+str(face)+'">'+''.join('<div class="zoom">'+escape(c)+'</div>' for c in s.KEYS)+'</div>'
+            else:body=f'<div class="f{face}" data-face="{face}">'+''.join('<div class="zoom">'+escape(c)+'</div>' for c in s.KEYS)+'</div>'
             save(page,key,fonts,body,'light','07',engine)
         if isinstance(fonts,dict) and 'sans-rounded' in fonts:
             for theme in ['light','dark','sky']:
                 save(page,key,fonts,s.rounded(),theme,'10',engine)
                 save(page,key,fonts,s.rounded_cards(),theme,'11',engine)
+                save(page,key,fonts,s.rounded_comparison(),theme,'12',engine)
         page.close()
     def icon_sheets(browser,key,icons,fonts,engine):
         page=browser.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
         for startindex in range(0,len(icons),48):
-            body=s.icon_sheet(icons[startindex:startindex+48],startindex)
+            body=s.icon_sheet(icons[startindex:startindex+48])
             for theme in ['light','dark','light grid']:save(page,key,fonts,body,theme,'08',engine)
         page.close()
     with sync_playwright() as pw:
         with pw.chromium.launch() as chromium:
-            suite(chromium,a.cand,candidatefonts,'chromium')
-            icon_sheets(chromium,a.cand,svgs,candidatefonts,'chromium')
+            suite(chromium,a.cand,candidatefonts,'chromium',svgs)
+            icon_sheets(chromium,a.cand,list(svgs.items()),candidatefonts,'chromium')
             # Also prove the stroke-expanded icon font loads and has every codepoint.
             page=chromium.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
             imap=json.loads((build/'icons/manifest.json').read_text())['icons']
-            chars=''.join(chr(int(v['codepoint'],16)) for v in imap.values())
-            body=s.icon_font(build/'icons/StrataIcons.woff2',chars)
+            body=s.icon_font(build/'icons/StrataIcons.woff2',imap)
             save(page,a.cand,candidatefonts,body,'light','09','chromium')
             if not page.evaluate('document.fonts.check("32px q")'):raise ValueError('Icon font fallback')
             page.close()
             if a.refs=='1':
-                controls={'sans':UPSTREAM/'sans/docs/font-files/InterVariable.woff2','serif':UPSTREAM/'serif/VAR/SourceSerif4Variable-Roman.ttf','mono':UPSTREAM/'mono-release/StrataMonoUpstream.ttf'}
-                suite(chromium,'ref:open',controls,'chromium')
-                icon_sheets(chromium,'ref:open',svgs,controls,'chromium')
-                huge=[huge_svg(n) for n in ['Sun03','Moon02','Cloud','CloudAngledRain','CloudLittleRain','CloudSnow','CloudFastWind','SunCloud01','SunCloudLittleRain01','SunCloudSnow01','WindPower','Umbrella','Search01','Location01','ArrowLeft01','ArrowRight01','Settings01','Notification01','Calendar01','Clock01','Menu01','Cancel01','Add01','MinusSign']]
-                icon_sheets(chromium,'ref:hugeicons',huge,controls,'chromium')
+                names=['clear-day','clear-night','cloudy','rain','drizzle','snow','wind','partly-cloudy-day','showers-day','snow-showers-day','strong-wind','umbrella','search','places','arrow-left','arrow-right','settings','bell','today','clock','menu','close','add','minus']
+                sources=['Sun03','Moon02','Cloud','CloudAngledRain','CloudLittleRain','CloudSnow','CloudFastWind','SunCloud01','SunCloudLittleRain01','SunCloudSnow01','WindPower','Umbrella','Search01','Location01','ArrowLeft01','ArrowRight01','Settings01','Notification01','Calendar01','Clock01','Menu01','Cancel01','Add01','MinusSign']
+                huge=[(name,huge_svg(source)) for name,source in zip(names,sources,strict=True)]
+                icon_sheets(chromium,'ref:hugeicons',huge,candidatefonts,'chromium')
                 cp=chromium.new_page();cp.set_content(s.document(mapping['ref:system'],SYSTEM,'<p>0123456789</p>'))
                 audit['system_engine_check']['chromium']=font_probe(cp,SYSTEM);cp.close()
                 with pw.webkit.launch() as webkit:
@@ -226,16 +221,14 @@ def main():
                         for theme in ['light','dark','sky']:
                             save(rp,'ref:rounded',SYSTEM+['ui-rounded'],s.rounded(),theme,'10','webkit')
                             save(rp,'ref:rounded',SYSTEM+['ui-rounded'],s.rounded_cards(),theme,'11','webkit')
+                            save(rp,'ref:rounded',SYSTEM+['ui-rounded'],s.rounded_comparison(),theme,'12','webkit')
                     else:audit['skipped'].append('WebKit ui-rounded raster matched a fallback family; skipped')
                     rp.close()
                     # System references do not produce outline diagrams; raster zooms only.
                     audit['skipped'].append('Apple outline views forbidden; replaced with rendered text zooms without stored outlines')
                     good=[chr(r['cp']) for r in symbols if r['rendered']]
                     if len(good)>=3:
-                        page=webkit.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
-                        body='<div style="font-family:system-ui" class="icons">'+''.join('<div class="tile">'+''.join(f'<span style="font-size:{size}px">{glyph}</span>' for size in [16,20,24,32])+'</div>' for glyph in good)+'</div>'
-                        for theme in ['light','dark','light grid']:save(page,'ref:symbols',SYSTEM,body,theme,'08','webkit')
-                        page.close()
+                        audit['skipped'].append('System symbol probes resolved but lack verified semantic names; no unnamed icon sheet emitted')
                     else:audit['skipped'].append('SF Symbols private-use probes did not resolve reliably through system-ui in WebKit; no symbols reference emitted')
                 delta=max(abs(c['width']-w['width']) for c,w in zip(audit['system_engine_check']['chromium'],audit['system_engine_check']['webkit']))
                 audit['system_engine_check']['max_width_delta']=delta
@@ -244,6 +237,7 @@ def main():
                 elif not chrome_valid:audit['skipped'].append('Chromium falls back for system serif/mono on this Mac; installed system references emitted in WebKit only')
                 else:audit['skipped'].append('System font width probes agree across Chromium/WebKit; system sheets emitted in WebKit only')
     dump(out/'index.json',{'sheets':rows})
+    dump(out/'findings.json',{'headline_collisions':findings})
     count=check(out);audit['seconds']=round(time.monotonic()-start,3);audit['png_count']=count;audit['blind_byte_scan']='PASS'
     dump(build/'render-audit.json',audit)
     print(f'render: {count} PNGs, {audit["seconds"]:.3f}s; blind byte scan PASS',flush=True)

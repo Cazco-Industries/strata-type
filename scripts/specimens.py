@@ -22,8 +22,23 @@ def document(label,fonts,body,theme='light'):
     else:families=fonts
     for index,family in enumerate(families):rules.append(f'.f{index}{{font-family:{family};font-optical-sizing:auto}}')
     mapurl='data:image/svg+xml;base64,'+base64.b64encode(MAP.encode()).decode()
-    css='''*{box-sizing:border-box}html,body{margin:0}body{width:1120px;padding:40px;background:#f6f5f1;color:#172529;font-family:system-ui}h1{font-size:22px;font-weight:500;margin:0 0 26px}h2{font-size:14px;font-weight:500;margin:0 0 16px}small,.label{font-family:system-ui;font-size:11px;opacity:.65}section{border-top:1px solid #89939144;padding:22px 0}.weights{display:grid;grid-template-columns:1fr 1fr;gap:30px}.row{line-height:1.25;padding:7px 0;white-space:nowrap}.paragraph{line-height:1.55;max-width:58ch;margin:12px 0 24px}.dark{background:#121d25;color:#e5e8e8}.sky{background:linear-gradient(160deg,#dce8ef,#75a6c5 65%,#294c77);color:#122836}.glass{background-image:url("MAPURL");background-size:cover;color:#102b2a}.glass main{padding:28px;background:#f3f7efca;backdrop-filter:blur(20px);border:1px solid #fff9;border-radius:22px}.card{padding:30px;border:1px solid #81999966;border-radius:24px;background:#fff9}.dark .card{background:#20323c}.big{font-size:94px;font-weight:500;line-height:1.08}.columns{display:grid;grid-template-columns:1fr 1fr;gap:26px}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}td,th{text-align:right;padding:14px 8px;border-bottom:1px solid #80909044;font-weight:400}th:first-child,td:first-child{text-align:left}pre{padding:24px;line-height:1.6;font-size:17px;white-space:pre-wrap;background:#deebe766;border-radius:12px}.terminal{background:#11262b;color:#e0eadb;padding:24px;border-radius:16px}.icons{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}.tile{min-height:116px;border:1px solid #849b9b55;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;border-radius:9px}.iconrow{display:flex;align-items:center;gap:8px}.iconrow svg{flex:none}.unitgrid{display:none}.grid .unitgrid{display:block}.grid .tile{background-image:linear-gradient(#6594b433 1px,transparent 1px),linear-gradient(90deg,#6594b433 1px,transparent 1px);background-size:8px 8px}.outlines{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.outlines svg{width:100%;height:200px;border:1px solid #85989844}.zoom{font-size:140px;line-height:1.2;text-align:center}.thin{font-size:13px;color:#587375}'''.replace('MAPURL',mapurl)
-    return '<!doctype html><html><head><meta charset="utf-8"><title>'+escape(label)+'</title><style>'+css+''.join(rules)+'</style></head><body class="'+theme+'"><h1>'+escape(label)+'</h1><main>'+body+'</main></body></html>'
+    css='''*{box-sizing:border-box}html,body{margin:0}body{width:1120px;padding:40px;background:#f6f5f1;color:#172529;font-family:system-ui}h1{font-size:22px;font-weight:500;margin:0 0 26px}h2{font-size:14px;font-weight:500;margin:0 0 16px}small,.label{font-family:system-ui;font-size:11px;opacity:.65}section{border-top:1px solid #89939144;padding:22px 0}.weights{display:grid;grid-template-columns:1fr 1fr;gap:30px}.row{line-height:1.25;padding:7px 0;white-space:nowrap}.paragraph{line-height:1.55;max-width:58ch;margin:12px 0 24px}.dark{background:#121d25;color:#e5e8e8}.sky{background:linear-gradient(160deg,#dce8ef,#75a6c5 65%,#294c77);color:#122836}.glass{background-image:url("MAPURL");background-size:cover;color:#102b2a}.glass main{padding:28px;background:#f3f7efca;backdrop-filter:blur(20px);border:1px solid #fff9;border-radius:22px}.card{padding:30px;border:1px solid #81999966;border-radius:24px;background:#fff9}.dark .card{background:#20323c}.big{font-size:94px;font-weight:500;line-height:1.08}.columns{display:grid;grid-template-columns:1fr 1fr;gap:26px}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}td,th{text-align:right;padding:14px 8px;border-bottom:1px solid #80909044;font-weight:400}th:first-child,td:first-child{text-align:left}pre{font-family:inherit;padding:24px;line-height:1.6;font-size:17px;white-space:pre-wrap;background:#deebe766;border-radius:12px}.terminal{background:#11262b;color:#e0eadb;padding:24px;border-radius:16px}.icons{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}.tile{min-height:116px;border:1px solid #849b9b55;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;border-radius:9px}.iconrow{display:flex;align-items:center;gap:8px}.iconrow svg{flex:none}.unitgrid{display:none}.grid .unitgrid{display:block}.grid .tile{background-image:linear-gradient(#6594b433 1px,transparent 1px),linear-gradient(90deg,#6594b433 1px,transparent 1px);background-size:8px 8px}.outlines{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.outlines svg{width:100%;height:200px;border:1px solid #85989844}.zoom{font-size:140px;line-height:1.2;text-align:center}.thin{font-size:13px;color:#587375}'''.replace('MAPURL',mapurl)
+    css+='''
+    .sky{background:linear-gradient(160deg,#dce8ef,#bcd6e6 65%,#adc8de)}
+    .sky small,.sky .label{color:#314b5c;opacity:1}
+    .dark pre{background:#20323c}
+    .terminal{background:#102126;color:#eef5ed}
+    .terminal pre{background:transparent}
+    .terminal small{opacity:1}
+    .fit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:24px}
+    .fit-row{display:flex;align-items:center;gap:8px;margin:12px 0;line-height:1.4}
+    .fit-row svg,.tabs svg{flex:none}
+    .tabs{display:flex;justify-content:space-around;gap:8px;padding:16px 0 0;border-top:1px solid #81999966}
+    .tab{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:13px}
+    .icon-name{font-size:9px;line-height:1.3;text-align:center;overflow-wrap:anywhere;padding:0 3px}
+    .comparison{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;line-height:1.3}
+    '''
+    return '<!doctype html><html><head><meta charset="utf-8"><title>'+escape(label)+'</title><style>'+css+''.join(rules)+'</style></head><body class="'+theme+'"><h1 data-annotation>'+escape(label)+'</h1><main>'+body+'</main></body></html>'
 
 
 def waterfall(face):
@@ -75,8 +90,44 @@ def rounded_cards():
     return out+'</div>'
 
 
-def card():
-    return '''<p class="label">Mockup</p><div class="card"><p class="f0" data-face="0" style="font-size:15px">Thursday · Lakeside</p><p class="f1" data-face="1" style="font-size:48px;line-height:1.13;max-width:19ch">A quiet afternoon before the rain returns.</p><div class="f0 big" data-face="0">72°</div><p class="f0" data-face="0" style="font-size:17px;line-height:1.55;max-width:58ch">Clouds build after 4 PM. A light breeze keeps the lake path comfortable through the afternoon.</p><div class="f0" data-face="0" style="font-size:23px">12 mph NNW &nbsp; 30.16 inHg &nbsp; 20%</div><table class="f0" data-face="0"><tr><th>Now</th><th>4 PM</th><th>5 PM</th><th>6 PM</th></tr><tr><td>72°</td><td>71°</td><td>69°</td><td>68°</td></tr></table></div>'''
+def rounded_comparison():
+    out='<h2>Regular / Rounded numerals</h2>'
+    for size in [24,48,96]:
+        out+=f'<section><p class="label">{size} px · regular above Rounded</p>'
+        out+=f'<div class="comparison" style="font-size:{size}px;grid-template-columns:repeat({3 if size==96 else 5},minmax(0,1fr))">'
+        for value in ['72°','−3°','104°F','18:30','80%']:
+            out+='<div>'+''.join(f'<div class="f{face}" data-face="{face}">{value}</div>' for face in [0,3])+'</div>'
+        out+='</div>'
+        out+='</section>'
+    return out
+
+
+def card_icons(icons):
+    if not icons:return ''
+    # These are semantic aliases only; geometry always comes from this label.
+    aliases={'today':'calendar-days','radar':'radar','places':'map-pin','settings':'settings'}
+    def icon(name,size):
+        key=name if name in icons else aliases.get(name,name)
+        if key not in icons:raise ValueError(f'Card needs its own {name} icon')
+        return re_size(icons[key],size)
+    out='<div class="f0" data-face="0"><div class="fit-grid">'
+    for text_size in [13,15,17]:
+        out+=f'<div><p class="label">{text_size} px text · 16 / 20 px icons</p>'
+        for icon_size in [16,20]:
+            for name,text in [('rain','Rain likely after 3 PM'),('wind','12 mph NNW')]:
+                out+=f'<div class="fit-row" style="font-size:{text_size}px">{icon(name,icon_size)}<span>{text}</span></div>'
+        out+='</div>'
+    out+='</div>'
+    for icon_size in [16,20]:
+        out+=f'<p class="label">{icon_size} px icons · 13 px labels</p><div class="tabs">'
+        for name in ['today','radar','places','settings']:
+            out+=f'<div class="tab">{icon(name,icon_size)}<span>{name.title()}</span></div>'
+        out+='</div>'
+    return out+'</div>'
+
+
+def card(icons=None):
+    return '''<p class="label">Mockup</p><div class="card"><p class="f0" data-face="0" style="font-size:15px">Thursday · Lakeside</p><p class="f1" data-face="1" data-headline style="font-size:48px;line-height:1.13;max-width:19ch">A quiet afternoon before the rain returns.</p><div class="f0 big" data-face="0">72°F</div><p class="f0" data-face="0" style="font-size:17px;line-height:1.55;max-width:58ch">Clouds build after 4 PM. A light breeze keeps the lake path comfortable through the afternoon.</p><div class="f0" data-face="0" style="font-size:23px">12 mph NNW &nbsp; 30.16 inHg &nbsp; 20% chance of rain</div><table class="f0" data-face="0"><tr><th>Now</th><th>4 PM</th><th>5 PM</th><th>6 PM</th></tr><tr><td>72°</td><td>71°</td><td>69°</td><td>68°</td></tr></table>'''+card_icons(icons)+'</div>'
 
 
 def code():
@@ -109,19 +160,21 @@ def outlines(path,face):
     return out+'</div>'
 
 
-def icon_font(path,chars):
+def icon_font(path,icons):
     data=base64.b64encode(path.read_bytes()).decode()
     return ('<style>@font-face{font-family:q;src:url(data:font/woff2;base64,'+data+');font-display:block}</style>'
-            '<div style="font-family:q;font-size:32px;line-height:1.8;display:grid;grid-template-columns:repeat(16,minmax(0,1fr));gap:8px">'
-            +''.join('<span>'+char+'</span>' for char in chars)+'</div>')
+            '<h2>Icon font glyphs</h2><p class="label">16 / 20 / 24 / 32 px</p><div class="icons">'
+            +''.join('<div class="tile"><div class="iconrow" data-font-family="q" style="font-family:q">'
+                     +''.join(f'<span style="font-size:{size}px">{chr(int(value["codepoint"],16))}</span>' for size in [16,20,24,32])
+                     +f'</div><small class="icon-name">{escape(name)}</small></div>' for name,value in icons.items())+'</div>')
 
 
-def icon_sheet(svgs,start=0):
-    out='<div class="icons">'
-    for index,svg in enumerate(svgs,start=start):
+def icon_sheet(icons):
+    out='<p class="label">16 / 20 / 24 / 32 px</p><div class="icons">'
+    for name,svg in icons:
         out+='<div class="tile"><div class="iconrow">'
         for size in [16,20,24,32]:out+=re_size(svg,size)
-        out+=f'</div><small>{index+1:03d}</small></div>'
+        out+=f'</div><small class="icon-name">{escape(name)}</small></div>'
     return out+'</div>'
 
 
