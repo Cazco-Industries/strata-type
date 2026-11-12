@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="rightLongSquiggleArrow" format="2">
+  <advance width="1200"/>
+  <unicode hex="27FF"/>
+  <outline>
+    <contour>
+      <point x="0" y="496" type="line"/>
+      <point x="171" y="495" type="line"/>
+      <point x="228" y="546" type="line"/>
+      <point x="371" y="403" type="line"/>
+      <point x="515" y="546" type="line"/>
+      <point x="572" y="495" type="line"/>
+      <point x="989" y="495" type="line"/>
+      <point x="989" y="754" type="line"/>
+      <point x="646" y="754" type="line"/>
+      <point x="515" y="896" type="line"/>
+      <point x="371" y="753" type="line"/>
+      <point x="228" y="896" type="line"/>
+      <point x="97" y="754" type="line"/>
+      <point x="0" y="754" type="line"/>
+    </contour>
+    <component base="_part.arrowhead1" xOffset="247"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

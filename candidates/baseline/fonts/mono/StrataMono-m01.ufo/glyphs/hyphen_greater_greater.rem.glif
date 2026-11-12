@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hyphen_greater_greater.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-385" y="1298" type="line"/>
+      <point x="-593" y="1120" type="line"/>
+      <point x="-453" y="968" type="line" smooth="yes"/>
+      <point x="-369" y="879"/>
+      <point x="-297" y="808"/>
+      <point x="-212" y="755" type="curve"/>
+      <point x="-2183" y="755" type="line"/>
+      <point x="-2183" y="497" type="line"/>
+      <point x="-216" y="497" type="line"/>
+      <point x="-297" y="442"/>
+      <point x="-372" y="373"/>
+      <point x="-453" y="284" type="curve" smooth="yes"/>
+      <point x="-593" y="132" type="line"/>
+      <point x="-385" y="-46" type="line"/>
+      <point x="219" y="626" type="line"/>
+    </contour>
+    <component base="_part.arrowhead"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>_part.arrowhead</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

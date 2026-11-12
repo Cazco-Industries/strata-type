@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Omegavaria" format="2">
+  <advance width="1200"/>
+  <unicode hex="1FFA"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="600" y="1386" name="top"/>
+  <anchor x="194" y="1386" name="topleft"/>
+  <outline>
+    <component base="Omega"/>
+    <component base="varia.case" xOffset="-732"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>varia.case</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

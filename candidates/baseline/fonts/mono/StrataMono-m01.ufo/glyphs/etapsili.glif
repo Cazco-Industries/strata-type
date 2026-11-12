@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="etapsili" format="2">
+  <advance width="1200"/>
+  <unicode hex="1F20"/>
+  <anchor x="264" y="0" name="bottom"/>
+  <anchor x="687" y="1674" name="top"/>
+  <outline>
+    <component base="eta"/>
+    <component base="psili" xOffset="87"/>
+  </outline>
+</glyph>

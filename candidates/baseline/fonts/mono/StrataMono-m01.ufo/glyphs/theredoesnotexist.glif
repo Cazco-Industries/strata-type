@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="theredoesnotexist" format="2">
+  <advance width="1200"/>
+  <unicode hex="2204"/>
+  <anchor x="560" y="0" name="bottom"/>
+  <anchor x="246" y="0" name="ogonek"/>
+  <anchor x="560" y="1386" name="top"/>
+  <anchor x="1034" y="1386" name="topright"/>
+  <outline>
+    <contour>
+      <point x="291" y="-228" type="line"/>
+      <point x="975" y="1584" type="line"/>
+      <point x="721" y="1675" type="line"/>
+      <point x="35" y="-137" type="line"/>
+    </contour>
+    <component base="existential"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

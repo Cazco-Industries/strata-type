@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="_part.bar" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="747" y="1454" type="line"/>
+      <point x="453" y="1454" type="line"/>
+      <point x="453" y="-210" type="line"/>
+      <point x="747" y="-210" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+    </dict>
+  </lib>
+</glyph>

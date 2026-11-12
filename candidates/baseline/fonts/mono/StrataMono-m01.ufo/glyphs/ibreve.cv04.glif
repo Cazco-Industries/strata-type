@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ibreve.cv04" format="2">
+  <advance width="1200"/>
+  <anchor x="809" y="0" name="ogonek"/>
+  <anchor x="598" y="1062" name="top"/>
+  <outline>
+    <component base="idotless.cv04"/>
+    <component base="breve" xOffset="-2"/>
+  </outline>
+</glyph>

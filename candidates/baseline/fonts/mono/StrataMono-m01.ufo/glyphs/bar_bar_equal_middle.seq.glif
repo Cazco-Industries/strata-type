@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bar_bar_equal_middle.seq" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="260" y="714" type="line"/>
+      <point x="1220" y="714" type="line"/>
+      <point x="1220" y="960" type="line"/>
+      <point x="260" y="960" type="line"/>
+    </contour>
+    <contour>
+      <point x="260" y="292" type="line"/>
+      <point x="1220" y="292" type="line"/>
+      <point x="1220" y="538" type="line"/>
+      <point x="260" y="538" type="line"/>
+    </contour>
+    <contour>
+      <point x="-1220" y="714" type="line"/>
+      <point x="-260" y="714" type="line"/>
+      <point x="-260" y="960" type="line"/>
+      <point x="-1220" y="960" type="line"/>
+    </contour>
+    <contour>
+      <point x="-1220" y="292" type="line"/>
+      <point x="-260" y="292" type="line"/>
+      <point x="-260" y="538" type="line"/>
+      <point x="-1220" y="538" type="line"/>
+    </contour>
+    <component base="_part.bar" xOffset="-249"/>
+    <component base="_part.bar" xOffset="-949"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CCPPPP</string>
+    </dict>
+  </lib>
+</glyph>

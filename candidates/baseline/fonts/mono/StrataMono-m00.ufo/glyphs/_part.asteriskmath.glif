@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="_part.asteriskmath" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="547" y="748" type="line"/>
+      <point x="121" y="1011" type="line"/>
+      <point x="53" y="897" type="line"/>
+      <point x="495" y="659" type="line"/>
+      <point x="53" y="415" type="line"/>
+      <point x="121" y="303" type="line"/>
+      <point x="547" y="568" type="line"/>
+      <point x="536" y="65" type="line"/>
+      <point x="663" y="65" type="line"/>
+      <point x="653" y="568" type="line"/>
+      <point x="1080" y="303" type="line"/>
+      <point x="1146" y="415" type="line"/>
+      <point x="704" y="659" type="line"/>
+      <point x="1146" y="897" type="line"/>
+      <point x="1080" y="1011" type="line"/>
+      <point x="653" y="748" type="line"/>
+      <point x="663" y="1251" type="line"/>
+      <point x="536" y="1251" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+    </dict>
+  </lib>
+</glyph>

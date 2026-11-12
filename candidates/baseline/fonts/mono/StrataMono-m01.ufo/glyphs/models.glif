@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="models" format="2">
+  <advance width="1200"/>
+  <unicode hex="22A7"/>
+  <outline>
+    <contour>
+      <point x="454" y="710" type="line"/>
+      <point x="954" y="710" type="line"/>
+      <point x="954" y="954" type="line"/>
+      <point x="454" y="954" type="line"/>
+    </contour>
+    <contour>
+      <point x="570" y="1156" type="line"/>
+      <point x="306" y="1156" type="line"/>
+      <point x="306" y="94" type="line"/>
+      <point x="570" y="94" type="line"/>
+    </contour>
+    <contour>
+      <point x="454" y="290" type="line"/>
+      <point x="954" y="290" type="line"/>
+      <point x="954" y="534" type="line"/>
+      <point x="454" y="534" type="line"/>
+    </contour>
+  </outline>
+</glyph>

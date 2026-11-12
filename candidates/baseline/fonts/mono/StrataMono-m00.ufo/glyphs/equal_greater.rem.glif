@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="equal_greater.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="807" y="863" type="line"/>
+      <point x="-928" y="863" type="line"/>
+      <point x="-928" y="748" type="line"/>
+      <point x="807" y="748" type="line"/>
+    </contour>
+    <contour>
+      <point x="807" y="496" type="line"/>
+      <point x="-928" y="496" type="line"/>
+      <point x="-928" y="380" type="line"/>
+      <point x="807" y="380" type="line"/>
+    </contour>
+    <component base="_part.arrowhead2"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>_part.arrowhead2</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPP</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="_part.arrowhead3" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="829" y="752" type="line"/>
+      <point x="415" y="1216" type="line"/>
+      <point x="315" y="1132" type="line"/>
+      <point x="660" y="752" type="line"/>
+    </contour>
+    <contour>
+      <point x="829" y="500" type="line"/>
+      <point x="660" y="500" type="line"/>
+      <point x="315" y="120" type="line"/>
+      <point x="415" y="36" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+    </dict>
+  </lib>
+</glyph>

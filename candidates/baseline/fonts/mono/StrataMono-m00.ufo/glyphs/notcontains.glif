@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="notcontains" format="2">
+  <advance width="1200"/>
+  <unicode hex="220C"/>
+  <outline>
+    <component base="_part.not_equal"/>
+    <component base="suchthat"/>
+  </outline>
+</glyph>

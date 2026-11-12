@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="leftcurlybracketmiddlepiece" format="2">
+  <advance width="1200"/>
+  <unicode hex="23A8"/>
+  <outline>
+    <contour>
+      <point x="657" y="2280" type="line"/>
+      <point x="543" y="2280" type="line"/>
+      <point x="543" y="963" type="line" smooth="yes"/>
+      <point x="543" y="831"/>
+      <point x="530" y="749"/>
+      <point x="232" y="749" type="curve"/>
+      <point x="232" y="651" type="line"/>
+      <point x="529" y="651"/>
+      <point x="543" y="566"/>
+      <point x="543" y="435" type="curve" smooth="yes"/>
+      <point x="543" y="-600" type="line"/>
+      <point x="657" y="-600" type="line"/>
+      <point x="657" y="452" type="line" smooth="yes"/>
+      <point x="657" y="614"/>
+      <point x="626" y="677"/>
+      <point x="508" y="700" type="curve"/>
+      <point x="625" y="724"/>
+      <point x="657" y="797"/>
+      <point x="657" y="948" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

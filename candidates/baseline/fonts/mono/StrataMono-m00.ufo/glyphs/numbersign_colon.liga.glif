@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="numbersign_colon.liga" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="609" y="1084" type="line"/>
+      <point x="566" y="783" type="line"/>
+      <point x="789" y="783" type="line"/>
+      <point x="832" y="1084" type="line"/>
+    </contour>
+    <contour>
+      <point x="529" y="523" type="line"/>
+      <point x="486" y="222" type="line"/>
+      <point x="709" y="222" type="line"/>
+      <point x="752" y="523" type="line"/>
+    </contour>
+    <component base="numbersign" xOffset="-1000"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>numbersign</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPP</string>
+    </dict>
+  </lib>
+</glyph>

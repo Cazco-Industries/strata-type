@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="notidentical" format="2">
+  <advance width="1200"/>
+  <unicode hex="2262"/>
+  <outline>
+    <component base="equivalence"/>
+    <component base="_part.strike"/>
+  </outline>
+</glyph>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="less_asterisk_greater.liga.cv16" format="2">
+  <advance width="1200"/>
+  <outline>
+    <component base="_part.less2" xOffset="-2500"/>
+    <component base="_part.greater2" xOffset="100"/>
+    <component base="_part.asteriskmath" xOffset="-1200"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>_part.less2</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>_part.greater2</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>2</integer>
+          <key>name</key>
+          <string>_part.asteriskmath</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

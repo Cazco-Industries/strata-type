@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="canadiansyllabicso" format="2">
+  <advance width="1200"/>
+  <unicode hex="1405"/>
+  <outline>
+    <contour>
+      <point x="60" y="1317" type="line"/>
+      <point x="60" y="70" type="line"/>
+      <point x="1140" y="699" type="line"/>
+    </contour>
+    <contour>
+      <point x="300" y="901" type="line"/>
+      <point x="660" y="699" type="line"/>
+      <point x="300" y="486" type="line"/>
+    </contour>
+  </outline>
+</glyph>

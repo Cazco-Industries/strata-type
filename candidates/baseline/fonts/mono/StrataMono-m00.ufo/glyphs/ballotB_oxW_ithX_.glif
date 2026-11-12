@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ballotBoxWithX" format="2">
+  <advance width="1200"/>
+  <unicode hex="2612"/>
+  <outline>
+    <contour>
+      <point x="867" y="908" type="line"/>
+      <point x="600" y="640" type="line"/>
+      <point x="329" y="908" type="line"/>
+      <point x="232" y="811" type="line"/>
+      <point x="504" y="544" type="line"/>
+      <point x="232" y="273" type="line"/>
+      <point x="329" y="176" type="line"/>
+      <point x="600" y="448" type="line"/>
+      <point x="867" y="176" type="line"/>
+      <point x="964" y="273" type="line"/>
+      <point x="696" y="544" type="line"/>
+      <point x="964" y="811" type="line"/>
+    </contour>
+    <component base="ballotBox"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>ballotBox</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

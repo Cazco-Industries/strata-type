@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="doubleverticalbardoublerightturnstile" format="2">
+  <advance width="1200"/>
+  <unicode hex="22AB"/>
+  <outline>
+    <contour>
+      <point x="445" y="747" type="line"/>
+      <point x="1170" y="747" type="line"/>
+      <point x="1170" y="863" type="line"/>
+      <point x="445" y="863" type="line"/>
+    </contour>
+    <contour>
+      <point x="498" y="1145" type="line"/>
+      <point x="390" y="1145" type="line"/>
+      <point x="390" y="95" type="line"/>
+      <point x="498" y="95" type="line"/>
+    </contour>
+    <contour>
+      <point x="198" y="1145" type="line"/>
+      <point x="90" y="1145" type="line"/>
+      <point x="90" y="95" type="line"/>
+      <point x="198" y="95" type="line"/>
+    </contour>
+    <contour>
+      <point x="445" y="380" type="line"/>
+      <point x="1170" y="380" type="line"/>
+      <point x="1170" y="496" type="line"/>
+      <point x="445" y="496" type="line"/>
+    </contour>
+  </outline>
+</glyph>

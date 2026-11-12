@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="tripleverticalbarrightturnstile" format="2">
+  <advance width="1200"/>
+  <unicode hex="22AA"/>
+  <outline>
+    <contour>
+      <point x="745" y="562" type="line"/>
+      <point x="1170" y="562" type="line"/>
+      <point x="1170" y="678" type="line"/>
+      <point x="745" y="678" type="line"/>
+    </contour>
+    <contour>
+      <point x="798" y="1145" type="line"/>
+      <point x="690" y="1145" type="line"/>
+      <point x="690" y="95" type="line"/>
+      <point x="798" y="95" type="line"/>
+    </contour>
+    <contour>
+      <point x="198" y="1145" type="line"/>
+      <point x="90" y="1145" type="line"/>
+      <point x="90" y="95" type="line"/>
+      <point x="198" y="95" type="line"/>
+    </contour>
+    <contour>
+      <point x="498" y="1145" type="line"/>
+      <point x="390" y="1145" type="line"/>
+      <point x="390" y="95" type="line"/>
+      <point x="498" y="95" type="line"/>
+    </contour>
+  </outline>
+</glyph>

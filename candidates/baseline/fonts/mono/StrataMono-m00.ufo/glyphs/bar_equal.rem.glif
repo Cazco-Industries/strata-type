@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bar_equal.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="770" y="863" type="line"/>
+      <point x="-601" y="863" type="line"/>
+      <point x="-601" y="748" type="line"/>
+      <point x="770" y="748" type="line"/>
+    </contour>
+    <contour>
+      <point x="770" y="496" type="line"/>
+      <point x="-601" y="496" type="line"/>
+      <point x="-601" y="380" type="line"/>
+      <point x="770" y="380" type="line"/>
+    </contour>
+    <component base="_part.bar" xOffset="-1200"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>_part.bar</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPP</string>
+    </dict>
+  </lib>
+</glyph>

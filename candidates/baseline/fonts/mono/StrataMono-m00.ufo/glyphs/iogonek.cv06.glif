@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="iogonek.cv06" format="2">
+  <advance width="1200"/>
+  <anchor x="582" y="1428" name="_center"/>
+  <anchor x="856" y="0" name="bottom"/>
+  <anchor x="667" y="1050" name="top"/>
+  <outline>
+    <component base="dotaccent" xOffset="-15"/>
+    <component base="idotless.cv06"/>
+    <component base="ogonek" xOffset="-89"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>dotaccent</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>idotless.cv06</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>2</integer>
+          <key>name</key>
+          <string>ogonek</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

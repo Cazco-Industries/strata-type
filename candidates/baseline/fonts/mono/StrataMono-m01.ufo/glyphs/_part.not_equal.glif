@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="_part.not_equal" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="225" y="-264" type="line"/>
+      <point x="1205" y="1386" type="line"/>
+      <point x="978" y="1498" type="line"/>
+      <point x="-5" y="-149" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+    </dict>
+  </lib>
+</glyph>

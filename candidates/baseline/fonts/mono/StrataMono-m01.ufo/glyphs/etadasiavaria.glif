@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="etadasiavaria" format="2">
+  <advance width="1200"/>
+  <unicode hex="1F23"/>
+  <anchor x="264" y="0" name="bottom"/>
+  <anchor x="623" y="1670" name="top"/>
+  <outline>
+    <component base="eta"/>
+    <component base="dasiavaria" xOffset="-23"/>
+  </outline>
+</glyph>

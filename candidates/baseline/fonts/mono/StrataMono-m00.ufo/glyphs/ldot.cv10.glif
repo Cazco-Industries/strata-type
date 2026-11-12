@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ldot.cv10" format="2">
+  <advance width="1200"/>
+  <anchor x="656" y="0" name="bottom"/>
+  <anchor x="1116" y="766" name="center"/>
+  <anchor x="656" y="766" name="middle"/>
+  <anchor x="667" y="1475" name="top"/>
+  <anchor x="807" y="1475" name="topright"/>
+  <outline>
+    <component base="l.cv10"/>
+    <component base="dotaccent" xOffset="519" yOffset="-662"/>
+  </outline>
+</glyph>

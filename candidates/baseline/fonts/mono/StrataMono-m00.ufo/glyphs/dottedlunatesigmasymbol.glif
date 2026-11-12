@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dottedlunatesigmasymbol" format="2">
+  <advance width="1200"/>
+  <unicode hex="037C"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="689" y="533" name="center"/>
+  <anchor x="600" y="1050" name="top"/>
+  <outline>
+    <component base="sigmaLunateSymbol"/>
+    <component base="dotaccentcomb" xScale="1.0565" yScale="1.0565" xOffset="53" yOffset="-846"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>anchor</key>
+          <string>center</string>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>dotaccentcomb</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="less_equal_start.seq" format="2">
+  <advance width="1200"/>
+  <outline>
+    <component base="greater_equal_end.seq" xScale="-1" xOffset="1200"/>
+  </outline>
+</glyph>

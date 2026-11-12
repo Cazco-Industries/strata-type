@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bar_equal_greater.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-1932" y="1259" type="line"/>
+      <point x="-1932" y="-7" type="line"/>
+      <point x="-1668" y="-7" type="line"/>
+      <point x="-1668" y="1259" type="line"/>
+    </contour>
+    <contour>
+      <point x="744" y="956" type="line"/>
+      <point x="-1800" y="956" type="line"/>
+      <point x="-1800" y="709" type="line"/>
+      <point x="744" y="709" type="line"/>
+    </contour>
+    <contour>
+      <point x="744" y="535" type="line"/>
+      <point x="-1800" y="535" type="line"/>
+      <point x="-1800" y="290" type="line"/>
+      <point x="744" y="290" type="line"/>
+    </contour>
+    <component base="_part.arrowhead2"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPPP</string>
+    </dict>
+  </lib>
+</glyph>

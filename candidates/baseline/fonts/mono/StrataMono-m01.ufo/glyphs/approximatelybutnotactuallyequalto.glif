@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="approximatelybutnotactuallyequalto" format="2">
+  <advance width="1200"/>
+  <unicode hex="2246"/>
+  <outline>
+    <contour>
+      <point x="591" y="-84" type="line"/>
+      <point x="835" y="874" type="line"/>
+      <point x="661" y="920" type="line"/>
+      <point x="416" y="-38" type="line"/>
+    </contour>
+    <component base="congruent"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

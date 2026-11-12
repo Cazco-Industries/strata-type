@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="slash_equal_end.seq" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-20" y="714" type="line"/>
+      <point x="703" y="714" type="line"/>
+      <point x="703" y="960" type="line"/>
+      <point x="-20" y="960" type="line"/>
+    </contour>
+    <contour>
+      <point x="-20" y="292" type="line"/>
+      <point x="480" y="292" type="line"/>
+      <point x="480" y="538" type="line"/>
+      <point x="-20" y="538" type="line"/>
+    </contour>
+    <component base="_part.not_equal"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPP</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="newline-control" format="2">
+  <advance width="1200"/>
+  <unicode hex="2424"/>
+  <anchor x="809.55" y="458.0" name="bottom"/>
+  <anchor x="715.5" y="915.38" name="top"/>
+  <anchor x="907.56" y="712.1" name="center"/>
+  <anchor x="802.62" y="915.38" name="topright"/>
+  <outline>
+    <component base="N" xScale="0.33" yScale="0.33" xOffset="200" yOffset="458"/>
+    <component base="L" xScale="0.33" yScale="0.33" xOffset="600" yOffset="458"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>N</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>L</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

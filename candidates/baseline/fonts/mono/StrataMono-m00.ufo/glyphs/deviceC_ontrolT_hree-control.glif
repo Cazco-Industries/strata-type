@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="deviceControlThree-control" format="2">
+  <advance width="1200"/>
+  <unicode hex="2413"/>
+  <anchor x="630.34" y="458.0" name="bottom"/>
+  <anchor x="198.0" y="685.04" name="center"/>
+  <anchor x="642.22" y="911.42" name="top"/>
+  <outline>
+    <component base="D" xScale="0.33" yScale="0.33" yOffset="458"/>
+    <component base="C" xScale="0.33" yScale="0.33" xOffset="400" yOffset="458"/>
+    <component base="three" xScale="0.33" yScale="0.33" xOffset="800" yOffset="458"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>D</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>C</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

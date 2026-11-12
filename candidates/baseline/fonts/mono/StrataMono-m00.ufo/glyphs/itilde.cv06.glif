@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="itilde.cv06" format="2">
+  <advance width="1200"/>
+  <anchor x="856" y="0" name="bottom"/>
+  <anchor x="667" y="1050" name="top"/>
+  <outline>
+    <component base="idotless.cv06"/>
+    <component base="tilde" xOffset="67"/>
+  </outline>
+</glyph>

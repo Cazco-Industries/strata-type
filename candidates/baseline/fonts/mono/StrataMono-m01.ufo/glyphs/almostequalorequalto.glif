@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="almostequalorequalto" format="2">
+  <advance width="1200"/>
+  <unicode hex="224A"/>
+  <outline>
+    <contour>
+      <point x="1054" y="330" type="line"/>
+      <point x="146" y="330" type="line"/>
+      <point x="146" y="84" type="line"/>
+      <point x="1054" y="84" type="line"/>
+    </contour>
+    <component base="_part.tilde" yOffset="5"/>
+    <component base="_part.tilde" yOffset="424"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CCP</string>
+    </dict>
+  </lib>
+</glyph>

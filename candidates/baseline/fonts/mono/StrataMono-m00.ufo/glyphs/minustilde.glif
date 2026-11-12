@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="minustilde" format="2">
+  <advance width="1200"/>
+  <unicode hex="2242"/>
+  <outline>
+    <contour>
+      <point x="970" y="863" type="line"/>
+      <point x="230" y="863" type="line"/>
+      <point x="230" y="747" type="line"/>
+      <point x="970" y="747" type="line"/>
+    </contour>
+    <component base="_part.tilde" yOffset="-165"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="windTrigram" format="2">
+  <advance width="1200"/>
+  <unicode hex="2634"/>
+  <outline>
+    <contour>
+      <point x="1020" y="1048" type="line"/>
+      <point x="180" y="1048" type="line"/>
+      <point x="180" y="934" type="line"/>
+      <point x="1020" y="934" type="line"/>
+    </contour>
+    <contour>
+      <point x="500" y="313" type="line"/>
+      <point x="180" y="313" type="line"/>
+      <point x="180" y="197" type="line"/>
+      <point x="500" y="197" type="line"/>
+    </contour>
+    <contour>
+      <point x="1020" y="680" type="line"/>
+      <point x="180" y="680" type="line"/>
+      <point x="180" y="565" type="line"/>
+      <point x="1020" y="565" type="line"/>
+    </contour>
+    <contour>
+      <point x="1020" y="312" type="line"/>
+      <point x="700" y="312" type="line"/>
+      <point x="700" y="197" type="line"/>
+      <point x="1020" y="197" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ksi-cy" format="2">
+  <advance width="1200"/>
+  <unicode hex="046F"/>
+  <anchor x="584" y="1062" name="top"/>
+  <outline>
+    <component base="ksi-cyHELPER"/>
+    <component base="caron" xOffset="-16"/>
+  </outline>
+</glyph>

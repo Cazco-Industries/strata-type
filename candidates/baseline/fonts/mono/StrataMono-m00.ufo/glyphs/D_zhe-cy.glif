@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Dzhe-cy" format="2">
+  <advance width="1200"/>
+  <unicode hex="040F"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="1034" y="0" name="bottomright"/>
+  <outline>
+    <contour>
+      <point x="536" y="61" type="line"/>
+      <point x="550" y="-278" type="line"/>
+      <point x="650" y="-278" type="line"/>
+      <point x="664" y="61" type="line"/>
+    </contour>
+    <component base="TseHelper-cy"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

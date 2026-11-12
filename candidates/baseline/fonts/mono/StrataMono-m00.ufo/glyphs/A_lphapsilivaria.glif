@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Alphapsilivaria" format="2">
+  <advance width="1200"/>
+  <unicode hex="1F0A"/>
+  <anchor x="595" y="0" name="bottom"/>
+  <anchor x="1100" y="0" name="ogonek"/>
+  <anchor x="-55" y="1381" name="top"/>
+  <anchor x="406" y="1374" name="topleft"/>
+  <outline>
+    <component base="Alpha"/>
+    <component base="psilivaria" xOffset="-489" yOffset="-191"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>psilivaria</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

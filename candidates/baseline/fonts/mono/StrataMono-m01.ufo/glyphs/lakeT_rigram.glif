@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lakeTrigram" format="2">
+  <advance width="1200"/>
+  <unicode hex="2631"/>
+  <outline>
+    <contour>
+      <point x="500" y="1169" type="line"/>
+      <point x="96" y="1169" type="line"/>
+      <point x="96" y="922" type="line"/>
+      <point x="500" y="922" type="line"/>
+    </contour>
+    <contour>
+      <point x="1104" y="330" type="line"/>
+      <point x="96" y="330" type="line"/>
+      <point x="96" y="84" type="line"/>
+      <point x="1104" y="84" type="line"/>
+    </contour>
+    <contour>
+      <point x="1104" y="751" type="line"/>
+      <point x="96" y="751" type="line"/>
+      <point x="96" y="503" type="line"/>
+      <point x="1104" y="503" type="line"/>
+    </contour>
+    <contour>
+      <point x="1104" y="1169" type="line"/>
+      <point x="700" y="1169" type="line"/>
+      <point x="700" y="922" type="line"/>
+      <point x="1104" y="922" type="line"/>
+    </contour>
+  </outline>
+</glyph>

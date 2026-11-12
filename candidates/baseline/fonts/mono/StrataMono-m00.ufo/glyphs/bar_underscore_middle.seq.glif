@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bar_underscore_middle.seq" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-20" y="-360" type="line"/>
+      <point x="1220" y="-360" type="line"/>
+      <point x="1220" y="-243" type="line"/>
+      <point x="-20" y="-243" type="line"/>
+    </contour>
+    <contour>
+      <point x="545" y="1445" type="line"/>
+      <point x="545" y="-317" type="line"/>
+      <point x="653" y="-317" type="line"/>
+      <point x="653" y="1445" type="line"/>
+    </contour>
+  </outline>
+</glyph>

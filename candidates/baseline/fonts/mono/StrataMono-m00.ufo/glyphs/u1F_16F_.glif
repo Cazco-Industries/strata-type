@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="u1F16F" format="2">
+  <advance width="1200"/>
+  <unicode hex="1F16F"/>
+  <outline>
+    <contour>
+      <point x="516" y="855" type="line"/>
+      <point x="459" y="855"/>
+      <point x="416" y="812"/>
+      <point x="416" y="755" type="curve"/>
+      <point x="416" y="531" type="line"/>
+      <point x="516" y="531" type="line"/>
+      <point x="516" y="266" type="line"/>
+      <point x="684" y="266" type="line"/>
+      <point x="684" y="531" type="line"/>
+      <point x="784" y="531" type="line"/>
+      <point x="784" y="755" type="line"/>
+      <point x="784" y="812"/>
+      <point x="741" y="855"/>
+      <point x="684" y="855" type="curve"/>
+    </contour>
+    <contour>
+      <point x="600" y="911" type="curve" smooth="yes"/>
+      <point x="655" y="911"/>
+      <point x="700" y="956"/>
+      <point x="700" y="1011" type="curve" smooth="yes"/>
+      <point x="700" y="1066"/>
+      <point x="655" y="1111"/>
+      <point x="600" y="1111" type="curve" smooth="yes"/>
+      <point x="545" y="1111"/>
+      <point x="500" y="1066"/>
+      <point x="500" y="1011" type="curve" smooth="yes"/>
+      <point x="500" y="956"/>
+      <point x="545" y="911"/>
+    </contour>
+    <component base="_part.circle"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPP</string>
+    </dict>
+  </lib>
+</glyph>

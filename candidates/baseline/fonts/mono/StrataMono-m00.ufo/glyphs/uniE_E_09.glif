@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniEE09" format="2">
+  <advance width="1200"/>
+  <unicode hex="EE09"/>
+  <outline>
+    <contour>
+      <point x="1250" y="686" type="curve"/>
+      <point x="1130" y="686" type="line"/>
+      <point x="1130" y="393"/>
+      <point x="893" y="156"/>
+      <point x="600" y="156" type="curve" smooth="yes"/>
+      <point x="307" y="156"/>
+      <point x="70" y="393"/>
+      <point x="70" y="686" type="curve"/>
+      <point x="-50" y="686" type="line"/>
+      <point x="-50" y="327"/>
+      <point x="241" y="36"/>
+      <point x="600" y="36" type="curve" smooth="yes"/>
+      <point x="959" y="36"/>
+      <point x="1250" y="327"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="equal_colon_equal.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-1041" y="956" type="line"/>
+      <point x="-2214" y="956" type="line"/>
+      <point x="-2214" y="709" type="line"/>
+      <point x="-1041" y="709" type="line"/>
+    </contour>
+    <contour>
+      <point x="-1041" y="535" type="line"/>
+      <point x="-2214" y="535" type="line"/>
+      <point x="-2214" y="290" type="line"/>
+      <point x="-1041" y="290" type="line"/>
+    </contour>
+    <component base="colon_equal.liga" xOffset="-41"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>colon_equal.liga</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPP</string>
+    </dict>
+  </lib>
+</glyph>

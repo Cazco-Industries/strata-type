@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="gcommaaccent" format="2">
+  <advance width="560"/>
+  <unicode hex="0123"/>
+  <anchor x="268" y="747" name="aboveLC"/>
+  <anchor x="267" y="-260" name="belowLC"/>
+  <outline>
+    <component base="g"/>
+    <component base="commabelowcmb.alt" xOffset="254"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.markColor</key>
+      <string>0,1,0.8,0.2</string>
+    </dict>
+  </lib>
+</glyph>

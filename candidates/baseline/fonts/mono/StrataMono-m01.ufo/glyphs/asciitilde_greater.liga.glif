@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="asciitilde_greater.liga" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-673" y="799" type="curve"/>
+      <point x="-901" y="694" type="line"/>
+      <point x="-841" y="518"/>
+      <point x="-658" y="399"/>
+      <point x="-514" y="399" type="curve" smooth="yes"/>
+      <point x="-239" y="399"/>
+      <point x="-227" y="599"/>
+      <point x="-114" y="599" type="curve" smooth="yes"/>
+      <point x="-3" y="599"/>
+      <point x="13" y="387"/>
+      <point x="286" y="387" type="curve" smooth="yes"/>
+      <point x="584" y="387"/>
+      <point x="549" y="563"/>
+      <point x="725" y="547" type="curve"/>
+      <point x="725" y="811" type="line"/>
+      <point x="389" y="840"/>
+      <point x="406" y="645"/>
+      <point x="286" y="645" type="curve" smooth="yes"/>
+      <point x="173" y="645"/>
+      <point x="161" y="845"/>
+      <point x="-114" y="845" type="curve" smooth="yes"/>
+      <point x="-389" y="845"/>
+      <point x="-401" y="645"/>
+      <point x="-514" y="645" type="curve" smooth="yes"/>
+      <point x="-576" y="645"/>
+      <point x="-641" y="719"/>
+    </contour>
+    <component base="_part.arrowhead1" xOffset="53"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>_part.arrowhead1</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="endOfMedium-control" format="2">
+  <advance width="1200"/>
+  <unicode hex="2419"/>
+  <anchor x="798.0" y="458.0" name="bottom"/>
+  <anchor x="515.81" y="458.0" name="ogonek"/>
+  <anchor x="798.0" y="911.42" name="top"/>
+  <anchor x="282.5" y="911.42" name="topleft"/>
+  <anchor x="959.7" y="458.0" name="bottomright"/>
+  <outline>
+    <component base="E" xScale="0.33" yScale="0.33" xOffset="200" yOffset="458"/>
+    <component base="M" xScale="0.33" yScale="0.33" xOffset="600" yOffset="458"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>E</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>M</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

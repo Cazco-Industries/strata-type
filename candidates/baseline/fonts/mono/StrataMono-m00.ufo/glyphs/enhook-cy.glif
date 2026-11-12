@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="enhook-cy" format="2">
+  <advance width="1200"/>
+  <unicode hex="04C8"/>
+  <anchor x="1001" y="0" name="bottomright"/>
+  <outline>
+    <component base="en-cy"/>
+    <component base="hookHELPER" xOffset="474"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>en-cy</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>hookHELPER</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

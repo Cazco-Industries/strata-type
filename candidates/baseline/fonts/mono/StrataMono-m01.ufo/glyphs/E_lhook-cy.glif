@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Elhook-cy" format="2">
+  <advance width="1200"/>
+  <unicode hex="0512"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="1116" y="0" name="bottomright"/>
+  <anchor x="600" y="1386" name="top"/>
+  <outline>
+    <component base="El-cy"/>
+    <component base="hookHELPER.case" xOffset="306"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>El-cy</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>hookHELPER.case</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

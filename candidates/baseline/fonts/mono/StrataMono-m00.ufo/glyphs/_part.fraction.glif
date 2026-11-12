@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="_part.fraction" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-506" y="373" type="line"/>
+      <point x="562" y="885" type="line"/>
+      <point x="508" y="979" type="line"/>
+      <point x="-562" y="467" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+    </dict>
+  </lib>
+</glyph>

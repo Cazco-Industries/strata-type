@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="greater_hyphen_end.seq" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="800" y="497" type="line"/>
+      <point x="800" y="755" type="line"/>
+      <point x="-20" y="755" type="line"/>
+      <point x="-20" y="497" type="line"/>
+    </contour>
+    <component base="_part.arrowhead1"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

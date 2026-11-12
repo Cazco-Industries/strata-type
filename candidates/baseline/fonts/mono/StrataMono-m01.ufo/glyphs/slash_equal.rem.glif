@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="slash_equal.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="954" y="956" type="line"/>
+      <point x="-51" y="956" type="line"/>
+      <point x="-170" y="709" type="line"/>
+      <point x="954" y="709" type="line"/>
+    </contour>
+    <contour>
+      <point x="954" y="535" type="line"/>
+      <point x="-253" y="535" type="line"/>
+      <point x="-369" y="290" type="line"/>
+      <point x="954" y="290" type="line"/>
+    </contour>
+    <component base="slash" xOffset="-1100"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>slash</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPP</string>
+    </dict>
+  </lib>
+</glyph>

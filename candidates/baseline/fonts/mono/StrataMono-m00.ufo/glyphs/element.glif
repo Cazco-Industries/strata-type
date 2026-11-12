@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="element" format="2">
+  <advance width="1200"/>
+  <unicode hex="2208"/>
+  <outline>
+    <contour>
+      <point x="122" y="677" type="line"/>
+      <point x="122" y="571" type="line"/>
+      <point x="1070" y="571" type="line"/>
+      <point x="1070" y="677" type="line"/>
+    </contour>
+    <component base="subset"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

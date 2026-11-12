@@ -1,0 +1,5615 @@
+{
+  "schema": 1,
+  "app_commit": "a8ba1de9782d3930ec73d1425359c73c2dd740a4",
+  "method": "TypeScript AST import bindings and identifier references (imports excluded; static occurrence counts, not runtime executions)",
+  "files_scanned": 1311,
+  "lucide": [
+    {
+      "name": "Activity",
+      "usage_count": 19,
+      "import_count": 11,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Activity",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/demo/weather/page.tsx",
+          "local": "Activity",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "Activity",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/status/page.tsx",
+          "local": "Activity",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/verification/page.tsx",
+          "local": "Activity",
+          "usage_count": 4
+        },
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "Activity",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertImpactSheet.tsx",
+          "local": "Activity",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Activity",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/HealthBriefCard.tsx",
+          "local": "Activity",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Activity",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/SkillScorecardPanel.tsx",
+          "local": "Activity",
+          "usage_count": 3
+        }
+      ],
+      "semantic_name": "activity"
+    },
+    {
+      "name": "AlertTriangle",
+      "usage_count": 9,
+      "import_count": 8,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AlertsBanner.tsx",
+          "local": "AlertTriangle",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/FreshnessIndicator.tsx",
+          "local": "AlertTriangle",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/places/PlacesView.tsx",
+          "local": "AlertTriangle",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarFrameChrome.tsx",
+          "local": "AlertTriangle",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "AlertTriangle",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/storm/StormView.tsx",
+          "local": "AlertTriangle",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/AlertStrip.tsx",
+          "local": "AlertTriangle",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayHero.tsx",
+          "local": "AlertTriangle",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "alert-triangle"
+    },
+    {
+      "name": "ArrowDown",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "ArrowDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/hubs/marine/MarineCards.tsx",
+          "local": "ArrowDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/pro/StormTable.tsx",
+          "local": "ArrowDown",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "arrow-down"
+    },
+    {
+      "name": "ArrowLeft",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/verticals/[id]/page.tsx",
+          "local": "ArrowLeft",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "arrow-left"
+    },
+    {
+      "name": "ArrowLeftRight",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/LaneComparePanel.tsx",
+          "local": "ArrowLeftRight",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "arrow-left-right"
+    },
+    {
+      "name": "ArrowRight",
+      "usage_count": 17,
+      "import_count": 11,
+      "files": [
+        {
+          "file": "apps/web/app/_components/LeadCaptureForm.tsx",
+          "local": "ArrowRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/about/page.tsx",
+          "local": "ArrowRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/demo/page.tsx",
+          "local": "ArrowRight",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "ArrowRight",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/relocation/page.tsx",
+          "local": "ArrowRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/reports/address/AddressReportManager.tsx",
+          "local": "ArrowRight",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/services/page.tsx",
+          "local": "ArrowRight",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/support/page.tsx",
+          "local": "ArrowRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/verticals/page.tsx",
+          "local": "ArrowRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastChangeViewer.tsx",
+          "local": "ArrowRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/LaunchSurfacePanel.tsx",
+          "local": "ArrowRight",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "arrow-right"
+    },
+    {
+      "name": "ArrowUp",
+      "usage_count": 7,
+      "import_count": 7,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AgentAskCard.tsx",
+          "local": "ArrowUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "ArrowUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/hubs/marine/MarineCards.tsx",
+          "local": "ArrowUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/EverydayChrome.tsx",
+          "local": "ArrowUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/pro/StormTable.tsx",
+          "local": "ArrowUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/HourForecastDetails.tsx",
+          "local": "ArrowUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/HourStrip.tsx",
+          "local": "ArrowUp",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "arrow-up"
+    },
+    {
+      "name": "ArrowUpDown",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "ArrowUpDown",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "arrow-up-down"
+    },
+    {
+      "name": "ArrowUpRight",
+      "usage_count": 4,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "ArrowUpRight",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "ArrowUpRight",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "arrow-up-right"
+    },
+    {
+      "name": "BadgeDollarSign",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/LaunchSurfacePanel.tsx",
+          "local": "BadgeDollarSign",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "badge-dollar-sign"
+    },
+    {
+      "name": "BarChart3",
+      "usage_count": 3,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/status/page.tsx",
+          "local": "BarChart3",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "BarChart3",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "bar-chart-3"
+    },
+    {
+      "name": "Bell",
+      "usage_count": 10,
+      "import_count": 7,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "Bell",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/weather/_components/WebPushControl.tsx",
+          "local": "Bell",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/PlanAndBillingPage.tsx",
+          "local": "Bell",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/WelcomePreview.tsx",
+          "local": "Bell",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/EiraReadCard.tsx",
+          "local": "Bell",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayFooter.tsx",
+          "local": "Bell",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewEditor.tsx",
+          "local": "Bell",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "bell"
+    },
+    {
+      "name": "BellOff",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/WebPushControl.tsx",
+          "local": "BellOff",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "bell-off"
+    },
+    {
+      "name": "BellRing",
+      "usage_count": 5,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/verticals/[id]/page.tsx",
+          "local": "BellRing",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "BellRing",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/TriggerBuilderPanel.tsx",
+          "local": "BellRing",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "bell-ring"
+    },
+    {
+      "name": "Bike",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/hubs/snow/RouteCard.tsx",
+          "local": "Bike",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "bike"
+    },
+    {
+      "name": "BookOpen",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/developers/api/page.tsx",
+          "local": "BookOpen",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "book-open"
+    },
+    {
+      "name": "Bot",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/services/page.tsx",
+          "local": "Bot",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "bot"
+    },
+    {
+      "name": "Box",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarDesk.tsx",
+          "local": "Box",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Box",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "box"
+    },
+    {
+      "name": "Boxes",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "Boxes",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "boxes"
+    },
+    {
+      "name": "Braces",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/developers/api/page.tsx",
+          "local": "Braces",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/verticals/[id]/page.tsx",
+          "local": "Braces",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "braces"
+    },
+    {
+      "name": "BriefcaseBusiness",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/DecisionBriefCard.tsx",
+          "local": "BriefcaseBusiness",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "briefcase-business"
+    },
+    {
+      "name": "Building2",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/demo/page.tsx",
+          "local": "Building2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/services/page.tsx",
+          "local": "Building2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "building-2"
+    },
+    {
+      "name": "CalendarCheck2",
+      "usage_count": 2,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/WeatherMilestonesCard.tsx",
+          "local": "CalendarCheck2",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "calendar-check-2"
+    },
+    {
+      "name": "CalendarClock",
+      "usage_count": 2,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "CalendarClock",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "calendar-clock"
+    },
+    {
+      "name": "CalendarDays",
+      "usage_count": 9,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/demo/weather/page.tsx",
+          "local": "CalendarDays",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "CalendarDays",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "CalendarDays",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/weather/_components/PollenCard.tsx",
+          "local": "CalendarDays",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "calendar-days"
+    },
+    {
+      "name": "CalendarRange",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/PersonaOnboarding.tsx",
+          "local": "CalendarRange",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "calendar-range"
+    },
+    {
+      "name": "Car",
+      "usage_count": 4,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/demo/weather/page.tsx",
+          "local": "Car",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "Car",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/DecisionBriefCard.tsx",
+          "local": "Car",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/hubs/snow/RouteCard.tsx",
+          "local": "Car",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "car"
+    },
+    {
+      "name": "ChartLine",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/EnthusiastMapPanel.tsx",
+          "local": "ChartLine",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/PhoneLayerSheet.tsx",
+          "local": "ChartLine",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "ChartLine",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "chart-line"
+    },
+    {
+      "name": "ChartNoAxesCombined",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/today/NextHoursSection.tsx",
+          "local": "ChartNoAxesCombined",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "chart-no-axes-combined"
+    },
+    {
+      "name": "Check",
+      "usage_count": 23,
+      "import_count": 17,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "Check",
+          "usage_count": 6
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/PersonaOnboarding.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/StormTracker.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertsPage.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/CheckoutPreview.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryChrome.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/plans/PlansView.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarLayoutMenu.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/TimelinePanel.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/pages/AccountPage.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/pages/RadarPage.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/ShareButton.tsx",
+          "local": "Check",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/storm/BeReady.tsx",
+          "local": "Check",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "check"
+    },
+    {
+      "name": "CheckCircle2",
+      "usage_count": 6,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/verification/page.tsx",
+          "local": "CheckCircle2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "CheckCircle2",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/weather/_components/SkillScorecardPanel.tsx",
+          "local": "CheckCircle2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/WeatherMilestonesCard.tsx",
+          "local": "CheckCircle2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "check-circle-2"
+    },
+    {
+      "name": "CheckIcon",
+      "usage_count": 3,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/components/ui/dropdown-menu.tsx",
+          "local": "CheckIcon",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/components/ui/select.tsx",
+          "local": "CheckIcon",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "check"
+    },
+    {
+      "name": "ChevronDown",
+      "usage_count": 23,
+      "import_count": 20,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/about/_stage/scene.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/status/OperatorDetails.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/PersonaOnboarding.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/WeatherAppViews.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/WeatherSurface.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertCard.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/fields/FieldChrome.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/hubs/map/HubLayerControl.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/LayerSheet.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/LegendPill.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarDesk.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarDisclosureSummary.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarHeadlineCard.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "ChevronDown",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/TimelinePanel.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/ShellTopBar.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/HourForecastDetails.tsx",
+          "local": "ChevronDown",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayHero.tsx",
+          "local": "ChevronDown",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewEditor.tsx",
+          "local": "ChevronDown",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "chevron-down"
+    },
+    {
+      "name": "ChevronDownIcon",
+      "usage_count": 2,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/components/ui/select.tsx",
+          "local": "ChevronDownIcon",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "chevron-down"
+    },
+    {
+      "name": "ChevronLeft",
+      "usage_count": 13,
+      "import_count": 11,
+      "files": [
+        {
+          "file": "apps/web/app/about/_stage/scene.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/CheckoutPreview.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/PlanAndBillingPage.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/day/TodayBackPill.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryChrome.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/OutlooksBackPill.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/SettingsParts.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/SettingsView.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/ShellSidebar.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/HourStrip.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewsParts.tsx",
+          "local": "ChevronLeft",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "chevron-left"
+    },
+    {
+      "name": "ChevronRight",
+      "usage_count": 26,
+      "import_count": 21,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "ChevronRight",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/about/_stage/scene.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertsBanner.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/BillingTodayLayer.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/day/DayStrip.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/history/PlaceHistoryLink.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/OutlooksParts.tsx",
+          "local": "ChevronRight",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/places/PlacesView.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/PhoneLayerSheet.tsx",
+          "local": "ChevronRight",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarDesk.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarFrameChrome.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/ReadoutCard.tsx",
+          "local": "ChevronRight",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/SettingsParts.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/PlanPill.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/EiraReadCard.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/HourForecastDetails.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/HourStrip.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "ChevronRight",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewsPanel.tsx",
+          "local": "ChevronRight",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "chevron-right"
+    },
+    {
+      "name": "ChevronRightIcon",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/components/ui/dropdown-menu.tsx",
+          "local": "ChevronRightIcon",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "chevron-right"
+    },
+    {
+      "name": "ChevronUp",
+      "usage_count": 5,
+      "import_count": 5,
+      "files": [
+        {
+          "file": "apps/web/app/about/_stage/scene.tsx",
+          "local": "ChevronUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/fields/FieldChrome.tsx",
+          "local": "ChevronUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "ChevronUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/StormCards.tsx",
+          "local": "ChevronUp",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayHero.tsx",
+          "local": "ChevronUp",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "chevron-up"
+    },
+    {
+      "name": "ChevronUpIcon",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/components/ui/select.tsx",
+          "local": "ChevronUpIcon",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "chevron-up"
+    },
+    {
+      "name": "CircleAlert",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/status/page.tsx",
+          "local": "CircleAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertCard.tsx",
+          "local": "CircleAlert",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "circle-alert"
+    },
+    {
+      "name": "Clipboard",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "Clipboard",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "clipboard"
+    },
+    {
+      "name": "Clock",
+      "usage_count": 8,
+      "import_count": 6,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "Clock",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Clock",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/plans/PlansView.tsx",
+          "local": "Clock",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/StargazingSection.tsx",
+          "local": "Clock",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayHero.tsx",
+          "local": "Clock",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewEditor.tsx",
+          "local": "Clock",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "clock"
+    },
+    {
+      "name": "Clock3",
+      "usage_count": 6,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/status/page.tsx",
+          "local": "Clock3",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Clock3",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/weather/_components/FreshnessIndicator.tsx",
+          "local": "Clock3",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "clock-3"
+    },
+    {
+      "name": "Cloud",
+      "usage_count": 4,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "Cloud",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "Cloud",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/StargazingSection.tsx",
+          "local": "Cloud",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "cloud"
+    },
+    {
+      "name": "CloudDrizzle",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertsPage.tsx",
+          "local": "CloudDrizzle",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "CloudDrizzle",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "cloud-drizzle"
+    },
+    {
+      "name": "CloudFog",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "CloudFog",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "cloud-fog"
+    },
+    {
+      "name": "CloudHail",
+      "usage_count": 4,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertsPage.tsx",
+          "local": "CloudHail",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "CloudHail",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/storm/StormView.tsx",
+          "local": "CloudHail",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "cloud-hail"
+    },
+    {
+      "name": "CloudLightning",
+      "usage_count": 9,
+      "import_count": 7,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/MesoscaleDiscussionsCard.tsx",
+          "local": "CloudLightning",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertsPage.tsx",
+          "local": "CloudLightning",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/EverydayOutlook.tsx",
+          "local": "CloudLightning",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/OutlooksParts.tsx",
+          "local": "CloudLightning",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "CloudLightning",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewEditor.tsx",
+          "local": "CloudLightning",
+          "usage_count": 1
+        },
+        {
+          "file": "packages/ui/src/weather-icons/resolve-weather-icon.ts",
+          "local": "CloudLightning",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "cloud-lightning"
+    },
+    {
+      "name": "CloudRain",
+      "usage_count": 30,
+      "import_count": 15,
+      "files": [
+        {
+          "file": "apps/web/app/demo/page.tsx",
+          "local": "CloudRain",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "CloudRain",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "CloudRain",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "CloudRain",
+          "usage_count": 5
+        },
+        {
+          "file": "apps/web/app/weather/_components/MinutecastCard.tsx",
+          "local": "CloudRain",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "CloudRain",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertsPage.tsx",
+          "local": "CloudRain",
+          "usage_count": 4
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/OutlooksParts.tsx",
+          "local": "CloudRain",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/EverydayChrome.tsx",
+          "local": "CloudRain",
+          "usage_count": 4
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/PhoneLayerSheet.tsx",
+          "local": "CloudRain",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "CloudRain",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "CloudRain",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/LongRangeCard.tsx",
+          "local": "CloudRain",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/NextHoursSection.tsx",
+          "local": "CloudRain",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "CloudRain",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "cloud-rain"
+    },
+    {
+      "name": "CloudRainWind",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "CloudRainWind",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "cloud-rain-wind"
+    },
+    {
+      "name": "CloudSnow",
+      "usage_count": 4,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AccumulationBandCard.tsx",
+          "local": "CloudSnow",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "CloudSnow",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertsPage.tsx",
+          "local": "CloudSnow",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "CloudSnow",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "cloud-snow"
+    },
+    {
+      "name": "CloudSun",
+      "usage_count": 6,
+      "import_count": 6,
+      "files": [
+        {
+          "file": "apps/web/app/services/page.tsx",
+          "local": "CloudSun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/PersonaOnboarding.tsx",
+          "local": "CloudSun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "CloudSun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/OutlooksParts.tsx",
+          "local": "CloudSun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "CloudSun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/NextHoursSection.tsx",
+          "local": "CloudSun",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "cloud-sun"
+    },
+    {
+      "name": "Cloudy",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "packages/ui/src/weather-icons/resolve-weather-icon.ts",
+          "local": "Cloudy",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "cloudy"
+    },
+    {
+      "name": "Code",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "Code",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "code"
+    },
+    {
+      "name": "Command",
+      "usage_count": 0,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Command",
+          "usage_count": 0
+        }
+      ],
+      "semantic_name": "command"
+    },
+    {
+      "name": "Compass",
+      "usage_count": 6,
+      "import_count": 6,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "Compass",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/WeatherMap.tsx",
+          "local": "Compass",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/EverydayChrome.tsx",
+          "local": "Compass",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarFrameChrome.tsx",
+          "local": "Compass",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Compass",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "Compass",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "compass"
+    },
+    {
+      "name": "Copy",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/report/[reportId]/AddressReportView.tsx",
+          "local": "Copy",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "copy"
+    },
+    {
+      "name": "Cpu",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "Cpu",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "cpu"
+    },
+    {
+      "name": "Crosshair",
+      "usage_count": 4,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Crosshair",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Crosshair",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "Crosshair",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/ReadoutCard.tsx",
+          "local": "Crosshair",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "crosshair"
+    },
+    {
+      "name": "Database",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Database",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "Database",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/SourceRegistryPanel.tsx",
+          "local": "Database",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "database"
+    },
+    {
+      "name": "DatabaseZap",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/services/page.tsx",
+          "local": "DatabaseZap",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "database-zap"
+    },
+    {
+      "name": "Download",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/report/[reportId]/AddressReportView.tsx",
+          "local": "Download",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/places/PlaceTransferControls.tsx",
+          "local": "Download",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "download"
+    },
+    {
+      "name": "Droplet",
+      "usage_count": 6,
+      "import_count": 5,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "Droplet",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/EverydayOutlook.tsx",
+          "local": "Droplet",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/OutlooksParts.tsx",
+          "local": "Droplet",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "Droplet",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/HourForecastDetails.tsx",
+          "local": "Droplet",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "droplet"
+    },
+    {
+      "name": "Droplets",
+      "usage_count": 3,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Droplets",
+          "usage_count": 3
+        }
+      ],
+      "semantic_name": "droplets"
+    },
+    {
+      "name": "Ellipsis",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/shell/PlaceRowMenu.tsx",
+          "local": "Ellipsis",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "ellipsis"
+    },
+    {
+      "name": "ExternalLink",
+      "usage_count": 4,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/report/[reportId]/AddressReportView.tsx",
+          "local": "ExternalLink",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertImpactSheet.tsx",
+          "local": "ExternalLink",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/DecisionBriefCard.tsx",
+          "local": "ExternalLink",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/share/page.tsx",
+          "local": "ExternalLink",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "external-link"
+    },
+    {
+      "name": "Eye",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/about/page.tsx",
+          "local": "Eye",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "Eye",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayFooter.tsx",
+          "local": "Eye",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "eye"
+    },
+    {
+      "name": "FileCheck2",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/DecisionBriefCard.tsx",
+          "local": "FileCheck2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "file-check-2"
+    },
+    {
+      "name": "FileClock",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ForecastChangeViewer.tsx",
+          "local": "FileClock",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "file-clock"
+    },
+    {
+      "name": "FilePlus2",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/reports/address/AddressReportManager.tsx",
+          "local": "FilePlus2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "file-plus-2"
+    },
+    {
+      "name": "FileText",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "FileText",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "file-text"
+    },
+    {
+      "name": "FileWarning",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/report/[reportId]/AddressReportView.tsx",
+          "local": "FileWarning",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "file-warning"
+    },
+    {
+      "name": "Flame",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Flame",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "flame"
+    },
+    {
+      "name": "Flower2",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/PollenCard.tsx",
+          "local": "Flower2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "flower-2"
+    },
+    {
+      "name": "Folder",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "Folder",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "folder"
+    },
+    {
+      "name": "Footprints",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/hubs/snow/RouteCard.tsx",
+          "local": "Footprints",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "footprints"
+    },
+    {
+      "name": "Gauge",
+      "usage_count": 6,
+      "import_count": 6,
+      "files": [
+        {
+          "file": "apps/web/app/demo/page.tsx",
+          "local": "Gauge",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/verticals/[id]/page.tsx",
+          "local": "Gauge",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "Gauge",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/PersonaOnboarding.tsx",
+          "local": "Gauge",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ViewModeSwitch.tsx",
+          "local": "Gauge",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "GaugeIcon",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "gauge"
+    },
+    {
+      "name": "Globe",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "packages/ui/src/weather-icons/resolve-weather-icon.ts",
+          "local": "Globe",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "globe"
+    },
+    {
+      "name": "Globe2",
+      "usage_count": 2,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "Globe2",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "globe-2"
+    },
+    {
+      "name": "GripVertical",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/places/PlacesView.tsx",
+          "local": "GripVertical",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "grip-vertical"
+    },
+    {
+      "name": "Hammer",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "Hammer",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "hammer"
+    },
+    {
+      "name": "HardDrive",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "HardDrive",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "hard-drive"
+    },
+    {
+      "name": "HeartPulse",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AlertImpactSheet.tsx",
+          "local": "HeartPulse",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/HealthBriefCard.tsx",
+          "local": "HeartPulse",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/WeatherMilestonesCard.tsx",
+          "local": "HeartPulse",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "heart-pulse"
+    },
+    {
+      "name": "History",
+      "usage_count": 4,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/history/PlaceHistoryLink.tsx",
+          "local": "History",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/places/PlacesView.tsx",
+          "local": "History",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/plans/PlansView.tsx",
+          "local": "History",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/PlacePicker.tsx",
+          "local": "History",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "history"
+    },
+    {
+      "name": "Home",
+      "usage_count": 4,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/demo/weather/page.tsx",
+          "local": "Home",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertImpactSheet.tsx",
+          "local": "Home",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/DecisionBriefCard.tsx",
+          "local": "Home",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/PersonaOnboarding.tsx",
+          "local": "Home",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "home"
+    },
+    {
+      "name": "House",
+      "usage_count": 4,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "House",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarLandscapeNav.tsx",
+          "local": "House",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/PlaceRowMenu.tsx",
+          "local": "House",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "house"
+    },
+    {
+      "name": "Inbox",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/HealthDeliveryInbox.tsx",
+          "local": "Inbox",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "inbox"
+    },
+    {
+      "name": "KeyRound",
+      "usage_count": 2,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/developers/api/page.tsx",
+          "local": "KeyRound",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "key-round"
+    },
+    {
+      "name": "Layers",
+      "usage_count": 12,
+      "import_count": 8,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "Layers",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/verticals/[id]/page.tsx",
+          "local": "Layers",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Layers",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/WelcomePreview.tsx",
+          "local": "Layers",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/EverydayChrome.tsx",
+          "local": "Layers",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarFrameChrome.tsx",
+          "local": "Layers",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Layers",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "Layers",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "layers"
+    },
+    {
+      "name": "Layers3",
+      "usage_count": 6,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Layers3",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "Layers3",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Layers3",
+          "usage_count": 3
+        }
+      ],
+      "semantic_name": "layers-3"
+    },
+    {
+      "name": "LayoutGrid",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ViewModeSwitch.tsx",
+          "local": "LayoutGrid",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarLayoutMenu.tsx",
+          "local": "LayoutGrid",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "layout-grid"
+    },
+    {
+      "name": "Leaf",
+      "usage_count": 5,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/EverydayChrome.tsx",
+          "local": "Leaf",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/PhoneLayerSheet.tsx",
+          "local": "Leaf",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "Leaf",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "Leaf",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "leaf"
+    },
+    {
+      "name": "Link2",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/report/[reportId]/AddressReportView.tsx",
+          "local": "Link2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "link-2"
+    },
+    {
+      "name": "List",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarDesk.tsx",
+          "local": "List",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "list"
+    },
+    {
+      "name": "ListOrdered",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "ListOrdered",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "list-ordered"
+    },
+    {
+      "name": "Loader2",
+      "usage_count": 7,
+      "import_count": 5,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "Loader2",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/HealthBriefCard.tsx",
+          "local": "Loader2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/TimeMachineCard.tsx",
+          "local": "Loader2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/TriggerBuilderPanel.tsx",
+          "local": "Loader2",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/WebPushControl.tsx",
+          "local": "Loader2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "loader-2"
+    },
+    {
+      "name": "LoaderCircle",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "LoaderCircle",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "loader-circle"
+    },
+    {
+      "name": "LocateFixed",
+      "usage_count": 5,
+      "import_count": 5,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/places/PlacesView.tsx",
+          "local": "LocateFixed",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarFrameChrome.tsx",
+          "local": "LocateFixed",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/pages/PlacesPage.tsx",
+          "local": "LocateFixed",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/PlacePicker.tsx",
+          "local": "LocateFixed",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "LocateFixed",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "locate-fixed"
+    },
+    {
+      "name": "Lock",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/settings/pages/RadarPage.tsx",
+          "local": "Lock",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "lock"
+    },
+    {
+      "name": "LockKeyhole",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/PersonaOnboarding.tsx",
+          "local": "LockKeyhole",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "lock-keyhole"
+    },
+    {
+      "name": "LogIn",
+      "usage_count": 6,
+      "import_count": 6,
+      "files": [
+        {
+          "file": "apps/web/app/_components/SignInLink.tsx",
+          "local": "LogIn",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/report/[reportId]/AddressReportView.tsx",
+          "local": "LogIn",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/reports/address/AddressReportManager.tsx",
+          "local": "LogIn",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AccountControl.tsx",
+          "local": "LogIn",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/LocationWatchboard.tsx",
+          "local": "LogIn",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/AccountAvatar.tsx",
+          "local": "LogIn",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "log-in"
+    },
+    {
+      "name": "LogOut",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AccountControl.tsx",
+          "local": "LogOut",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/AccountAvatar.tsx",
+          "local": "LogOut",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "log-out"
+    },
+    {
+      "name": "Mail",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/support/page.tsx",
+          "local": "Mail",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "mail"
+    },
+    {
+      "name": "Map",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Map",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/WeatherMilestonesCard.tsx",
+          "local": "MapIcon",
+          "usage_count": 1
+        },
+        {
+          "file": "packages/ui/src/weather-icons/resolve-weather-icon.ts",
+          "local": "MapIcon",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "map"
+    },
+    {
+      "name": "MapPin",
+      "usage_count": 9,
+      "import_count": 8,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "MapPin",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/LaunchSurfacePanel.tsx",
+          "local": "MapPin",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/LocationWatchboard.tsx",
+          "local": "MapPin",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarLandscapeNav.tsx",
+          "local": "MapPin",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/pages/PlacesPage.tsx",
+          "local": "MapPin",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/PlacePicker.tsx",
+          "local": "MapPin",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/ShellSidebar.tsx",
+          "local": "MapPin",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewEditor.tsx",
+          "local": "MapPin",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "map-pin"
+    },
+    {
+      "name": "MapPinned",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/relocation/page.tsx",
+          "local": "MapPinned",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "map-pinned"
+    },
+    {
+      "name": "MapPinPlusInside",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/shell/PlacePicker.tsx",
+          "local": "MapPinPlusInside",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "map-pin-plus-inside"
+    },
+    {
+      "name": "Maximize2",
+      "usage_count": 4,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarFrameChrome.tsx",
+          "local": "Maximize2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "Maximize2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/SplitPane.tsx",
+          "local": "Maximize2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapCard.tsx",
+          "local": "Maximize2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "maximize-2"
+    },
+    {
+      "name": "Menu",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "Menu",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/_components/SiteNav.tsx",
+          "local": "Menu",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarLandscapeNav.tsx",
+          "local": "Menu",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "menu"
+    },
+    {
+      "name": "Minimize2",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarFrameChrome.tsx",
+          "local": "Minimize2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarStage.tsx",
+          "local": "Minimize2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapCard.tsx",
+          "local": "Minimize2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "minimize-2"
+    },
+    {
+      "name": "Minus",
+      "usage_count": 7,
+      "import_count": 6,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/hubs/hubParts.tsx",
+          "local": "Minus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarDesk.tsx",
+          "local": "Minus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarHeadlineCard.tsx",
+          "local": "Minus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/TimelinePanel.tsx",
+          "local": "Minus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "Minus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/CardList.tsx",
+          "local": "Minus",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "minus"
+    },
+    {
+      "name": "MonitorDown",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/InstallPromptChip.tsx",
+          "local": "MonitorDown",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "monitor-down"
+    },
+    {
+      "name": "Moon",
+      "usage_count": 4,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "Moon",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/StargazingSection.tsx",
+          "local": "Moon",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/SunriseSunsetCard.tsx",
+          "local": "Moon",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "moon"
+    },
+    {
+      "name": "Mountain",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/today/StormCards.tsx",
+          "local": "Mountain",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "mountain"
+    },
+    {
+      "name": "Navigation",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/EverydayChrome.tsx",
+          "local": "Navigation",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Navigation",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/PlacePicker.tsx",
+          "local": "Navigation",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "navigation"
+    },
+    {
+      "name": "OctagonAlert",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertCard.tsx",
+          "local": "OctagonAlert",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "octagon-alert"
+    },
+    {
+      "name": "PanelLeft",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarDesk.tsx",
+          "local": "PanelLeft",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "panel-left"
+    },
+    {
+      "name": "PanelRightOpen",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ProWorkspaceDrawer.tsx",
+          "local": "PanelRightOpen",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "panel-right-open"
+    },
+    {
+      "name": "Pause",
+      "usage_count": 9,
+      "import_count": 7,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Pause",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/about/_stage/AskEiraDemo.tsx",
+          "local": "Pause",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Pause",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/TimelineDock.tsx",
+          "local": "Pause",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Pause",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/ScrubberBar.tsx",
+          "local": "Pause",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/TimelinePanel.tsx",
+          "local": "Pause",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "pause"
+    },
+    {
+      "name": "Pencil",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/shell/PlaceRowMenu.tsx",
+          "local": "Pencil",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "pencil"
+    },
+    {
+      "name": "Pin",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/shell/PlaceRow.tsx",
+          "local": "Pin",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/PlaceRowMenu.tsx",
+          "local": "Pin",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "pin"
+    },
+    {
+      "name": "PinOff",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/shell/PlaceRowMenu.tsx",
+          "local": "PinOff",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "pin-off"
+    },
+    {
+      "name": "Play",
+      "usage_count": 10,
+      "import_count": 7,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Play",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/about/_stage/AskEiraDemo.tsx",
+          "local": "Play",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Play",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/TimelineDock.tsx",
+          "local": "Play",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Play",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/ScrubberBar.tsx",
+          "local": "Play",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/TimelinePanel.tsx",
+          "local": "Play",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "play"
+    },
+    {
+      "name": "PlayCircle",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/services/page.tsx",
+          "local": "PlayCircle",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "play-circle"
+    },
+    {
+      "name": "Plug",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Plug",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "plug"
+    },
+    {
+      "name": "Plus",
+      "usage_count": 21,
+      "import_count": 15,
+      "files": [
+        {
+          "file": "apps/web/app/about/_stage/scene.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Plus",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/LocationWatchboard.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/TriggerBuilderPanel.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/hubs/hubParts.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/places/PlacesView.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarDesk.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/OwnAlertsCard.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/ShellSidebar.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/CardList.tsx",
+          "local": "Plus",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewEditor.tsx",
+          "local": "Plus",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewsPanel.tsx",
+          "local": "Plus",
+          "usage_count": 5
+        }
+      ],
+      "semantic_name": "plus"
+    },
+    {
+      "name": "Radar",
+      "usage_count": 15,
+      "import_count": 11,
+      "files": [
+        {
+          "file": "apps/web/app/about/page.tsx",
+          "local": "Radar",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/demo/page.tsx",
+          "local": "Radar",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/demo/weather/page.tsx",
+          "local": "Radar",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "Radar",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/status/page.tsx",
+          "local": "Radar",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/support/page.tsx",
+          "local": "Radar",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Radar",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/WelcomePreview.tsx",
+          "local": "Radar",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/LayerLibraryPanel.tsx",
+          "local": "Radar",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayHero.tsx",
+          "local": "Radar",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapCard.tsx",
+          "local": "Radar",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "radar"
+    },
+    {
+      "name": "RadarIcon",
+      "usage_count": 2,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/SiteRadarComparePanel.tsx",
+          "local": "RadarIcon",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "radar"
+    },
+    {
+      "name": "RadioTower",
+      "usage_count": 5,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/verification/page.tsx",
+          "local": "RadioTower",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastTrustPanel.tsx",
+          "local": "RadioTower",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/SkillScorecardPanel.tsx",
+          "local": "RadioTower",
+          "usage_count": 2
+        },
+        {
+          "file": "packages/ui/src/weather-icons/resolve-weather-icon.ts",
+          "local": "RadioTower",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "radio-tower"
+    },
+    {
+      "name": "Radius",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Radius",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "radius"
+    },
+    {
+      "name": "RectangleVertical",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "RectangleVertical",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "rectangle-vertical"
+    },
+    {
+      "name": "RefreshCw",
+      "usage_count": 5,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "RefreshCw",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/DataStatusBanner.tsx",
+          "local": "RefreshCw",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastChangeViewer.tsx",
+          "local": "RefreshCw",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/SiteRadarComparePanel.tsx",
+          "local": "RefreshCw",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "refresh-cw"
+    },
+    {
+      "name": "RotateCcw",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/ScrubberBar.tsx",
+          "local": "RotateCcw",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "rotate-ccw"
+    },
+    {
+      "name": "Route",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/developers/api/page.tsx",
+          "local": "Route",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertImpactSheet.tsx",
+          "local": "Route",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Route",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "route"
+    },
+    {
+      "name": "Rows2",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Rows2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "rows-2"
+    },
+    {
+      "name": "Rows3",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Rows3",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "rows-3"
+    },
+    {
+      "name": "Ruler",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Ruler",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "ruler"
+    },
+    {
+      "name": "Satellite",
+      "usage_count": 4,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Satellite",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/EnthusiastMapPanel.tsx",
+          "local": "Satellite",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/PhoneLayerSheet.tsx",
+          "local": "Satellite",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "satellite"
+    },
+    {
+      "name": "Scan",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Scan",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "Scan",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "scan"
+    },
+    {
+      "name": "ScanLine",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "packages/ui/src/weather-icons/resolve-weather-icon.ts",
+          "local": "ScanLine",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "scan-line"
+    },
+    {
+      "name": "School",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "School",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "school"
+    },
+    {
+      "name": "Search",
+      "usage_count": 7,
+      "import_count": 7,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "Search",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "Search",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/places/PlacesView.tsx",
+          "local": "Search",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/libraryParts.tsx",
+          "local": "Search",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/SettingsView.tsx",
+          "local": "Search",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/pages/PlacesPage.tsx",
+          "local": "Search",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/PlacePicker.tsx",
+          "local": "Search",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "search"
+    },
+    {
+      "name": "Settings",
+      "usage_count": 4,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/about/_stage/scene.tsx",
+          "local": "Settings",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/AccountAvatar.tsx",
+          "local": "Settings",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/ShellSidebar.tsx",
+          "local": "Settings",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "settings"
+    },
+    {
+      "name": "Settings2",
+      "usage_count": 2,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/WeatherMilestonesCard.tsx",
+          "local": "Settings2",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "settings-2"
+    },
+    {
+      "name": "Share",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryChrome.tsx",
+          "local": "Share",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/ShareButton.tsx",
+          "local": "Share",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "share"
+    },
+    {
+      "name": "Share2",
+      "usage_count": 4,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "Share2",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/StormTracker.tsx",
+          "local": "Share2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/share/page.tsx",
+          "local": "Share2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "share-2"
+    },
+    {
+      "name": "Shield",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertsPage.tsx",
+          "local": "Shield",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "shield"
+    },
+    {
+      "name": "ShieldAlert",
+      "usage_count": 9,
+      "import_count": 8,
+      "files": [
+        {
+          "file": "apps/web/app/demo/page.tsx",
+          "local": "ShieldAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/demo/weather/page.tsx",
+          "local": "ShieldAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/support/page.tsx",
+          "local": "ShieldAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/verification/page.tsx",
+          "local": "ShieldAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertImpactSheet.tsx",
+          "local": "ShieldAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "ShieldAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "ShieldAlert",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "ShieldAlert",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "shield-alert"
+    },
+    {
+      "name": "ShieldCheck",
+      "usage_count": 12,
+      "import_count": 10,
+      "files": [
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/about/page.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/developers/api/page.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/report/[reportId]/AddressReportView.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/services/page.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/status/page.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastTrustPanel.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/LaunchSurfacePanel.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/SourceRegistryPanel.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/share/page.tsx",
+          "local": "ShieldCheck",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "shield-check"
+    },
+    {
+      "name": "SkipBack",
+      "usage_count": 4,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "SkipBack",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/TimelineDock.tsx",
+          "local": "SkipBack",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/ScrubberBar.tsx",
+          "local": "SkipBack",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/TimelinePanel.tsx",
+          "local": "SkipBack",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "skip-back"
+    },
+    {
+      "name": "SkipForward",
+      "usage_count": 4,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "SkipForward",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/TimelineDock.tsx",
+          "local": "SkipForward",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/ScrubberBar.tsx",
+          "local": "SkipForward",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/TimelinePanel.tsx",
+          "local": "SkipForward",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "skip-forward"
+    },
+    {
+      "name": "SlidersHorizontal",
+      "usage_count": 8,
+      "import_count": 8,
+      "files": [
+        {
+          "file": "apps/web/app/relocation/page.tsx",
+          "local": "SlidersHorizontal",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/WelcomePreview.tsx",
+          "local": "SlidersHorizontal",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/fields/FieldChrome.tsx",
+          "local": "SlidersHorizontal",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayFooter.tsx",
+          "local": "SlidersHorizontal",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "SlidersHorizontal",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewEditor.tsx",
+          "local": "SlidersHorizontal",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewNotices.tsx",
+          "local": "SlidersHorizontal",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewsMenuGroup.tsx",
+          "local": "SlidersHorizontal",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "sliders-horizontal"
+    },
+    {
+      "name": "Smartphone",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/status/page.tsx",
+          "local": "Smartphone",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "smartphone"
+    },
+    {
+      "name": "Snowflake",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Snowflake",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/OutlooksParts.tsx",
+          "local": "Snowflake",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "Snowflake",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "snowflake"
+    },
+    {
+      "name": "Sparkles",
+      "usage_count": 6,
+      "import_count": 4,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/PersonaOnboarding.tsx",
+          "local": "Sparkles",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/SpaceWeatherCard.tsx",
+          "local": "Sparkles",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/ViewModeSwitch.tsx",
+          "local": "Sparkles",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/WeatherMilestonesCard.tsx",
+          "local": "Sparkles",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "sparkles"
+    },
+    {
+      "name": "Sprout",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "Sprout",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/PollenCard.tsx",
+          "local": "Sprout",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "sprout"
+    },
+    {
+      "name": "Star",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/LocationWatchboard.tsx",
+          "local": "Star",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/LayerLibraryPanel.tsx",
+          "local": "Star",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/PhoneLayerSheet.tsx",
+          "local": "Star",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "star"
+    },
+    {
+      "name": "Sun",
+      "usage_count": 6,
+      "import_count": 6,
+      "files": [
+        {
+          "file": "apps/web/app/about/page.tsx",
+          "local": "Sun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "Sun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/day/DayGlance.tsx",
+          "local": "Sun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/OutlooksParts.tsx",
+          "local": "Sun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "Sun",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/shellNav.ts",
+          "local": "Sun",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "sun"
+    },
+    {
+      "name": "SunDim",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "SunDim",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "sun-dim"
+    },
+    {
+      "name": "Sunrise",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/day/DayGlance.tsx",
+          "local": "Sunrise",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/SunriseSunsetCard.tsx",
+          "local": "Sunrise",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "sunrise"
+    },
+    {
+      "name": "Sunset",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "Sunset",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/SunriseSunsetCard.tsx",
+          "local": "Sunset",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "sunset"
+    },
+    {
+      "name": "Target",
+      "usage_count": 3,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ForecastTrustPanel.tsx",
+          "local": "Target",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/SkillScorecardPanel.tsx",
+          "local": "Target",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "target"
+    },
+    {
+      "name": "Terminal",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "Terminal",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "Terminal",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "terminal"
+    },
+    {
+      "name": "Thermometer",
+      "usage_count": 13,
+      "import_count": 8,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "Thermometer",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Thermometer",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/OutlooksParts.tsx",
+          "local": "Thermometer",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/EverydayChrome.tsx",
+          "local": "Thermometer",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/PhoneLayerSheet.tsx",
+          "local": "Thermometer",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "Thermometer",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/LongRangeCard.tsx",
+          "local": "Thermometer",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "Thermometer",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "thermometer"
+    },
+    {
+      "name": "ThermometerSnowflake",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/report/ReportPanel.tsx",
+          "local": "ThermometerSnowflake",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "thermometer-snowflake"
+    },
+    {
+      "name": "ThermometerSun",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/DecisionBriefCard.tsx",
+          "local": "ThermometerSun",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "thermometer-sun"
+    },
+    {
+      "name": "Tornado",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/PersonaOnboarding.tsx",
+          "local": "Tornado",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "Tornado",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "tornado"
+    },
+    {
+      "name": "Trash2",
+      "usage_count": 7,
+      "import_count": 6,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Trash2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/HealthBriefCard.tsx",
+          "local": "Trash2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/LocationWatchboard.tsx",
+          "local": "Trash2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/TriggerBuilderPanel.tsx",
+          "local": "Trash2",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/PlaceRowMenu.tsx",
+          "local": "Trash2",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewEditor.tsx",
+          "local": "Trash2",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "trash-2"
+    },
+    {
+      "name": "TreePine",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "TreePine",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "tree-pine"
+    },
+    {
+      "name": "TrendingUp",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/DecisionBriefCard.tsx",
+          "local": "TrendingUp",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "trending-up"
+    },
+    {
+      "name": "TriangleAlert",
+      "usage_count": 6,
+      "import_count": 5,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/SourceRegistryPanel.tsx",
+          "local": "TriangleAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/alerts/AlertCard.tsx",
+          "local": "TriangleAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/BillingTodayLayer.tsx",
+          "local": "TriangleAlert",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/EiraReadCard.tsx",
+          "local": "TriangleAlert",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewsParts.tsx",
+          "local": "TriangleAlert",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "triangle-alert"
+    },
+    {
+      "name": "Trophy",
+      "usage_count": 2,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/WeatherMilestonesCard.tsx",
+          "local": "Trophy",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "trophy"
+    },
+    {
+      "name": "Upload",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/places/PlaceTransferControls.tsx",
+          "local": "Upload",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "upload"
+    },
+    {
+      "name": "User",
+      "usage_count": 2,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/about/_stage/scene.tsx",
+          "local": "User",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "user"
+    },
+    {
+      "name": "UserRound",
+      "usage_count": 3,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AccountControl.tsx",
+          "local": "UserRound",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/AccountAvatar.tsx",
+          "local": "UserRound",
+          "usage_count": 2
+        }
+      ],
+      "semantic_name": "user-round"
+    },
+    {
+      "name": "Warehouse",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "Warehouse",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "warehouse"
+    },
+    {
+      "name": "Waves",
+      "usage_count": 3,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/DecisionBriefCard.tsx",
+          "local": "Waves",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Waves",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/TropicalHubCard.tsx",
+          "local": "Waves",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "waves"
+    },
+    {
+      "name": "Wind",
+      "usage_count": 18,
+      "import_count": 14,
+      "files": [
+        {
+          "file": "apps/web/app/models/page.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "Wind",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/PollenCard.tsx",
+          "local": "Wind",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Wind",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/day/DayGlance.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/EverydayOutlook.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/EverydayChrome.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/PhoneLayerSheet.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/storm/StormView.tsx",
+          "local": "Wind",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/NextHoursSection.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapBehind.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/TodayMapCard.tsx",
+          "local": "Wind",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "wind"
+    },
+    {
+      "name": "Wrench",
+      "usage_count": 1,
+      "import_count": 1,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarPhone.tsx",
+          "local": "Wrench",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "wrench"
+    },
+    {
+      "name": "X",
+      "usage_count": 28,
+      "import_count": 25,
+      "files": [
+        {
+          "file": "apps/docs-app/src/App.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/scheduler-web/src/main.tsx",
+          "local": "X",
+          "usage_count": 3
+        },
+        {
+          "file": "apps/web/app/about/_stage/scene.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ActivityPlannerCard.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ForecastDashboard.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/InstallPromptChip.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/billing/billingParts.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/fields/FieldPointSheet.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/fields/FieldReadout.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/history/HistoryParts.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/hubs/hubParts.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/hubs/map/HubLayerControl.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/instruments/InstrumentDialog.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/outlooks/ReaderParts.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/BottomSheet.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/EverydayChrome.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarAlertDock.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/RadarLayoutMenu.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/radar/ReadoutCard.tsx",
+          "local": "X",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/SettingsView.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/settings/pages/PlacesPage.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/shell/AskSheet.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/HourForecastDetails.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewEditor.tsx",
+          "local": "X",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/views/ViewsUpsell.tsx",
+          "local": "X",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "x"
+    },
+    {
+      "name": "XIcon",
+      "usage_count": 2,
+      "import_count": 2,
+      "files": [
+        {
+          "file": "apps/web/components/ui/dialog.tsx",
+          "local": "XIcon",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/components/ui/sheet.tsx",
+          "local": "XIcon",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "x"
+    },
+    {
+      "name": "Zap",
+      "usage_count": 4,
+      "import_count": 3,
+      "files": [
+        {
+          "file": "apps/web/app/weather/_components/AlertPreferencesPanel.tsx",
+          "local": "Zap",
+          "usage_count": 1
+        },
+        {
+          "file": "apps/web/app/weather/_components/ProLayerSettings.tsx",
+          "local": "Zap",
+          "usage_count": 2
+        },
+        {
+          "file": "apps/web/app/weather/_components/today/ConditionsGrid.tsx",
+          "local": "Zap",
+          "usage_count": 1
+        }
+      ],
+      "semantic_name": "zap"
+    }
+  ],
+  "manual_review": [],
+  "condition_glyphs": [
+    {
+      "name": "clear-day",
+      "semantic_name": "clear-day",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "clear-night",
+      "semantic_name": "clear-night",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "cloudy",
+      "semantic_name": "cloudy",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "cold",
+      "semantic_name": "cold",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "drizzle",
+      "semantic_name": "drizzle",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "fog",
+      "semantic_name": "fog",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "freezing-rain",
+      "semantic_name": "freezing-rain",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "hail",
+      "semantic_name": "hail",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "haze",
+      "semantic_name": "haze",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "heavy-rain",
+      "semantic_name": "heavy-rain",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "hot",
+      "semantic_name": "hot",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "hurricane",
+      "semantic_name": "hurricane",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "partly-cloudy-day",
+      "semantic_name": "partly-cloudy-day",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "partly-cloudy-night",
+      "semantic_name": "partly-cloudy-night",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "rain",
+      "semantic_name": "rain",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "showers-day",
+      "semantic_name": "showers-day",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "showers-night",
+      "semantic_name": "showers-night",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "sleet",
+      "semantic_name": "sleet",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "snow",
+      "semantic_name": "snow",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "sunrise",
+      "semantic_name": "sunrise",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "sunset",
+      "semantic_name": "sunset",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "thunderstorm",
+      "semantic_name": "thunderstorm",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "tornado",
+      "semantic_name": "tornado",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "unknown",
+      "semantic_name": "unknown",
+      "file": "packages/ui/src/condition-glyph.ts"
+    },
+    {
+      "name": "wind",
+      "semantic_name": "wind",
+      "file": "packages/ui/src/condition-glyph.ts"
+    }
+  ],
+  "nws_codes": {
+    "day": {
+      "skc": "day-sunny",
+      "few": "day-sunny",
+      "sct": "day-cloudy",
+      "bkn": "day-cloudy",
+      "ovc": "cloudy",
+      "wind_skc": "day-windy",
+      "wind_few": "day-windy",
+      "wind_sct": "day-cloudy-windy",
+      "wind_bkn": "day-cloudy-windy",
+      "wind_ovc": "cloudy",
+      "snow": "snow",
+      "rain_snow": "rain-mix",
+      "snow_sleet": "sleet",
+      "rain_sleet": "sleet",
+      "rain_fzra": "rain-mix",
+      "snow_fzra": "rain-mix",
+      "fzra": "rain-mix",
+      "rain_showers": "day-showers",
+      "rain_showers_hi": "day-showers",
+      "rain": "rain",
+      "sprinkles": "sprinkle",
+      "hail": "hail",
+      "sleet": "sleet",
+      "fog": "fog",
+      "hot": "hot",
+      "cold": "snowflake-cold",
+      "blizzard": "snow-wind",
+      "tsra": "thunderstorm",
+      "tsra_sct": "day-thunderstorm",
+      "tsra_hi": "day-thunderstorm",
+      "tornado": "tornado",
+      "hurricane": "hurricane",
+      "tropical_storm": "hurricane",
+      "dust": "dust",
+      "smoke": "smoke",
+      "haze": "day-haze"
+    },
+    "night": {
+      "skc": "night-clear",
+      "few": "night-clear",
+      "sct": "night-cloudy",
+      "bkn": "night-cloudy",
+      "ovc": "cloudy",
+      "wind_skc": "night-cloudy-windy",
+      "wind_few": "night-cloudy-windy",
+      "wind_sct": "night-cloudy-windy",
+      "wind_bkn": "night-cloudy-windy",
+      "wind_ovc": "cloudy",
+      "snow": "snow",
+      "rain_snow": "night-rain-mix",
+      "snow_sleet": "night-sleet",
+      "rain_sleet": "night-sleet",
+      "rain_fzra": "night-rain-mix",
+      "snow_fzra": "night-rain-mix",
+      "fzra": "night-rain-mix",
+      "rain_showers": "night-showers",
+      "rain_showers_hi": "night-showers",
+      "rain": "night-rain",
+      "sprinkles": "night-sprinkle",
+      "hail": "night-hail",
+      "sleet": "night-sleet",
+      "fog": "night-fog",
+      "hot": "hot",
+      "cold": "snowflake-cold",
+      "blizzard": "night-snow-wind",
+      "tsra": "night-thunderstorm",
+      "tsra_sct": "night-thunderstorm",
+      "tsra_hi": "night-thunderstorm",
+      "tornado": "tornado",
+      "hurricane": "hurricane",
+      "tropical_storm": "hurricane",
+      "dust": "dust",
+      "smoke": "smoke",
+      "haze": "night-fog"
+    }
+  },
+  "erik_flowers_referenced": [
+    {
+      "name": "cloud",
+      "semantic_name": "cloud",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "cloudy",
+      "semantic_name": "cloudy",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "day-cloudy",
+      "semantic_name": "partly-cloudy-day",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "day-cloudy-windy",
+      "semantic_name": "day-cloudy-windy",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "day-haze",
+      "semantic_name": "haze-day",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "day-showers",
+      "semantic_name": "showers-day",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "day-sunny",
+      "semantic_name": "clear-day",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "day-thunderstorm",
+      "semantic_name": "thunderstorm-day",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "day-windy",
+      "semantic_name": "day-windy",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "dust",
+      "semantic_name": "dust",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "fire",
+      "semantic_name": "fire",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "flood",
+      "semantic_name": "flood",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "fog",
+      "semantic_name": "fog",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "hail",
+      "semantic_name": "hail",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "hot",
+      "semantic_name": "hot",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "hurricane",
+      "semantic_name": "hurricane",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "moonrise",
+      "semantic_name": "moonrise",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "moonset",
+      "semantic_name": "moonset",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "na",
+      "semantic_name": "na",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "night-clear",
+      "semantic_name": "clear-night",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "night-cloudy",
+      "semantic_name": "partly-cloudy-night",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "night-cloudy-windy",
+      "semantic_name": "night-cloudy-windy",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "night-fog",
+      "semantic_name": "fog-night",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "night-hail",
+      "semantic_name": "hail-night",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "night-partly-cloudy",
+      "semantic_name": "partly-cloudy-night",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "night-rain",
+      "semantic_name": "rain-night",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "night-rain-mix",
+      "semantic_name": "night-rain-mix",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "night-showers",
+      "semantic_name": "showers-night",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "night-sleet",
+      "semantic_name": "sleet-night",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "night-snow-wind",
+      "semantic_name": "night-snow-wind",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "night-sprinkle",
+      "semantic_name": "drizzle-night",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "night-thunderstorm",
+      "semantic_name": "thunderstorm-night",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts"
+      ]
+    },
+    {
+      "name": "rain",
+      "semantic_name": "rain",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "rain-mix",
+      "semantic_name": "rain-mix",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "sleet",
+      "semantic_name": "sleet",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "smog",
+      "semantic_name": "smog",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "smoke",
+      "semantic_name": "smoke",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "snow",
+      "semantic_name": "snow",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "snow-wind",
+      "semantic_name": "snow-wind",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "snowflake-cold",
+      "semantic_name": "cold",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "sprinkle",
+      "semantic_name": "drizzle",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "strong-wind",
+      "semantic_name": "wind-strong",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "sunrise",
+      "semantic_name": "sunrise",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "sunset",
+      "semantic_name": "sunset",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "thunderstorm",
+      "semantic_name": "thunderstorm",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "tornado",
+      "semantic_name": "tornado",
+      "files": [
+        "packages/ui/src/weather-icons/nws-map.ts",
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "tsunami",
+      "semantic_name": "tsunami",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "umbrella",
+      "semantic_name": "umbrella",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    },
+    {
+      "name": "windy",
+      "semantic_name": "wind",
+      "files": [
+        "packages/ui/src/weather-icons/resolve-weather-icon.ts"
+      ]
+    }
+  ],
+  "erik_flowers_catalog": [
+    "alien",
+    "barometer",
+    "celsius",
+    "cloud",
+    "cloud-down",
+    "cloud-refresh",
+    "cloud-up",
+    "cloudy",
+    "cloudy-gusts",
+    "cloudy-windy",
+    "day-cloudy",
+    "day-cloudy-gusts",
+    "day-cloudy-high",
+    "day-cloudy-windy",
+    "day-fog",
+    "day-hail",
+    "day-haze",
+    "day-light-wind",
+    "day-lightning",
+    "day-rain",
+    "day-rain-mix",
+    "day-rain-wind",
+    "day-showers",
+    "day-sleet",
+    "day-sleet-storm",
+    "day-snow",
+    "day-snow-thunderstorm",
+    "day-snow-wind",
+    "day-sprinkle",
+    "day-storm-showers",
+    "day-sunny",
+    "day-sunny-overcast",
+    "day-thunderstorm",
+    "day-windy",
+    "degrees",
+    "direction-down",
+    "direction-down-left",
+    "direction-down-right",
+    "direction-left",
+    "direction-right",
+    "direction-up",
+    "direction-up-left",
+    "direction-up-right",
+    "dust",
+    "earthquake",
+    "fahrenheit",
+    "fire",
+    "flood",
+    "fog",
+    "gale-warning",
+    "hail",
+    "horizon",
+    "horizon-alt",
+    "hot",
+    "humidity",
+    "hurricane",
+    "hurricane-warning",
+    "lightning",
+    "lunar-eclipse",
+    "meteor",
+    "moon-alt-first-quarter",
+    "moon-alt-full",
+    "moon-alt-new",
+    "moon-alt-third-quarter",
+    "moon-alt-waning-crescent-1",
+    "moon-alt-waning-crescent-2",
+    "moon-alt-waning-crescent-3",
+    "moon-alt-waning-crescent-4",
+    "moon-alt-waning-crescent-5",
+    "moon-alt-waning-crescent-6",
+    "moon-alt-waning-gibbous-1",
+    "moon-alt-waning-gibbous-2",
+    "moon-alt-waning-gibbous-3",
+    "moon-alt-waning-gibbous-4",
+    "moon-alt-waning-gibbous-5",
+    "moon-alt-waning-gibbous-6",
+    "moon-alt-waxing-crescent-1",
+    "moon-alt-waxing-crescent-2",
+    "moon-alt-waxing-crescent-3",
+    "moon-alt-waxing-crescent-4",
+    "moon-alt-waxing-crescent-5",
+    "moon-alt-waxing-crescent-6",
+    "moon-alt-waxing-gibbous-1",
+    "moon-alt-waxing-gibbous-2",
+    "moon-alt-waxing-gibbous-3",
+    "moon-alt-waxing-gibbous-4",
+    "moon-alt-waxing-gibbous-5",
+    "moon-alt-waxing-gibbous-6",
+    "moon-first-quarter",
+    "moon-full",
+    "moon-new",
+    "moon-third-quarter",
+    "moon-waning-crescent-1",
+    "moon-waning-crescent-2",
+    "moon-waning-crescent-3",
+    "moon-waning-crescent-4",
+    "moon-waning-crescent-5",
+    "moon-waning-crescent-6",
+    "moon-waning-gibbous-1",
+    "moon-waning-gibbous-2",
+    "moon-waning-gibbous-3",
+    "moon-waning-gibbous-4",
+    "moon-waning-gibbous-5",
+    "moon-waning-gibbous-6",
+    "moon-waxing-6",
+    "moon-waxing-crescent-1",
+    "moon-waxing-crescent-2",
+    "moon-waxing-crescent-3",
+    "moon-waxing-crescent-4",
+    "moon-waxing-crescent-5",
+    "moon-waxing-gibbous-1",
+    "moon-waxing-gibbous-2",
+    "moon-waxing-gibbous-3",
+    "moon-waxing-gibbous-4",
+    "moon-waxing-gibbous-5",
+    "moon-waxing-gibbous-6",
+    "moonrise",
+    "moonset",
+    "na",
+    "night-alt-cloudy",
+    "night-alt-cloudy-gusts",
+    "night-alt-cloudy-high",
+    "night-alt-cloudy-windy",
+    "night-alt-hail",
+    "night-alt-lightning",
+    "night-alt-partly-cloudy",
+    "night-alt-rain",
+    "night-alt-rain-mix",
+    "night-alt-rain-wind",
+    "night-alt-showers",
+    "night-alt-sleet",
+    "night-alt-sleet-storm",
+    "night-alt-snow",
+    "night-alt-snow-thunderstorm",
+    "night-alt-snow-wind",
+    "night-alt-sprinkle",
+    "night-alt-storm-showers",
+    "night-alt-thunderstorm",
+    "night-clear",
+    "night-cloudy",
+    "night-cloudy-gusts",
+    "night-cloudy-high",
+    "night-cloudy-windy",
+    "night-fog",
+    "night-hail",
+    "night-lightning",
+    "night-partly-cloudy",
+    "night-rain",
+    "night-rain-mix",
+    "night-rain-wind",
+    "night-showers",
+    "night-sleet",
+    "night-sleet-storm",
+    "night-snow",
+    "night-snow-thunderstorm",
+    "night-snow-wind",
+    "night-sprinkle",
+    "night-storm-showers",
+    "night-thunderstorm",
+    "rain",
+    "rain-mix",
+    "rain-wind",
+    "raindrop",
+    "raindrops",
+    "refresh",
+    "refresh-alt",
+    "sandstorm",
+    "showers",
+    "sleet",
+    "small-craft-advisory",
+    "smog",
+    "smoke",
+    "snow",
+    "snow-wind",
+    "snowflake-cold",
+    "solar-eclipse",
+    "sprinkle",
+    "stars",
+    "storm-showers",
+    "storm-warning",
+    "strong-wind",
+    "sunrise",
+    "sunset",
+    "thermometer",
+    "thermometer-exterior",
+    "thermometer-internal",
+    "thunderstorm",
+    "time-1",
+    "time-10",
+    "time-11",
+    "time-12",
+    "time-2",
+    "time-3",
+    "time-4",
+    "time-5",
+    "time-6",
+    "time-7",
+    "time-8",
+    "time-9",
+    "tornado",
+    "train",
+    "tsunami",
+    "umbrella",
+    "volcano",
+    "wind-beaufort-0",
+    "wind-beaufort-1",
+    "wind-beaufort-10",
+    "wind-beaufort-11",
+    "wind-beaufort-12",
+    "wind-beaufort-2",
+    "wind-beaufort-3",
+    "wind-beaufort-4",
+    "wind-beaufort-5",
+    "wind-beaufort-6",
+    "wind-beaufort-7",
+    "wind-beaufort-8",
+    "wind-beaufort-9",
+    "wind-deg",
+    "windy"
+  ],
+  "gaps": [
+    {
+      "semantic_name": "cloudy-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "fog-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "drizzle-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": true
+    },
+    {
+      "semantic_name": "rain-light-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "rain-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "rain-heavy-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "snow-light-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "snow-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "snow-heavy-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "sleet-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": true
+    },
+    {
+      "semantic_name": "freezing-rain-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "hail-day",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": true
+    },
+    {
+      "semantic_name": "cloudy-night",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "haze-night",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "rain-light-night",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "rain-heavy-night",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "snow-light-night",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "snow-night",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "snow-heavy-night",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "freezing-rain-night",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "wind-calm",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "wind-gust",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "wind-direction",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "alert-watch",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "alert-warning",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "alert-advisory",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "alert-emergency",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "uv-low",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "uv-moderate",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "uv-high",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "uv-very-high",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "uv-extreme",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "air-quality-good",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "air-quality-moderate",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "air-quality-unhealthy-sensitive",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "air-quality-unhealthy",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "air-quality-very-unhealthy",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "air-quality-hazardous",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "tide-high",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "tide-low",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "tide-rising",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "tide-falling",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "moon-new",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": true
+    },
+    {
+      "semantic_name": "moon-waxing-crescent",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "moon-first-quarter",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": true
+    },
+    {
+      "semantic_name": "moon-waxing-gibbous",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "moon-full",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": true
+    },
+    {
+      "semantic_name": "moon-waning-gibbous",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    },
+    {
+      "semantic_name": "moon-third-quarter",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": true
+    },
+    {
+      "semantic_name": "moon-waning-crescent",
+      "status": "not resolved as a distinct app condition today",
+      "catalog_available": false
+    }
+  ],
+  "required_library": [
+    "clear-day",
+    "partly-cloudy-day",
+    "cloudy-day",
+    "fog-day",
+    "haze-day",
+    "drizzle-day",
+    "rain-light-day",
+    "rain-day",
+    "rain-heavy-day",
+    "snow-light-day",
+    "snow-day",
+    "snow-heavy-day",
+    "sleet-day",
+    "freezing-rain-day",
+    "hail-day",
+    "thunderstorm-day",
+    "clear-night",
+    "partly-cloudy-night",
+    "cloudy-night",
+    "fog-night",
+    "haze-night",
+    "drizzle-night",
+    "rain-light-night",
+    "rain-night",
+    "rain-heavy-night",
+    "snow-light-night",
+    "snow-night",
+    "snow-heavy-night",
+    "sleet-night",
+    "freezing-rain-night",
+    "hail-night",
+    "thunderstorm-night",
+    "wind-calm",
+    "wind-gust",
+    "wind-direction",
+    "wind-strong",
+    "alert-watch",
+    "alert-warning",
+    "alert-advisory",
+    "alert-emergency",
+    "uv-low",
+    "uv-moderate",
+    "uv-high",
+    "uv-very-high",
+    "uv-extreme",
+    "air-quality-good",
+    "air-quality-moderate",
+    "air-quality-unhealthy-sensitive",
+    "air-quality-unhealthy",
+    "air-quality-very-unhealthy",
+    "air-quality-hazardous",
+    "tide-high",
+    "tide-low",
+    "tide-rising",
+    "tide-falling",
+    "moon-new",
+    "moon-waxing-crescent",
+    "moon-first-quarter",
+    "moon-waxing-gibbous",
+    "moon-full",
+    "moon-waning-gibbous",
+    "moon-third-quarter",
+    "moon-waning-crescent"
+  ],
+  "evidence": {
+    "packages/ui/src/condition-glyph.ts": "6deb4d145da8c4b2137d8a599f3907892db3af78ab1473381cae0561f3e34a3c",
+    "packages/ui/src/condition-icon.tsx": "570484cd1c8a03771e268592ecbfd1c49f56e4d1c9a2322382eb838492ad49d0",
+    "packages/ui/src/weather-icons/registry.ts": "770d8b891654fae52d2b1f37a7a82c527ba83b6fa1dead7e13566db996a6a29d",
+    "packages/ui/src/weather-icons/weather-icons-catalog.ts": "bfb52ced99d2cf12f03903a5a2b623adf96688bd04ebd4e8477e90f0e8e42a44",
+    "packages/ui/src/weather-icons/resolve-weather-icon.ts": "a26affe61d524b71aac8b4c0c4e62366eb0c90936416d8d08b24ae5fa6a7f990",
+    "packages/ui/src/weather-icons/nws-map.ts": "6ba434934adcc94df6476217b8ffe086d316c20c572d964138175e36cd718111"
+  },
+  "counts": {
+    "lucide_icons": 182,
+    "lucide_imports": 604,
+    "lucide_usage_occurrences": 742,
+    "condition_glyphs": 25,
+    "nws_codes": 36,
+    "erik_catalog": 219,
+    "erik_referenced": 49,
+    "library_gaps": 50
+  }
+}

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="exclam_equal.ss08" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="970" y="868" type="line"/>
+      <point x="160" y="868" type="line"/>
+      <point x="80" y="752" type="line"/>
+      <point x="970" y="752" type="line"/>
+    </contour>
+    <contour>
+      <point x="970" y="500" type="line"/>
+      <point x="160" y="500" type="line"/>
+      <point x="80" y="384" type="line"/>
+      <point x="970" y="384" type="line"/>
+    </contour>
+    <contour>
+      <point x="-80" y="868" type="line"/>
+      <point x="-970" y="868" type="line"/>
+      <point x="-970" y="752" type="line"/>
+      <point x="-160" y="752" type="line"/>
+    </contour>
+    <contour>
+      <point x="-80" y="500" type="line"/>
+      <point x="-970" y="500" type="line"/>
+      <point x="-970" y="384" type="line"/>
+      <point x="-160" y="384" type="line"/>
+    </contour>
+    <component base="_part.not_equal" xOffset="-600"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPPPP</string>
+    </dict>
+  </lib>
+</glyph>

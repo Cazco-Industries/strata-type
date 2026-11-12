@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Chekhakassian-cy" format="2">
+  <advance width="1200"/>
+  <unicode hex="04CB"/>
+  <anchor x="822" y="0" name="_bottom"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="867" y="0" name="bottomleft"/>
+  <anchor x="1034" y="0" name="bottomright"/>
+  <anchor x="581" y="1374" name="top"/>
+  <outline>
+    <contour>
+      <point x="245" y="1374" type="line"/>
+      <point x="117" y="1374" type="line"/>
+      <point x="117" y="839" type="line" smooth="yes"/>
+      <point x="117" y="611"/>
+      <point x="277" y="452"/>
+      <point x="509" y="452" type="curve" smooth="yes"/>
+      <point x="680" y="452"/>
+      <point x="776" y="499"/>
+      <point x="931" y="619" type="curve"/>
+      <point x="905" y="731" type="line"/>
+      <point x="829" y="647"/>
+      <point x="712" y="577"/>
+      <point x="537" y="577" type="curve" smooth="yes"/>
+      <point x="355" y="577"/>
+      <point x="245" y="667"/>
+      <point x="245" y="855" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="1014" y="1374" type="line"/>
+      <point x="887" y="1374" type="line"/>
+      <point x="887" y="0" type="line"/>
+      <point x="1014" y="0" type="line"/>
+    </contour>
+    <component base="descStraight-cy.case" xScale="-1" xOffset="1446"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>anchor</key>
+          <string>bottomleft</string>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>descStraight-cy.case</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPP</string>
+    </dict>
+  </lib>
+</glyph>

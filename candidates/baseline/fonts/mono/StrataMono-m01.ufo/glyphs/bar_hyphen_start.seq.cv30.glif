@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bar_hyphen_start.seq.cv30" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="600" y="497" type="line"/>
+      <point x="1220" y="497" type="line"/>
+      <point x="1220" y="755" type="line"/>
+      <point x="600" y="755" type="line"/>
+    </contour>
+    <component base="bar.cv30"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

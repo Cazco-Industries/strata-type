@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="aacute.cv01" format="2">
+  <advance width="1200"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="1085" y="-30" name="ogonek"/>
+  <anchor x="586" y="1062" name="top"/>
+  <outline>
+    <component base="a.cv01"/>
+    <component base="acute" xOffset="-14"/>
+  </outline>
+</glyph>

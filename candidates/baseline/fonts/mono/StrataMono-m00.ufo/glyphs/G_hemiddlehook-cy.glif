@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ghemiddlehook-cy" format="2">
+  <advance width="1200"/>
+  <unicode hex="0494"/>
+  <anchor x="600" y="-386" name="bottom"/>
+  <anchor x="1109" y="0" name="bottomright"/>
+  <anchor x="600" y="1374" name="top"/>
+  <outline>
+    <contour>
+      <point x="929" y="1374" type="line"/>
+      <point x="240" y="1374" type="line"/>
+      <point x="322" y="1261" type="line"/>
+      <point x="912" y="1261" type="line"/>
+    </contour>
+    <component base="Shha-cy" xOffset="9"/>
+    <component base="hookHELPER.case" xOffset="587"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>Shha-cy</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>hookHELPER.case</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CCP</string>
+    </dict>
+  </lib>
+</glyph>

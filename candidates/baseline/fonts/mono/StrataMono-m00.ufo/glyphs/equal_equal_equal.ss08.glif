@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="equal_equal_equal.ss08" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-1230" y="868" type="line"/>
+      <point x="-2170" y="868" type="line"/>
+      <point x="-2170" y="752" type="line"/>
+      <point x="-1230" y="752" type="line"/>
+    </contour>
+    <contour>
+      <point x="-1230" y="500" type="line"/>
+      <point x="-2170" y="500" type="line"/>
+      <point x="-2170" y="384" type="line"/>
+      <point x="-1230" y="384" type="line"/>
+    </contour>
+    <contour>
+      <point x="-130" y="868" type="line"/>
+      <point x="-1070" y="868" type="line"/>
+      <point x="-1070" y="752" type="line"/>
+      <point x="-130" y="752" type="line"/>
+    </contour>
+    <contour>
+      <point x="-130" y="500" type="line"/>
+      <point x="-1070" y="500" type="line"/>
+      <point x="-1070" y="384" type="line"/>
+      <point x="-130" y="384" type="line"/>
+    </contour>
+    <contour>
+      <point x="970" y="868" type="line"/>
+      <point x="30" y="868" type="line"/>
+      <point x="30" y="752" type="line"/>
+      <point x="970" y="752" type="line"/>
+    </contour>
+    <contour>
+      <point x="970" y="500" type="line"/>
+      <point x="30" y="500" type="line"/>
+      <point x="30" y="384" type="line"/>
+      <point x="970" y="384" type="line"/>
+    </contour>
+  </outline>
+</glyph>

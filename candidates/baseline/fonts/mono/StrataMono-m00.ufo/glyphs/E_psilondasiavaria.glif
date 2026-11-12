@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Epsilondasiavaria" format="2">
+  <advance width="1200"/>
+  <unicode hex="1F1B"/>
+  <anchor x="654" y="0" name="bottom"/>
+  <anchor x="957" y="0" name="ogonek"/>
+  <anchor x="6" y="1392" name="top"/>
+  <anchor x="250" y="1374" name="topleft"/>
+  <outline>
+    <component base="Epsilon"/>
+    <component base="dasiavaria" xOffset="-652" yOffset="-191"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>anchor</key>
+          <string>topleft</string>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>dasiavaria</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

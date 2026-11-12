@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="omicronpsilivaria" format="2">
+  <advance width="1200"/>
+  <unicode hex="1F42"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="449" y="1674" name="top"/>
+  <outline>
+    <component base="omicron"/>
+    <component base="psilivaria" xOffset="9"/>
+  </outline>
+</glyph>

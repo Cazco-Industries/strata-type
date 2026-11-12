@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="_part.control" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="600" y="1321" type="line"/>
+      <point x="42" y="828" type="line"/>
+      <point x="119" y="739" type="line"/>
+      <point x="600" y="1152" type="line"/>
+      <point x="1081" y="739" type="line"/>
+      <point x="1158" y="828" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+    </dict>
+  </lib>
+</glyph>

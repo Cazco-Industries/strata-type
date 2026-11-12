@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="equals.circled" format="2">
+  <advance width="1200"/>
+  <unicode hex="229C"/>
+  <outline>
+    <component base="_part.circle"/>
+    <component base="equalsuperior" yOffset="-278"/>
+  </outline>
+</glyph>

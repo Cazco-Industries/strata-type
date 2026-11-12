@@ -1,0 +1,24 @@
+{
+  "lock_sha256": "b07505fecb69668270c7a6800cf6b43e230a3f64d5c9e0c4eacab3cade846b17",
+  "faces": {
+    "sans": {
+      "masters": 6,
+      "sha256": "490c23fd7099c407798b86b3dbfb14282988130c934799badbbfa2622c4092a8"
+    },
+    "serif": {
+      "masters": 9,
+      "copyrights": [
+        "Copyright 2014 - 2023 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'."
+      ],
+      "sha256": "028ca55f86155e2169b37fb4a184251b4f7e17da2eb425d8088b1f1af215814b"
+    },
+    "mono": {
+      "masters": 2,
+      "copyrights": [
+        "Copyright 2014-2021 The Fira Code Project Authors (https://github.com/tonsky/FiraCode)"
+      ],
+      "sha256": "96e3d2d70e4d56aeebd203a836fff5329e86b2a75a8274443dc3c9a93c0379ac"
+    }
+  },
+  "scope": "upright variable baselines; names and compilation only, no design edits"
+}

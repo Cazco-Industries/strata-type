@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="QdoubleStruck" format="2">
+  <advance width="1200"/>
+  <unicode hex="211A"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="600" y="1374" name="top"/>
+  <outline>
+    <contour>
+      <point x="336" y="1278" type="line"/>
+      <point x="336" y="98" type="line"/>
+      <point x="464" y="98" type="line"/>
+      <point x="464" y="1278" type="line"/>
+    </contour>
+    <contour>
+      <point x="735" y="1278" type="line"/>
+      <point x="735" y="98" type="line"/>
+      <point x="863" y="98" type="line"/>
+      <point x="863" y="1278" type="line"/>
+    </contour>
+    <component base="Q"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPP</string>
+    </dict>
+  </lib>
+</glyph>

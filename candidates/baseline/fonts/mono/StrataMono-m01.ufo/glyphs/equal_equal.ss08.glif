@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="equal_equal.ss08" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="1054" y="960" type="line"/>
+      <point x="76" y="960" type="line"/>
+      <point x="76" y="714" type="line"/>
+      <point x="1054" y="714" type="line"/>
+    </contour>
+    <contour>
+      <point x="1054" y="538" type="line"/>
+      <point x="76" y="538" type="line"/>
+      <point x="76" y="292" type="line"/>
+      <point x="1054" y="292" type="line"/>
+    </contour>
+    <contour>
+      <point x="-76" y="960" type="line"/>
+      <point x="-1054" y="960" type="line"/>
+      <point x="-1054" y="714" type="line"/>
+      <point x="-76" y="714" type="line"/>
+    </contour>
+    <contour>
+      <point x="-76" y="538" type="line"/>
+      <point x="-1054" y="538" type="line"/>
+      <point x="-1054" y="292" type="line"/>
+      <point x="-76" y="292" type="line"/>
+    </contour>
+  </outline>
+</glyph>

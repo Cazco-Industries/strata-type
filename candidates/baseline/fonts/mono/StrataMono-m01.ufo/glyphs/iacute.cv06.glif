@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="iacute.cv06" format="2">
+  <advance width="1200"/>
+  <anchor x="805" y="0" name="bottom"/>
+  <anchor x="607" y="1062" name="top"/>
+  <outline>
+    <component base="idotless.cv06"/>
+    <component base="acute" xOffset="7"/>
+  </outline>
+</glyph>

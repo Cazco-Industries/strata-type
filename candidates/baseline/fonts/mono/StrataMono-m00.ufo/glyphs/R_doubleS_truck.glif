@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="RdoubleStruck" format="2">
+  <advance width="1200"/>
+  <unicode hex="211D"/>
+  <outline>
+    <contour>
+      <point x="605" y="609" type="line"/>
+      <point x="1003" y="0" type="line"/>
+      <point x="1163" y="0" type="line"/>
+      <point x="741" y="619" type="line"/>
+    </contour>
+    <component base="PdoubleStruck"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

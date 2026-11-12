@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "git": [
+    {
+      "id": "sans",
+      "url": "https://github.com/rsms/inter.git",
+      "ref": "v4.1",
+      "sha": "e3a3d4c57d5ecc01453a575621882a384c1995a3"
+    },
+    {
+      "id": "serif",
+      "url": "https://github.com/adobe-fonts/source-serif.git",
+      "ref": "4.005R",
+      "sha": "2823e993c53fca27c5c8749f529b56a5a7c77b6b"
+    },
+    {
+      "id": "serif-sources",
+      "url": "https://github.com/adobe-fonts/source-serif.git",
+      "ref": "4.005",
+      "sha": "17cfec64bc132c81255dda15ea64a0bf27ef4da9",
+      "sparse": [
+        "/*.fea",
+        "/LICENSE.md",
+        "/Roman/*.fea",
+        "/Roman/*.designspace",
+        "/Roman/Masters/",
+        "/Roman/Instances/*/*/*.fea"
+      ]
+    },
+    {
+      "id": "mono",
+      "url": "https://github.com/tonsky/FiraCode.git",
+      "ref": "6.2",
+      "sha": "eee6db993696aba61ff4eef03698e2987d79910c"
+    },
+    {
+      "id": "lucide",
+      "url": "https://github.com/lucide-icons/lucide.git",
+      "ref": "0.468.0",
+      "sha": "f12b0de177fbc2a6795e99be065887e72b237123"
+    }
+  ],
+  "npm": [
+    {
+      "id": "hugeicons-free",
+      "package": "@hugeicons/core-free-icons",
+      "version": "4.4.0",
+      "url": "https://registry.npmjs.org/@hugeicons/core-free-icons/-/core-free-icons-4.4.0.tgz",
+      "integrity": "sha512-7Mz8bmGoY6tZ6l3C2TXwNMLVSr0I8HPwjjFIERAuJFj3rWwLxdF2ZLkDqdrVuEE1dx5b/VXyIsP4WoSU6Q40KQ==",
+      "gitHead": "4fd1c2d5572f832eb908d401ca95a18013069abf",
+      "license": "MIT",
+      "style": "Stroke Rounded only"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "mono-release",
+      "version": "6.2",
+      "url": "https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip",
+      "sha256": "0949915ba8eb24d89fd93d10a7ff623f42830d7c5ffc3ecbf960e4ecad3e3e79",
+      "member": "variable_ttf/FiraCode-VF.ttf",
+      "target": "StrataMonoUpstream.ttf",
+      "purpose": "render-only open-font control; unmodified upstream binary"
+    }
+  ]
+}

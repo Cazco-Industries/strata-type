@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="strokelongoverlay" format="2">
+  <unicode hex="0336"/>
+  <outline>
+    <contour>
+      <point x="1248" y="552" type="line"/>
+      <point x="1248" y="671" type="line"/>
+      <point x="-45" y="671" type="line"/>
+      <point x="-45" y="552" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.originalWidth</key>
+      <integer>1200</integer>
+    </dict>
+  </lib>
+</glyph>

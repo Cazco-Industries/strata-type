@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="notalmostequalto" format="2">
+  <advance width="1200"/>
+  <unicode hex="2249"/>
+  <outline>
+    <component base="approxequal"/>
+    <component base="_part.strike"/>
+  </outline>
+</glyph>

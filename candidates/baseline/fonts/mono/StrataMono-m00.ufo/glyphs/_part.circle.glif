@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="_part.circle" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="600" y="36" type="curve" smooth="yes"/>
+      <point x="959" y="36"/>
+      <point x="1250" y="327"/>
+      <point x="1250" y="686" type="curve" smooth="yes"/>
+      <point x="1250" y="1045"/>
+      <point x="959" y="1336"/>
+      <point x="600" y="1336" type="curve" smooth="yes"/>
+      <point x="241" y="1336"/>
+      <point x="-50" y="1045"/>
+      <point x="-50" y="686" type="curve" smooth="yes"/>
+      <point x="-50" y="327"/>
+      <point x="241" y="36"/>
+    </contour>
+    <contour>
+      <point x="600" y="156" type="curve" smooth="yes"/>
+      <point x="307" y="156"/>
+      <point x="70" y="393"/>
+      <point x="70" y="686" type="curve" smooth="yes"/>
+      <point x="70" y="979"/>
+      <point x="307" y="1216"/>
+      <point x="600" y="1216" type="curve" smooth="yes"/>
+      <point x="893" y="1216"/>
+      <point x="1130" y="979"/>
+      <point x="1130" y="686" type="curve" smooth="yes"/>
+      <point x="1130" y="393"/>
+      <point x="893" y="156"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,9 @@
+.venv/
+build/
+sources/upstream/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+sources/*.log
+sources/*.json

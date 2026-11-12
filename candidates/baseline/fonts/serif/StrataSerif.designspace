@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="3.0">
+  <axes>
+    <axis tag="wght" name="weight" minimum="200" maximum="900" default="400">
+      <map input="200" output="0"/>
+      <map input="300" output="145"/>
+      <map input="400" output="394"/>
+      <map input="600" output="594"/>
+      <map input="700" output="823"/>
+      <map input="900" output="1000"/>
+    </axis>
+    <axis tag="opsz" name="optical" minimum="8" maximum="60" default="20"/>
+  </axes>
+  <sources>
+    <source filename="StrataSerif-m00.ufo" familyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="0"/>
+        <dimension name="optical" xvalue="8"/>
+      </location>
+    </source>
+    <source filename="StrataSerif-m01.ufo" familyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="394"/>
+        <dimension name="optical" xvalue="8"/>
+      </location>
+    </source>
+    <source filename="StrataSerif-m02.ufo" familyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+        <dimension name="optical" xvalue="8"/>
+      </location>
+    </source>
+    <source filename="StrataSerif-m03.ufo" familyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="0"/>
+        <dimension name="optical" xvalue="20"/>
+      </location>
+    </source>
+    <source filename="StrataSerif-m04.ufo" familyname="Strata Serif">
+      <lib copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="weight" xvalue="394"/>
+        <dimension name="optical" xvalue="20"/>
+      </location>
+    </source>
+    <source filename="StrataSerif-m05.ufo" familyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+        <dimension name="optical" xvalue="20"/>
+      </location>
+    </source>
+    <source filename="StrataSerif-m06.ufo" familyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="0"/>
+        <dimension name="optical" xvalue="60"/>
+      </location>
+    </source>
+    <source filename="StrataSerif-m07.ufo" familyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="394"/>
+        <dimension name="optical" xvalue="60"/>
+      </location>
+    </source>
+    <source filename="StrataSerif-m08.ufo" familyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+        <dimension name="optical" xvalue="60"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance familyname="Strata Serif" stylename="Caption ExtraLight" filename="StrataSerif-instance-000.ufo" postscriptfontname="StrataSerif-CaptionExtraLight" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="0"/>
+        <dimension name="optical" xvalue="8"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Caption Light" filename="StrataSerif-instance-001.ufo" postscriptfontname="StrataSerif-CaptionLight" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="145"/>
+        <dimension name="optical" xvalue="8"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Caption" filename="StrataSerif-instance-002.ufo" postscriptfontname="StrataSerif-Caption" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="394"/>
+        <dimension name="optical" xvalue="8"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Caption Semibold" filename="StrataSerif-instance-003.ufo" postscriptfontname="StrataSerif-CaptionSemibold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="594"/>
+        <dimension name="optical" xvalue="8"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Caption Bold" filename="StrataSerif-instance-004.ufo" postscriptfontname="StrataSerif-CaptionBold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="823"/>
+        <dimension name="optical" xvalue="8"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Caption Black" filename="StrataSerif-instance-005.ufo" postscriptfontname="StrataSerif-CaptionBlack" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+        <dimension name="optical" xvalue="8"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="SmText ExtraLight" filename="StrataSerif-instance-006.ufo" postscriptfontname="StrataSerif-SmTextExtraLight" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="0"/>
+        <dimension name="optical" xvalue="16"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="SmText Light" filename="StrataSerif-instance-007.ufo" postscriptfontname="StrataSerif-SmTextLight" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="145"/>
+        <dimension name="optical" xvalue="16"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="SmText" filename="StrataSerif-instance-008.ufo" postscriptfontname="StrataSerif-SmText" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="394"/>
+        <dimension name="optical" xvalue="16"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="SmText Semibold" filename="StrataSerif-instance-009.ufo" postscriptfontname="StrataSerif-SmTextSemibold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="594"/>
+        <dimension name="optical" xvalue="16"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="SmText Bold" filename="StrataSerif-instance-010.ufo" postscriptfontname="StrataSerif-SmTextBold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="823"/>
+        <dimension name="optical" xvalue="16"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="SmText Black" filename="StrataSerif-instance-011.ufo" postscriptfontname="StrataSerif-SmTextBlack" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+        <dimension name="optical" xvalue="16"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="ExtraLight" filename="StrataSerif-instance-012.ufo" postscriptfontname="StrataSerif-ExtraLight" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="0"/>
+        <dimension name="optical" xvalue="20"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Light" filename="StrataSerif-instance-013.ufo" postscriptfontname="StrataSerif-Light" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="145"/>
+        <dimension name="optical" xvalue="20"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Regular" filename="StrataSerif-instance-014.ufo" postscriptfontname="StrataSerif-Regular" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="394"/>
+        <dimension name="optical" xvalue="20"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Semibold" filename="StrataSerif-instance-015.ufo" postscriptfontname="StrataSerif-Semibold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="594"/>
+        <dimension name="optical" xvalue="20"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Bold" filename="StrataSerif-instance-016.ufo" postscriptfontname="StrataSerif-Bold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="823"/>
+        <dimension name="optical" xvalue="20"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Black" filename="StrataSerif-instance-017.ufo" postscriptfontname="StrataSerif-Black" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+        <dimension name="optical" xvalue="20"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Subhead ExtraLight" filename="StrataSerif-instance-018.ufo" postscriptfontname="StrataSerif-SubheadExtraLight" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="0"/>
+        <dimension name="optical" xvalue="32"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Subhead Light" filename="StrataSerif-instance-019.ufo" postscriptfontname="StrataSerif-SubheadLight" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="145"/>
+        <dimension name="optical" xvalue="32"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Subhead" filename="StrataSerif-instance-020.ufo" postscriptfontname="StrataSerif-Subhead" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="394"/>
+        <dimension name="optical" xvalue="32"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Subhead Semibold" filename="StrataSerif-instance-021.ufo" postscriptfontname="StrataSerif-SubheadSemibold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="594"/>
+        <dimension name="optical" xvalue="32"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Subhead Bold" filename="StrataSerif-instance-022.ufo" postscriptfontname="StrataSerif-SubheadBold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="823"/>
+        <dimension name="optical" xvalue="32"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Subhead Black" filename="StrataSerif-instance-023.ufo" postscriptfontname="StrataSerif-SubheadBlack" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+        <dimension name="optical" xvalue="32"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Display ExtraLight" filename="StrataSerif-instance-024.ufo" postscriptfontname="StrataSerif-DisplayExtraLight" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="0"/>
+        <dimension name="optical" xvalue="60"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Display Light" filename="StrataSerif-instance-025.ufo" postscriptfontname="StrataSerif-DisplayLight" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="145"/>
+        <dimension name="optical" xvalue="60"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Display" filename="StrataSerif-instance-026.ufo" postscriptfontname="StrataSerif-Display" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="394"/>
+        <dimension name="optical" xvalue="60"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Display Semibold" filename="StrataSerif-instance-027.ufo" postscriptfontname="StrataSerif-DisplaySemibold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="594"/>
+        <dimension name="optical" xvalue="60"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Display Bold" filename="StrataSerif-instance-028.ufo" postscriptfontname="StrataSerif-DisplayBold" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="823"/>
+        <dimension name="optical" xvalue="60"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Strata Serif" stylename="Display Black" filename="StrataSerif-instance-029.ufo" postscriptfontname="StrataSerif-DisplayBlack" stylemapfamilyname="Strata Serif">
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+        <dimension name="optical" xvalue="60"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+  </instances>
+  <lib>
+    <dict>
+      <key>public.skipExportGlyphs</key>
+      <array>
+        <string>caron.alt</string>
+        <string>commabelowcmb.alt</string>
+        <string>tonos.cap</string>
+        <string>f.ligalong</string>
+        <string>dieresiscmb.tight</string>
+        <string>IJ</string>
+        <string>Tbar</string>
+        <string>colontriangularmod</string>
+        <string>crossmark</string>
+        <string>ij</string>
+        <string>overline</string>
+        <string>similar</string>
+        <string>tbar</string>
+        <string>triangularbullet</string>
+        <string>turkicdsccmb</string>
+        <string>circumflexcaron</string>
+        <string>circumflexcaron.cap</string>
+        <string>circumflexmacron</string>
+        <string>circumflexmacron.cap</string>
+        <string>uni004Duni0300</string>
+        <string>uni004Duni0304</string>
+        <string>uni006Duni0300</string>
+        <string>uni006Duni0304</string>
+        <string>uni00CAuni0304</string>
+        <string>uni00CAuni030C</string>
+        <string>uni00EAuni0304</string>
+        <string>uni00EAuni030C</string>
+      </array>
+    </dict>
+  </lib>
+</designspace>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniEE03" format="2">
+  <advance width="1200"/>
+  <unicode hex="EE03"/>
+  <outline>
+    <contour>
+      <point x="489" y="1274" type="line"/>
+      <point x="489" y="100" type="line"/>
+      <point x="1210" y="100" type="line"/>
+      <point x="1210" y="1274" type="line"/>
+    </contour>
+    <component base="uniEE00"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

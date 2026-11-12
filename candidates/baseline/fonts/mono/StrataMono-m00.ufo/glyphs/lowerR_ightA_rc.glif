@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lowerRightArc" format="2">
+  <advance width="1200"/>
+  <unicode hex="25DE"/>
+  <outline>
+    <contour>
+      <point x="1140" y="540" type="curve"/>
+      <point x="980" y="540" type="line"/>
+      <point x="980" y="330"/>
+      <point x="808" y="160"/>
+      <point x="600" y="160" type="curve"/>
+      <point x="600" y="0" type="line"/>
+      <point x="898" y="0"/>
+      <point x="1140" y="240"/>
+    </contour>
+  </outline>
+</glyph>

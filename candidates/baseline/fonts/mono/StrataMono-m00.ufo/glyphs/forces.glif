@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="forces" format="2">
+  <advance width="1200"/>
+  <unicode hex="22A9"/>
+  <outline>
+    <contour>
+      <point x="545" y="562" type="line"/>
+      <point x="1070" y="562" type="line"/>
+      <point x="1070" y="678" type="line"/>
+      <point x="545" y="678" type="line"/>
+    </contour>
+    <contour>
+      <point x="598" y="1145" type="line"/>
+      <point x="490" y="1145" type="line"/>
+      <point x="490" y="95" type="line"/>
+      <point x="598" y="95" type="line"/>
+    </contour>
+    <contour>
+      <point x="298" y="1145" type="line"/>
+      <point x="190" y="1145" type="line"/>
+      <point x="190" y="95" type="line"/>
+      <point x="298" y="95" type="line"/>
+    </contour>
+  </outline>
+</glyph>

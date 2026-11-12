@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="unitSeparator-control" format="2">
+  <advance width="1200"/>
+  <unicode hex="241F"/>
+  <anchor x="798.0" y="458.0" name="bottom"/>
+  <anchor x="473.9" y="458.0" name="ogonek"/>
+  <anchor x="804.6" y="915.38" name="top"/>
+  <outline>
+    <component base="U" xScale="0.33" yScale="0.33" xOffset="200" yOffset="458"/>
+    <component base="S" xScale="0.33" yScale="0.33" xOffset="600" yOffset="458"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>U</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>S</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

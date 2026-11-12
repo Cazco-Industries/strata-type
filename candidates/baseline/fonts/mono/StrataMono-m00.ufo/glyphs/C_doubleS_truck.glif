@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="CdoubleStruck" format="2">
+  <advance width="1200"/>
+  <unicode hex="2102"/>
+  <anchor x="698" y="0" name="bottom"/>
+  <anchor x="734" y="1374" name="top"/>
+  <outline>
+    <contour>
+      <point x="411" y="1255" type="line"/>
+      <point x="411" y="64" type="line"/>
+      <point x="539" y="64" type="line"/>
+      <point x="539" y="1255" type="line"/>
+    </contour>
+    <component base="C"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

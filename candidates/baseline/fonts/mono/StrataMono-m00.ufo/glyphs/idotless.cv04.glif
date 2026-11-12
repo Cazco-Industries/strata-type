@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="idotless.cv04" format="2">
+  <advance width="1200"/>
+  <anchor x="738" y="0" name="ogonek"/>
+  <anchor x="604" y="1050" name="top"/>
+  <outline>
+    <contour>
+      <point x="718" y="1050" type="line"/>
+      <point x="272" y="1050" type="line"/>
+      <point x="272" y="942" type="line"/>
+      <point x="594" y="942" type="line"/>
+      <point x="594" y="0" type="line"/>
+      <point x="718" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="equal_exclam_equal.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-886" y="863" type="line"/>
+      <point x="-2170" y="863" type="line"/>
+      <point x="-2170" y="748" type="line"/>
+      <point x="-886" y="748" type="line"/>
+    </contour>
+    <contour>
+      <point x="-886" y="496" type="line"/>
+      <point x="-2170" y="496" type="line"/>
+      <point x="-2170" y="380" type="line"/>
+      <point x="-886" y="380" type="line"/>
+    </contour>
+    <contour>
+      <point x="970" y="863" type="line"/>
+      <point x="-314" y="863" type="line"/>
+      <point x="-314" y="748" type="line"/>
+      <point x="970" y="748" type="line"/>
+    </contour>
+    <contour>
+      <point x="970" y="496" type="line"/>
+      <point x="-314" y="496" type="line"/>
+      <point x="-314" y="380" type="line"/>
+      <point x="970" y="380" type="line"/>
+    </contour>
+    <component base="exclam" xOffset="-1200"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>exclam</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CPPPP</string>
+    </dict>
+  </lib>
+</glyph>

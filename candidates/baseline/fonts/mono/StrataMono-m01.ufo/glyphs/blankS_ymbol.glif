@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="blankSymbol" format="2">
+  <advance width="1200"/>
+  <unicode hex="2422"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="600" y="1484" name="top"/>
+  <outline>
+    <contour>
+      <point x="6" y="929" type="line"/>
+      <point x="684" y="1254" type="line"/>
+      <point x="602" y="1405" type="line"/>
+      <point x="-78" y="1080" type="line"/>
+    </contour>
+    <component base="b"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

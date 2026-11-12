@@ -1,0 +1,1637 @@
+{
+  "license": "ISC; see bundled notices",
+  "icons": [
+    {
+      "semantic_name": "activity",
+      "upstream_svg": "activity",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "air-quality-good",
+      "upstream_svg": "leaf",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "air-quality-hazardous",
+      "upstream_svg": "leaf",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "air-quality-moderate",
+      "upstream_svg": "leaf",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "air-quality-unhealthy",
+      "upstream_svg": "leaf",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "air-quality-unhealthy-sensitive",
+      "upstream_svg": "leaf",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "air-quality-very-unhealthy",
+      "upstream_svg": "leaf",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "alert-advisory",
+      "upstream_svg": "triangle-alert",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "alert-emergency",
+      "upstream_svg": "triangle-alert",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "alert-triangle",
+      "upstream_svg": "triangle-alert",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "alert-warning",
+      "upstream_svg": "triangle-alert",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "alert-watch",
+      "upstream_svg": "triangle-alert",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "arrow-down",
+      "upstream_svg": "arrow-down",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "arrow-left",
+      "upstream_svg": "arrow-left",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "arrow-left-right",
+      "upstream_svg": "arrow-left-right",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "arrow-right",
+      "upstream_svg": "arrow-right",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "arrow-up",
+      "upstream_svg": "arrow-up",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "arrow-up-down",
+      "upstream_svg": "arrow-up-down",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "arrow-up-right",
+      "upstream_svg": "arrow-up-right",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "badge-dollar-sign",
+      "upstream_svg": "badge-dollar-sign",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "bar-chart-3",
+      "upstream_svg": "chart-no-axes-column-increasing",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "bell",
+      "upstream_svg": "bell",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "bell-off",
+      "upstream_svg": "bell-off",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "bell-ring",
+      "upstream_svg": "bell-ring",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "bike",
+      "upstream_svg": "bike",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "book-open",
+      "upstream_svg": "book-open",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "bot",
+      "upstream_svg": "bot",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "box",
+      "upstream_svg": "box",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "boxes",
+      "upstream_svg": "boxes",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "braces",
+      "upstream_svg": "braces",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "briefcase-business",
+      "upstream_svg": "briefcase-business",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "building-2",
+      "upstream_svg": "building-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "calendar-check-2",
+      "upstream_svg": "calendar-check-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "calendar-clock",
+      "upstream_svg": "calendar-clock",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "calendar-days",
+      "upstream_svg": "calendar-days",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "calendar-range",
+      "upstream_svg": "calendar-range",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "car",
+      "upstream_svg": "car",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "chart-line",
+      "upstream_svg": "chart-line",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "chart-no-axes-combined",
+      "upstream_svg": "chart-no-axes-combined",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "check",
+      "upstream_svg": "check",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "check-circle-2",
+      "upstream_svg": "circle-check",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "chevron-down",
+      "upstream_svg": "chevron-down",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "chevron-left",
+      "upstream_svg": "chevron-left",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "chevron-right",
+      "upstream_svg": "chevron-right",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "chevron-up",
+      "upstream_svg": "chevron-up",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "circle-alert",
+      "upstream_svg": "circle-alert",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "clear-day",
+      "upstream_svg": "sun",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "clear-night",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "clipboard",
+      "upstream_svg": "clipboard",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "clock",
+      "upstream_svg": "clock",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "clock-3",
+      "upstream_svg": "clock-3",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloud",
+      "upstream_svg": "cloud",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloud-drizzle",
+      "upstream_svg": "cloud-drizzle",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloud-fog",
+      "upstream_svg": "cloud-fog",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloud-hail",
+      "upstream_svg": "cloud-hail",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloud-lightning",
+      "upstream_svg": "cloud-lightning",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloud-rain",
+      "upstream_svg": "cloud-rain",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloud-rain-wind",
+      "upstream_svg": "cloud-rain-wind",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloud-snow",
+      "upstream_svg": "cloud-snow",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloud-sun",
+      "upstream_svg": "cloud-sun",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloudy",
+      "upstream_svg": "cloudy",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cloudy-day",
+      "upstream_svg": "cloud",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "cloudy-night",
+      "upstream_svg": "cloud",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "code",
+      "upstream_svg": "code",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cold",
+      "upstream_svg": "thermometer-snowflake",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "command",
+      "upstream_svg": "command",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "compass",
+      "upstream_svg": "compass",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "copy",
+      "upstream_svg": "copy",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "cpu",
+      "upstream_svg": "cpu",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "crosshair",
+      "upstream_svg": "crosshair",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "database",
+      "upstream_svg": "database",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "database-zap",
+      "upstream_svg": "database-zap",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "day-cloudy-windy",
+      "upstream_svg": "wind",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "day-windy",
+      "upstream_svg": "wind",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "download",
+      "upstream_svg": "download",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "drizzle",
+      "upstream_svg": "cloud-drizzle",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "drizzle-day",
+      "upstream_svg": "cloud-drizzle",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "drizzle-night",
+      "upstream_svg": "cloud-drizzle",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "droplet",
+      "upstream_svg": "droplet",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "droplets",
+      "upstream_svg": "droplets",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "dust",
+      "upstream_svg": "haze",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "ellipsis",
+      "upstream_svg": "ellipsis",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "external-link",
+      "upstream_svg": "external-link",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "eye",
+      "upstream_svg": "eye",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "file-check-2",
+      "upstream_svg": "file-check-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "file-clock",
+      "upstream_svg": "file-clock",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "file-plus-2",
+      "upstream_svg": "file-plus-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "file-text",
+      "upstream_svg": "file-text",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "file-warning",
+      "upstream_svg": "file-warning",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "fire",
+      "upstream_svg": "flame",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "flame",
+      "upstream_svg": "flame",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "flood",
+      "upstream_svg": "waves",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "flower-2",
+      "upstream_svg": "flower-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "fog",
+      "upstream_svg": "cloud-fog",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "fog-day",
+      "upstream_svg": "cloud-fog",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "fog-night",
+      "upstream_svg": "cloud-fog",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "folder",
+      "upstream_svg": "folder",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "footprints",
+      "upstream_svg": "footprints",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "freezing-rain",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "freezing-rain-day",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "freezing-rain-night",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "gauge",
+      "upstream_svg": "gauge",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "globe",
+      "upstream_svg": "globe",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "globe-2",
+      "upstream_svg": "earth",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "grip-vertical",
+      "upstream_svg": "grip-vertical",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "hail",
+      "upstream_svg": "cloud-hail",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "hail-day",
+      "upstream_svg": "cloud-hail",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "hail-night",
+      "upstream_svg": "cloud-hail",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "hammer",
+      "upstream_svg": "hammer",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "hard-drive",
+      "upstream_svg": "hard-drive",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "haze",
+      "upstream_svg": "haze",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "haze-day",
+      "upstream_svg": "haze",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "haze-night",
+      "upstream_svg": "haze",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "heart-pulse",
+      "upstream_svg": "heart-pulse",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "heavy-rain",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "history",
+      "upstream_svg": "history",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "home",
+      "upstream_svg": "house",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "hot",
+      "upstream_svg": "thermometer-sun",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "house",
+      "upstream_svg": "house",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "hurricane",
+      "upstream_svg": "wind",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "inbox",
+      "upstream_svg": "inbox",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "key-round",
+      "upstream_svg": "key-round",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "layers",
+      "upstream_svg": "layers",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "layers-3",
+      "upstream_svg": "layers",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "layout-grid",
+      "upstream_svg": "layout-grid",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "leaf",
+      "upstream_svg": "leaf",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "link-2",
+      "upstream_svg": "link-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "list",
+      "upstream_svg": "list",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "list-ordered",
+      "upstream_svg": "list-ordered",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "loader-2",
+      "upstream_svg": "loader-circle",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "loader-circle",
+      "upstream_svg": "loader-circle",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "locate-fixed",
+      "upstream_svg": "locate-fixed",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "lock",
+      "upstream_svg": "lock",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "lock-keyhole",
+      "upstream_svg": "lock-keyhole",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "log-in",
+      "upstream_svg": "log-in",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "log-out",
+      "upstream_svg": "log-out",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "mail",
+      "upstream_svg": "mail",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "map",
+      "upstream_svg": "map",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "map-pin",
+      "upstream_svg": "map-pin",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "map-pin-plus-inside",
+      "upstream_svg": "map-pin-plus-inside",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "map-pinned",
+      "upstream_svg": "map-pinned",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "maximize-2",
+      "upstream_svg": "maximize-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "menu",
+      "upstream_svg": "menu",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "minimize-2",
+      "upstream_svg": "minimize-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "minus",
+      "upstream_svg": "minus",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "monitor-down",
+      "upstream_svg": "monitor-down",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "moon",
+      "upstream_svg": "moon",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "moon-first-quarter",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "moon-full",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "moon-new",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "moon-third-quarter",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "moon-waning-crescent",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "moon-waning-gibbous",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "moon-waxing-crescent",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "moon-waxing-gibbous",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "moonrise",
+      "upstream_svg": "moon-star",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "moonset",
+      "upstream_svg": "moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "mountain",
+      "upstream_svg": "mountain",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "na",
+      "upstream_svg": "circle-help",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "navigation",
+      "upstream_svg": "navigation",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "night-cloudy-windy",
+      "upstream_svg": "wind",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "night-rain-mix",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "night-snow-wind",
+      "upstream_svg": "cloud-snow",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "octagon-alert",
+      "upstream_svg": "octagon-alert",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "panel-left",
+      "upstream_svg": "panel-left",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "panel-right-open",
+      "upstream_svg": "panel-right-open",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "partly-cloudy-day",
+      "upstream_svg": "cloud-sun",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "partly-cloudy-night",
+      "upstream_svg": "cloud-moon",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "pause",
+      "upstream_svg": "pause",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "pencil",
+      "upstream_svg": "pencil",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "pin",
+      "upstream_svg": "pin",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "pin-off",
+      "upstream_svg": "pin-off",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "play",
+      "upstream_svg": "play",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "play-circle",
+      "upstream_svg": "circle-play",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "plug",
+      "upstream_svg": "plug",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "plus",
+      "upstream_svg": "plus",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "radar",
+      "upstream_svg": "radar",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "radio-tower",
+      "upstream_svg": "radio-tower",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "radius",
+      "upstream_svg": "radius",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "rain",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "rain-day",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "rain-heavy-day",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "rain-heavy-night",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "rain-light-day",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "rain-light-night",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "rain-mix",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "rain-night",
+      "upstream_svg": "cloud-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "rectangle-vertical",
+      "upstream_svg": "rectangle-vertical",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "refresh-cw",
+      "upstream_svg": "refresh-cw",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "rotate-ccw",
+      "upstream_svg": "rotate-ccw",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "route",
+      "upstream_svg": "route",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "rows-2",
+      "upstream_svg": "rows-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "rows-3",
+      "upstream_svg": "rows-3",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "ruler",
+      "upstream_svg": "ruler",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "satellite",
+      "upstream_svg": "satellite",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "scan",
+      "upstream_svg": "scan",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "scan-line",
+      "upstream_svg": "scan-line",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "school",
+      "upstream_svg": "school",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "search",
+      "upstream_svg": "search",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "settings",
+      "upstream_svg": "settings",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "settings-2",
+      "upstream_svg": "settings-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "share",
+      "upstream_svg": "share",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "share-2",
+      "upstream_svg": "share-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "shield",
+      "upstream_svg": "shield",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "shield-alert",
+      "upstream_svg": "shield-alert",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "shield-check",
+      "upstream_svg": "shield-check",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "showers-day",
+      "upstream_svg": "cloud-sun-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "showers-night",
+      "upstream_svg": "cloud-moon-rain",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "skip-back",
+      "upstream_svg": "skip-back",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "skip-forward",
+      "upstream_svg": "skip-forward",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "sleet",
+      "upstream_svg": "cloud-hail",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "sleet-day",
+      "upstream_svg": "cloud-hail",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "sleet-night",
+      "upstream_svg": "cloud-hail",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "sliders-horizontal",
+      "upstream_svg": "sliders-horizontal",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "smartphone",
+      "upstream_svg": "smartphone",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "smog",
+      "upstream_svg": "haze",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "smoke",
+      "upstream_svg": "cloud-fog",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "snow",
+      "upstream_svg": "cloud-snow",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "snow-day",
+      "upstream_svg": "cloud-snow",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "snow-heavy-day",
+      "upstream_svg": "cloud-snow",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "snow-heavy-night",
+      "upstream_svg": "cloud-snow",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "snow-light-day",
+      "upstream_svg": "cloud-snow",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "snow-light-night",
+      "upstream_svg": "cloud-snow",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "snow-night",
+      "upstream_svg": "cloud-snow",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "snow-wind",
+      "upstream_svg": "cloud-snow",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "snowflake",
+      "upstream_svg": "snowflake",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "sparkles",
+      "upstream_svg": "sparkles",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "sprout",
+      "upstream_svg": "sprout",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "star",
+      "upstream_svg": "star",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "sun",
+      "upstream_svg": "sun",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "sun-dim",
+      "upstream_svg": "sun-dim",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "sunrise",
+      "upstream_svg": "sunrise",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "sunset",
+      "upstream_svg": "sunset",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "target",
+      "upstream_svg": "target",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "terminal",
+      "upstream_svg": "terminal",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "thermometer",
+      "upstream_svg": "thermometer",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "thermometer-snowflake",
+      "upstream_svg": "thermometer-snowflake",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "thermometer-sun",
+      "upstream_svg": "thermometer-sun",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "thunderstorm",
+      "upstream_svg": "cloud-lightning",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "thunderstorm-day",
+      "upstream_svg": "cloud-lightning",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "thunderstorm-night",
+      "upstream_svg": "cloud-lightning",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "tide-falling",
+      "upstream_svg": "waves",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "tide-high",
+      "upstream_svg": "waves",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "tide-low",
+      "upstream_svg": "waves",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "tide-rising",
+      "upstream_svg": "waves",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "tornado",
+      "upstream_svg": "tornado",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "trash-2",
+      "upstream_svg": "trash-2",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "tree-pine",
+      "upstream_svg": "tree-pine",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "trending-up",
+      "upstream_svg": "trending-up",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "triangle-alert",
+      "upstream_svg": "triangle-alert",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "trophy",
+      "upstream_svg": "trophy",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "tsunami",
+      "upstream_svg": "waves",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "umbrella",
+      "upstream_svg": "umbrella",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "unknown",
+      "upstream_svg": "circle-help",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "upload",
+      "upstream_svg": "upload",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "user",
+      "upstream_svg": "user",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "user-round",
+      "upstream_svg": "user-round",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "uv-extreme",
+      "upstream_svg": "sun",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "uv-high",
+      "upstream_svg": "sun",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "uv-low",
+      "upstream_svg": "sun",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "uv-moderate",
+      "upstream_svg": "sun",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "uv-very-high",
+      "upstream_svg": "sun",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "warehouse",
+      "upstream_svg": "warehouse",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "waves",
+      "upstream_svg": "waves",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "wind",
+      "upstream_svg": "wind",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "wind-calm",
+      "upstream_svg": "wind",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "wind-direction",
+      "upstream_svg": "wind",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "wind-gust",
+      "upstream_svg": "wind",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "wind-strong",
+      "upstream_svg": "wind",
+      "role": "weather",
+      "status": "approximation; weather design pending"
+    },
+    {
+      "semantic_name": "wrench",
+      "upstream_svg": "wrench",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "x",
+      "upstream_svg": "x",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    },
+    {
+      "semantic_name": "zap",
+      "upstream_svg": "zap",
+      "role": "ui",
+      "status": "baseline upstream geometry"
+    }
+  ]
+}

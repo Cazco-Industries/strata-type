@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="colon_greater.liga.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="29" y="1177" type="line"/>
+      <point x="29" y="1049" type="line"/>
+      <point x="851" y="625" type="line"/>
+      <point x="29" y="201" type="line"/>
+      <point x="29" y="76" type="line"/>
+      <point x="961" y="549" type="line"/>
+      <point x="961" y="702" type="line"/>
+    </contour>
+    <component base="colon" xOffset="-1246" yOffset="122"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>colon</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Etadasiaperispomeni" format="2">
+  <advance width="1200"/>
+  <unicode hex="1F2F"/>
+  <anchor x="600" y="0" name="bottom"/>
+  <anchor x="1034" y="0" name="bottomright"/>
+  <anchor x="600" y="688" name="center"/>
+  <anchor x="-149" y="1390" name="top"/>
+  <anchor x="166" y="1374" name="topleft"/>
+  <outline>
+    <component base="Eta"/>
+    <component base="dasiaperispomeni" xOffset="-744" yOffset="-277"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>anchor</key>
+          <string>topleft</string>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>dasiaperispomeni</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

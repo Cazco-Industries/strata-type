@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="assertion" format="2">
+  <advance width="1200"/>
+  <unicode hex="22A6"/>
+  <outline>
+    <contour>
+      <point x="454" y="503" type="line"/>
+      <point x="954" y="503" type="line"/>
+      <point x="954" y="747" type="line"/>
+      <point x="454" y="747" type="line"/>
+    </contour>
+    <contour>
+      <point x="570" y="1156" type="line"/>
+      <point x="306" y="1156" type="line"/>
+      <point x="306" y="94" type="line"/>
+      <point x="570" y="94" type="line"/>
+    </contour>
+  </outline>
+</glyph>

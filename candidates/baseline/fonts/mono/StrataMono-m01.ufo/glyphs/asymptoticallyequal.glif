@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="asymptoticallyequal" format="2">
+  <advance width="1200"/>
+  <unicode hex="2243"/>
+  <outline>
+    <contour>
+      <point x="1054" y="535" type="line"/>
+      <point x="146" y="535" type="line"/>
+      <point x="146" y="290" type="line"/>
+      <point x="1054" y="290" type="line"/>
+    </contour>
+    <component base="_part.tilde" yOffset="185"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

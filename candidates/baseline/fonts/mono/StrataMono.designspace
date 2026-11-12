@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="300" maximum="700" default="300">
+      <map input="300" output="62"/>
+      <map input="400" output="84"/>
+      <map input="500" output="112"/>
+      <map input="600" output="132"/>
+      <map input="700" output="158"/>
+    </axis>
+  </axes>
+  <sources>
+    <source filename="StrataMono-m00.ufo" name="Strata Mono Light" familyname="Strata Mono" stylename="Light">
+      <lib copy="1"/>
+      <groups copy="1"/>
+      <features copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="Weight" xvalue="62"/>
+      </location>
+    </source>
+    <source filename="StrataMono-m01.ufo" name="Strata Mono Bold" familyname="Strata Mono" stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="158"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance name="Strata Mono Light" familyname="Strata Mono" stylename="Light" filename="StrataMono-instance-000.ufo" postscriptfontname="StrataMono-Light" stylemapfamilyname="Strata Mono" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="62"/>
+      </location>
+    </instance>
+    <instance name="Strata Mono Regular" familyname="Strata Mono" stylename="Regular" filename="StrataMono-instance-001.ufo" postscriptfontname="StrataMono-Regular" stylemapfamilyname="Strata Mono" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="84"/>
+      </location>
+    </instance>
+    <instance name="Strata Mono Medium" familyname="Strata Mono" stylename="Medium" filename="StrataMono-instance-002.ufo" postscriptfontname="StrataMono-Medium" stylemapfamilyname="Strata Mono" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="112"/>
+      </location>
+    </instance>
+    <instance name="Strata Mono SemiBold" familyname="Strata Mono" stylename="SemiBold" filename="StrataMono-instance-003.ufo" postscriptfontname="StrataMono-SemiBold" stylemapfamilyname="Strata Mono" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="132"/>
+      </location>
+    </instance>
+    <instance name="Strata Mono Bold" familyname="Strata Mono" stylename="Bold" filename="StrataMono-instance-004.ufo" postscriptfontname="StrataMono-Bold" stylemapfamilyname="Strata Mono" stylemapstylename="bold">
+      <location>
+        <dimension name="Weight" xvalue="158"/>
+      </location>
+    </instance>
+  </instances>
+  <lib>
+    <dict>
+      <key>GSDimensionPlugin.Dimensions</key>
+      <dict>
+        <key>B67F0F2D-EC95-4CB8-966E-23AE86958A69</key>
+        <dict/>
+        <key>BF448B58-7A35-489E-A1C9-12628F60690C</key>
+        <dict>
+          <key>HH</key>
+          <integer>141</integer>
+          <key>HV</key>
+          <integer>166</integer>
+          <key>OH</key>
+          <integer>121</integer>
+          <key>OV</key>
+          <integer>170</integer>
+          <key>nV</key>
+          <integer>160</integer>
+          <key>oH</key>
+          <integer>118</integer>
+          <key>oV</key>
+          <integer>165</integer>
+        </dict>
+        <key>UUID0</key>
+        <dict>
+          <key>HH</key>
+          <integer>78</integer>
+          <key>HV</key>
+          <integer>95</integer>
+          <key>OH</key>
+          <integer>78</integer>
+          <key>OV</key>
+          <integer>99</integer>
+          <key>nV</key>
+          <integer>92</integer>
+          <key>oH</key>
+          <integer>74</integer>
+          <key>oV</key>
+          <integer>98</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</designspace>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="delete-control" format="2">
+  <advance width="1200"/>
+  <unicode hex="2421"/>
+  <anchor x="611.2" y="458.0" name="bottom"/>
+  <anchor x="1107.56" y="712.1" name="center"/>
+  <anchor x="611.2" y="915.38" name="top"/>
+  <anchor x="1002.62" y="915.38" name="topright"/>
+  <anchor x="714.82" y="458.0" name="ogonek"/>
+  <anchor x="454.78" y="915.38" name="topleft"/>
+  <outline>
+    <component base="D" xScale="0.33" yScale="0.33" yOffset="458"/>
+    <component base="L" xScale="0.33" yScale="0.33" xOffset="800" yOffset="458"/>
+    <component base="E" xScale="0.33" yScale="0.33" xOffset="400" yOffset="458"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>D</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>L</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>2</integer>
+          <key>name</key>
+          <string>E</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

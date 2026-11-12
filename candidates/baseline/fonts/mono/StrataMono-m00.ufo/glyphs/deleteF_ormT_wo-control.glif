@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="deleteFormTwo-control" format="2">
+  <advance width="1200"/>
+  <unicode hex="2425"/>
+  <outline>
+    <contour>
+      <point x="196" y="0" type="line"/>
+      <point x="1136" y="1374" type="line"/>
+      <point x="1006" y="1374" type="line"/>
+      <point x="64" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="460" y="0" type="line"/>
+      <point x="1200" y="1082" type="line"/>
+      <point x="1200" y="1271" type="line"/>
+      <point x="328" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="0" y="100" type="line"/>
+      <point x="872" y="1374" type="line"/>
+      <point x="742" y="1374" type="line"/>
+      <point x="0" y="292" type="line"/>
+    </contour>
+  </outline>
+</glyph>

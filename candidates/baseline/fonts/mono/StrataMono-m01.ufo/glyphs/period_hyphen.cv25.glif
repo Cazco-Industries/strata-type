@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="period_hyphen.cv25" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-103" y="503" type="line"/>
+      <point x="983" y="503" type="line"/>
+      <point x="983" y="749" type="line"/>
+      <point x="-103" y="749" type="line"/>
+    </contour>
+    <component base="bullet" xOffset="-1233" yOffset="-46"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>bullet</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>

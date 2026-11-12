@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>ascender</key>
+    <integer>1800</integer>
+    <key>capHeight</key>
+    <integer>1386</integer>
+    <key>copyright</key>
+    <string>Copyright 2014-2021 The Fira Code Project Authors (https://github.com/tonsky/FiraCode)</string>
+    <key>descender</key>
+    <integer>-600</integer>
+    <key>familyName</key>
+    <string>Strata Mono</string>
+    <key>italicAngle</key>
+    <integer>0</integer>
+    <key>openTypeHeadCreated</key>
+    <string>2021/12/03 16:48:46</string>
+    <key>openTypeHheaAscender</key>
+    <integer>1800</integer>
+    <key>openTypeHheaDescender</key>
+    <integer>-600</integer>
+    <key>openTypeHheaLineGap</key>
+    <integer>0</integer>
+    <key>openTypeNameCompatibleFullName</key>
+    <string>Strata Mono Bold</string>
+    <key>openTypeNameDesigner</key>
+    <string>Carrois Corporate, Edenspiekermann AG, Nikita Prokopov</string>
+    <key>openTypeNameDesignerURL</key>
+    <string>https://tonsky.me</string>
+    <key>openTypeNameLicense</key>
+    <string>Licensed under the SIL Open Font License, Version 1.1. See accompanying notices.</string>
+    <key>openTypeNameLicenseURL</key>
+    <string>https://openfontlicense.org</string>
+    <key>openTypeNameManufacturer</key>
+    <string>Carrois Corporate, Edenspiekermann AG, Nikita Prokopov</string>
+    <key>openTypeNameManufacturerURL</key>
+    <string>https://tonsky.me</string>
+    <key>openTypeNamePreferredFamilyName</key>
+    <string>Strata Mono</string>
+    <key>openTypeNameUniqueID</key>
+    <string>StrataMono-Bold;1.000</string>
+    <key>openTypeOS2Panose</key>
+    <array>
+      <integer>2</integer>
+      <integer>11</integer>
+      <integer>8</integer>
+      <integer>9</integer>
+      <integer>5</integer>
+      <integer>0</integer>
+      <integer>0</integer>
+      <integer>2</integer>
+      <integer>0</integer>
+      <integer>4</integer>
+    </array>
+    <key>openTypeOS2Selection</key>
+    <array>
+      <integer>7</integer>
+    </array>
+    <key>openTypeOS2StrikeoutPosition</key>
+    <integer>318</integer>
+    <key>openTypeOS2StrikeoutSize</key>
+    <integer>50</integer>
+    <key>openTypeOS2Type</key>
+    <array/>
+    <key>openTypeOS2TypoAscender</key>
+    <integer>1800</integer>
+    <key>openTypeOS2TypoDescender</key>
+    <integer>-600</integer>
+    <key>openTypeOS2TypoLineGap</key>
+    <integer>0</integer>
+    <key>openTypeOS2VendorID</key>
+    <string>CTDB</string>
+    <key>openTypeOS2WeightClass</key>
+    <integer>700</integer>
+    <key>openTypeOS2WinAscent</key>
+    <integer>1800</integer>
+    <key>openTypeOS2WinDescent</key>
+    <integer>600</integer>
+    <key>postscriptBlueValues</key>
+    <array>
+      <integer>-40</integer>
+      <integer>0</integer>
+      <integer>1062</integer>
+      <integer>1102</integer>
+      <integer>1386</integer>
+      <integer>1426</integer>
+      <integer>1484</integer>
+      <integer>1524</integer>
+    </array>
+    <key>postscriptFontName</key>
+    <string>StrataMono-Bold</string>
+    <key>postscriptFullName</key>
+    <string>Strata Mono Bold</string>
+    <key>postscriptIsFixedPitch</key>
+    <true/>
+    <key>postscriptOtherBlues</key>
+    <array>
+      <integer>-482</integer>
+      <integer>-442</integer>
+    </array>
+    <key>postscriptStemSnapH</key>
+    <array>
+      <integer>234</integer>
+    </array>
+    <key>postscriptStemSnapV</key>
+    <array>
+      <integer>316</integer>
+    </array>
+    <key>postscriptUnderlinePosition</key>
+    <integer>-100</integer>
+    <key>postscriptUnderlineThickness</key>
+    <integer>50</integer>
+    <key>styleMapFamilyName</key>
+    <string>Strata Mono</string>
+    <key>styleMapStyleName</key>
+    <string>bold</string>
+    <key>styleName</key>
+    <string>Bold</string>
+    <key>unitsPerEm</key>
+    <integer>1950</integer>
+    <key>versionMajor</key>
+    <integer>6</integer>
+    <key>versionMinor</key>
+    <integer>2</integer>
+    <key>xHeight</key>
+    <integer>1062</integer>
+  </dict>
+</plist>

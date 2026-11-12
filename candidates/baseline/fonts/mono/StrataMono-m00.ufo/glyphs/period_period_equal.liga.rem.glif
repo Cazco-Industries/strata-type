@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="period_period_equal.liga.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="970" y="863" type="line"/>
+      <point x="-195" y="863" type="line"/>
+      <point x="-195" y="748" type="line"/>
+      <point x="970" y="748" type="line"/>
+    </contour>
+    <contour>
+      <point x="970" y="496" type="line"/>
+      <point x="-195" y="496" type="line"/>
+      <point x="-195" y="380" type="line"/>
+      <point x="970" y="380" type="line"/>
+    </contour>
+    <component base="bullet" xOffset="-2400" yOffset="-66"/>
+    <component base="bullet" xOffset="-1500" yOffset="-66"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>bullet</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>bullet</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CCPP</string>
+    </dict>
+  </lib>
+</glyph>

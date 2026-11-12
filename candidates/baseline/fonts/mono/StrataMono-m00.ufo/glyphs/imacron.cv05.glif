@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="imacron.cv05" format="2">
+  <advance width="1200"/>
+  <anchor x="738" y="0" name="ogonek"/>
+  <anchor x="604" y="1050" name="top"/>
+  <outline>
+    <component base="idotless.cv05"/>
+    <component base="macron" xOffset="4"/>
+  </outline>
+</glyph>

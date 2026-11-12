@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="greater_equal.ss02" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-569" y="279" type="line"/>
+      <point x="-522" y="171" type="line"/>
+      <point x="571" y="657" type="line"/>
+      <point x="525" y="759" type="line"/>
+    </contour>
+    <contour>
+      <point x="-569" y="1177" type="line"/>
+      <point x="525" y="697" type="line"/>
+      <point x="571" y="657" type="line"/>
+      <point x="571" y="799" type="line"/>
+      <point x="-522" y="1285" type="line"/>
+    </contour>
+    <contour>
+      <point x="571" y="27" type="line"/>
+      <point x="-540" y="27" type="line"/>
+      <point x="-540" y="-94" type="line"/>
+      <point x="571" y="-94" type="line"/>
+    </contour>
+  </outline>
+</glyph>

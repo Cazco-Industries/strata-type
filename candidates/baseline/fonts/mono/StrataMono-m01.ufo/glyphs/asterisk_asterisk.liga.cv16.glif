@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="asterisk_asterisk.liga.cv16" format="2">
+  <advance width="1200"/>
+  <outline>
+    <component base="asteriskmath" xOffset="-1150"/>
+    <component base="asteriskmath" xOffset="-50"/>
+  </outline>
+</glyph>

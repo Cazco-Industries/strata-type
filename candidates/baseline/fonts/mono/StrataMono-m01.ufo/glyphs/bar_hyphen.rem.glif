@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bar_hyphen.rem" format="2">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-600" y="503" type="line"/>
+      <point x="854" y="503" type="line"/>
+      <point x="854" y="749" type="line"/>
+      <point x="-600" y="749" type="line"/>
+    </contour>
+    <component base="_part.bar" xOffset="-1200"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>_part.bar</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.shapeOrder</key>
+      <string>CP</string>
+    </dict>
+  </lib>
+</glyph>
