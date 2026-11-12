@@ -109,6 +109,13 @@ def outlines(path,face):
     return out+'</div>'
 
 
+def icon_font(path,chars):
+    data=base64.b64encode(path.read_bytes()).decode()
+    return ('<style>@font-face{font-family:q;src:url(data:font/woff2;base64,'+data+');font-display:block}</style>'
+            '<div style="font-family:q;font-size:32px;line-height:1.8;display:grid;grid-template-columns:repeat(16,minmax(0,1fr));gap:8px">'
+            +''.join('<span>'+char+'</span>' for char in chars)+'</div>')
+
+
 def icon_sheet(svgs,start=0):
     out='<div class="icons">'
     for index,svg in enumerate(svgs,start=start):

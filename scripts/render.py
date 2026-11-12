@@ -159,6 +159,7 @@ def main():
             for i in range(3):
                 if not page.evaluate(f'document.fonts.check("400 32px p{i}")'):raise ValueError('Font unloaded during specimen render')
         filename=f'{label}-{number:02}.png';dest=out/filename
+        if page.evaluate('document.documentElement.scrollWidth')>1120:raise ValueError('Specimen overflows sheet width')
         page.screenshot(path=str(dest),full_page=True,animations='disabled');clean_png(dest)
         with Image.open(dest) as image:width,height=image.size
         rows.append({'label':label,'image':filename,'sheet':kind,'theme':theme,'width':width,'height':height,'scale':2})
@@ -197,11 +198,9 @@ def main():
             icon_sheets(chromium,a.cand,svgs,candidatefonts,'chromium')
             # Also prove the stroke-expanded icon font loads and has every codepoint.
             page=chromium.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
-            import base64
-            fontdata=base64.b64encode((build/'icons/StrataIcons.woff2').read_bytes()).decode()
             imap=json.loads((build/'icons/manifest.json').read_text())['icons']
             chars=''.join(chr(int(v['codepoint'],16)) for v in imap.values())
-            body='<style>@font-face{font-family:q;src:url(data:font/woff2;base64,'+fontdata+')}</style><div style="font-family:q;font-size:32px;line-height:1.8;word-break:break-all">'+chars+'</div>'
+            body=s.icon_font(build/'icons/StrataIcons.woff2',chars)
             save(page,a.cand,candidatefonts,body,'light','09','chromium')
             if not page.evaluate('document.fonts.check("32px q")'):raise ValueError('Icon font fallback')
             page.close()
