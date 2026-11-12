@@ -8,7 +8,7 @@ import sys
 import time
 import uharfbuzz as hb
 from fontTools.ttLib import TTFont
-from common import checkpoint, ROOT, FACES, CORE, FORBIDDEN, candidate, digest, dump
+from common import checkpoint, ROOT, ALL_FACES, CORE, ROUNDED_CORE, FORBIDDEN, candidate_faces, candidate, digest, dump
 from icons import parse_svg, validate
 
 
@@ -32,7 +32,8 @@ def metrics(font,path):
 def checked_build(cand,icons_dir=None):
     path=candidate(cand);out=ROOT/'build'/cand
     report=json.loads((out/'build.json').read_text())
-    for face in FACES:
+    if set(report['faces'])!=set(candidate_faces(path)):raise ValueError('Changed face set; run make build')
+    for face in candidate_faces(path):
         if report['faces'][face]['source_sha256']!=digest(path/'fonts'/face):raise ValueError(f'Stale {face} build; run make build')
         for format in ['ttf','woff2']:
             if report['faces'][face][f'{format}_sha256']!=digest(out/report['faces'][face][format]):raise ValueError(f'Changed binary: {face} {format}')
@@ -42,13 +43,14 @@ def checked_build(cand,icons_dir=None):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--cand',required=True);p.add_argument('--icons-dir');p.add_argument('--strict',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--cand',required=True);p.add_argument('--icons-dir');p.add_argument('--strict',action='store_true');p.add_argument('--summary');a=p.parse_args()
     start=time.monotonic();path,out,build,icons=checked_build(a.cand,a.icons_dir)
     report={'candidate':a.cand,'subset':build['subset'],'core_codepoints':len(CORE),'faces':{},'hard_failures':[]}
-    for face,family in FACES.items():
+    for face,family in candidate_faces(path).items():
         checkpoint()
         before=time.monotonic();ttf=out/build['faces'][face]['ttf'];font=TTFont(ttf)
-        missing=sorted(CORE-set(font.getBestCmap()))
+        required=ROUNDED_CORE if face=='sans-rounded' else CORE
+        missing=sorted(required-set(font.getBestCmap()))
         names=[{'id':n.nameID,'platform':n.platformID,'value':n.toUnicode()} for n in font['name'].names if FORBIDDEN.search(n.toUnicode())]
         if names:report['hard_failures'].append(f'{face}: reserved upstream name in name table')
         bakery=out/f'{face}-fontbakery.json'
@@ -62,7 +64,7 @@ def main():
         if result.returncode not in (0,1) or not interp.exists():raise RuntimeError(f'Interpolatable did not run: {face}; inspect log')
         problems=json.loads(interp.read_text() or '{}')
         types=Counter(p['type'] for values in problems.values() for p in values)
-        item={'fontbakery':{'profile':'universal','network':'skipped','counts':fb['result']},'interpolatable':{'glyphs_with_findings':len(problems),'counts':dict(types),'report':interp.name},'coverage':{'required':len(CORE),'present':len(CORE)-len(missing),'missing':[f'U+{c:04X}' for c in missing],'status':'FAIL' if missing else 'PASS'},'names':{'status':'FAIL' if names else 'PASS','violations':names},'metrics':metrics(font,ttf),'woff2_bytes':ttf.with_suffix('.woff2').stat().st_size,'seconds':round(time.monotonic()-before,3)}
+        item={'fontbakery':{'profile':'universal','network':'skipped','counts':fb['result']},'interpolatable':{'glyphs_with_findings':len(problems),'counts':dict(types),'report':interp.name},'coverage':{'required':len(required),'present':len(required)-len(missing),'missing':[f'U+{c:04X}' for c in missing],'status':'FAIL' if missing else 'PASS'},'names':{'status':'FAIL' if names else 'PASS','violations':names},'metrics':metrics(font,ttf),'woff2_bytes':ttf.with_suffix('.woff2').stat().st_size,'seconds':round(time.monotonic()-before,3)}
         item['figures']={'tabular_equal_width':len(set(item['metrics']['figures_tnum']))==1,'proportional_varied_width':len(set(item['metrics']['figures_pnum']))>1,'tnum_feature':'tnum' in item['metrics']['layout_features'],'pnum_feature':'pnum' in item['metrics']['layout_features']}
         report['faces'][face]=item
         print(f'{face}: {json.dumps(item["fontbakery"]["counts"])}, missing={len(missing)}, interpolation={dict(types)}',flush=True)
@@ -87,15 +89,17 @@ def main():
       '| Face | Pass | Warn | Fail | Error | Core present | Interpolation glyphs | WOFF2 bytes |',
       '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
     for face,item in report['faces'].items():
-        c=item['fontbakery']['counts'];lines.append(f'| {FACES[face]} | {c.get("PASS",0)} | {c.get("WARN",0)} | {c.get("FAIL",0)} | {c.get("ERROR",0)} | {item["coverage"]["present"]}/{len(CORE)} | {item["interpolatable"]["glyphs_with_findings"]} | {item["woff2_bytes"]} |')
+        c=item['fontbakery']['counts'];lines.append(f'| {ALL_FACES[face]} | {c.get("PASS",0)} | {c.get("WARN",0)} | {c.get("FAIL",0)} | {c.get("ERROR",0)} | {item["coverage"]["present"]}/{item["coverage"]["required"]} | {item["interpolatable"]["glyphs_with_findings"]} | {item["woff2_bytes"]} |')
     lines+=['','Metrics are UPM-normalized (default variable location). Figure advances are shaped with HarfBuzz, with tnum/pnum explicitly requested.','', '| Face | UPM | x-height | Cap | Typo asc/desc/gap | hhea asc/desc/gap | Win asc/desc | Weight range |','| --- | ---: | ---: | ---: | --- | --- | --- | --- |']
     for face,item in report['faces'].items():
-        m=item['metrics'];lines.append(f'| {FACES[face]} | {m["upm"]} | {m["sxHeight"]} | {m["sCapHeight"]} | {m["sTypoAscender"]}/{m["sTypoDescender"]}/{m["sTypoLineGap"]} | {m["hhea"]["ascent"]}/{m["hhea"]["descent"]}/{m["hhea"]["lineGap"]} | {m["usWinAscent"]}/{m["usWinDescent"]} | {m["axes"]["wght"]} |')
+        m=item['metrics'];lines.append(f'| {ALL_FACES[face]} | {m["upm"]} | {m["sxHeight"]} | {m["sCapHeight"]} | {m["sTypoAscender"]}/{m["sTypoDescender"]}/{m["sTypoLineGap"]} | {m["hhea"]["ascent"]}/{m["hhea"]["descent"]}/{m["hhea"]["lineGap"]} | {m["usWinAscent"]}/{m["usWinDescent"]} | {m["axes"]["wght"]} |')
         lines += []
     for face,item in report['faces'].items():
-        lines+=['',f'## {FACES[face]}',f'Missing core: {", ".join(item["coverage"]["missing"]) or "none"}',f'Figure gates: {item["figures"]}',f'Tabular advances 0–9: {item["metrics"]["figures_tnum"]}',f'Proportional advances 0–9: {item["metrics"]["figures_pnum"]}',f'Interpolation findings: {item["interpolatable"]["counts"]}']
+        lines+=['',f'## {ALL_FACES[face]}',f'Name/RFN: {item["names"]["status"]}',f'Missing required: {", ".join(item["coverage"]["missing"]) or "none"}',f'Figure gates: {item["figures"]}',f'Tabular advances 0–9: {item["metrics"]["figures_tnum"]}',f'Proportional advances 0–9: {item["metrics"]["figures_pnum"]}',f'Interpolation findings: {item["interpolatable"]["counts"]}']
     lines+=['',f'Icons: {report["icons"]}',f'Elapsed: {report["seconds"]} seconds.']
-    (out/'gate.md').write_text('\n'.join(lines)+'\n')
+    summary=Path(a.summary).expanduser() if a.summary else out/'gate.md'
+    summary.parent.mkdir(parents=True,exist_ok=True)
+    summary.write_text('\n'.join(lines)+'\n')
     if report['hard_failures'] or (a.strict and report['quality_status']=='FAIL'):raise SystemExit(1)
     print(f'gate report complete: {report["seconds"]:.3f}s; quality={report["quality_status"]}',flush=True)
 

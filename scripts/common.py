@@ -6,6 +6,8 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 UPSTREAM = ROOT / 'sources/upstream'
 FACES = {'sans': 'Strata Sans', 'serif': 'Strata Serif', 'mono': 'Strata Mono'}
+ALL_FACES = {**FACES, 'sans-rounded': 'Strata Sans Rounded'}
+ROUNDED_CORE = set(map(ord, ' 0123456789.,:%°−+±-/CF℃℉')) | {0x2007, 0x2008, 0x2009, 0x2044}
 FORBIDDEN = re.compile(r'inter|source|fira', re.I)
 CORE = (set(range(0x20, 0x7f)) | set(range(0xa0, 0x100)) |
         set(range(0x2000, 0x200b)) | set(range(0x2010, 0x2016)) |
@@ -13,6 +15,12 @@ CORE = (set(range(0x20, 0x7f)) | set(range(0xa0, 0x100)) |
         set(range(0x2070, 0x207a)) - {0x2072, 0x2073} |
         {0x2103, 0x2109, 0x2212} | set(range(0x2190, 0x219a)) | set(range(0x2150, 0x215f)))
 # Unassigned superscripts are not requested. Latin-1 supplies ¹ ² ³ and ¼ ½ ¾.
+
+def candidate_faces(path):
+    faces = dict(FACES)
+    if (path / 'fonts/sans-rounded').is_dir():
+        faces['sans-rounded'] = ALL_FACES['sans-rounded']
+    return faces
 
 def candidate(value):
     if not re.fullmatch(r'[a-z0-9][a-z0-9_-]{0,63}', value):

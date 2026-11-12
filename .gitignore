@@ -7,3 +7,17 @@ __pycache__/
 node_modules/
 sources/*.log
 sources/*.json
+# Candidate masters are deterministically rebuilt from baseline + transforms.
+candidates/lumen-146/fonts/
+candidates/quartz-571/fonts/
+# Original workshop copies and self-review helpers remain local, untouched.
+candidates/lumen-146/icons/
+candidates/quartz-571/icons/
+candidates/quartz-571/provenance.json
+candidates/quartz-571/transforms/stages.py
+candidates/quartz-571/transforms/workshop.py
+candidates/quartz-571/transforms/audit.py
+candidates/quartz-571/transforms/review.py
+candidates/quartz-571/transforms/contacts.py
+candidates/quartz-571/transforms/summarize.py
+candidates/quartz-571/transforms/rounding-masks.json

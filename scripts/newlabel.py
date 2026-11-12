@@ -9,7 +9,7 @@ import re
 import secrets
 
 WORDS=('amber','birch','cedar','cobalt','copper','coral','dawn','dune','elm','fern','flint','grove','hazel','jade','lake','linen','maple','moss','opal','pearl','pine','reed','river','slate','stone','teal','vale','willow')
-LEAK=re.compile(r'Strata|Inter|Source|Fira|SF|New[ _-]?York|Lucide|Hugeicons|baseline|reference',re.I)
+LEAK=re.compile(r'Strata|Inter|Source|Fira|SF|New[ _-]?York|Lucide|Hugeicons|baseline|reference|lumen|quartz|opus|sol|claude|codex|gpt',re.I)
 
 
 def labels(path,keys):

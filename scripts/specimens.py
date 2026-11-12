@@ -15,10 +15,10 @@ MAP='<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1800"><rect wi
 def document(label,fonts,body,theme='light'):
     rules=[]
     if isinstance(fonts,dict):
-        for index,face in enumerate(['sans','serif','mono']):
-            path=fonts[face];mime='font/woff2' if path.suffix=='.woff2' else 'font/ttf'
+        for index,path in enumerate(fonts.values()):
+            mime='font/woff2' if path.suffix=='.woff2' else 'font/ttf'
             rules.append(f'@font-face{{font-family:p{index};src:url(data:{mime};base64,{base64.b64encode(path.read_bytes()).decode()});font-style:normal;font-weight:100 900;font-display:block}}')
-        families=['p0','p1','p2']
+        families=['p'+str(i) for i in range(len(fonts))]
     else:families=fonts
     for index,family in enumerate(families):rules.append(f'.f{index}{{font-family:{family};font-optical-sizing:auto}}')
     mapurl='data:image/svg+xml;base64,'+base64.b64encode(MAP.encode()).decode()
@@ -53,6 +53,26 @@ def weather():
         for time,temp,pop in [('8 AM','72','10'),('9 AM','73','8'),('10 AM','74','15'),('11 AM','71','35'),('12 PM','69','80'),('1 PM','70','9')]:out+=f'<tr><td>{time}</td><td>{temp}°</td><td>{pop}%</td></tr>'
         out+='</table></section>'
     return out+'</div><section style="font-size:38px">30.16 inHg &nbsp; 12 mph NNW &nbsp; 3:45 PM</section><section style="font-size:24px">¼ ½ ¾ &nbsp; 10/12 &nbsp; 72° → 68°</section></div>'
+
+
+def rounded():
+    out='<h2>Rounded numerals</h2><div class="f3" data-face="3" style="font-variant-numeric:tabular-nums">'
+    for size in [24,32,48,64,96]:
+        out+=f'<section><small>{size}</small><div class="columns" style="font-size:{size}px;line-height:1.25">'
+        out+=''.join(f'<div>{value}</div>' for value in ['72°','−3°','104°F','18℃'])+'</div></section>'
+    out+='<section style="font-size:24px"><table><tr>'+''.join(f'<td>{t}</td>' for t in ['08:00','09:00','10:00','11:00','12:00'])+'</tr><tr>'
+    out+=''.join(f'<td>{t}°</td>' for t in ['72','73','74','71','69'])+'</tr><tr>'
+    out+=''.join(f'<td>{t}%</td>' for t in ['10','8','15','35','80'])+'</tr></table></section>'
+    return out+'<section style="font-size:48px">0% &nbsp; 8% &nbsp; 100%<br>03:45 &nbsp; 18:30</section></div>'
+
+
+def rounded_cards():
+    out='<p class="label">Mockup · same card, two numeral styles</p><div class="columns">'
+    for face,title in [(3,'Rounded numerals'),(0,'Regular numerals')]:
+        out+=f'<div><h2>{title}</h2><div class="card"><p class="f0" data-face="0">Thursday · Lakeside</p><p class="f1" data-face="1" style="font-size:32px">A quiet afternoon.</p>'
+        out+=f'<div class="f{face}" data-face="{face}" style="font-size:96px;line-height:1.15">72°</div><p class="f0" data-face="0">Clouds build after noon.</p>'
+        out+=f'<div class="f{face}" data-face="{face}" style="font-size:24px;font-variant-numeric:tabular-nums"><table><tr><td>08:00</td><td>09:00</td><td>10:00</td></tr><tr><td>72°</td><td>71°</td><td>69°</td></tr><tr><td>10%</td><td>35%</td><td>80%</td></tr></table></div></div></div>'
+    return out+'</div>'
 
 
 def card():

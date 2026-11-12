@@ -9,7 +9,7 @@ import tempfile
 import time
 from fontTools import subset
 from fontTools.ttLib import TTFont
-from common import checkpoint, ROOT, FACES, CORE, candidate, digest, dump, rename_binary
+from common import checkpoint, ROOT, ALL_FACES, CORE, candidate_faces, candidate, digest, dump, rename_binary
 from icons import build_icons
 
 
@@ -31,7 +31,7 @@ def compile_face(face,source,out):
     with log.open('w') as stream:
         subprocess.run([sys.executable,'-I','-m','fontmake','-m',str(designspaces[0]),'-o','variable','--output-path',str(out),'--keep-overlaps','--no-autohint','--verbose','WARNING'],cwd=source,stdout=stream,stderr=subprocess.STDOUT,check=True)
     font=TTFont(out,recalcTimestamp=False)
-    rename_binary(font,FACES[face]);font['head'].created=font['head'].modified=3406620153
+    rename_binary(font,ALL_FACES[face]);font['head'].created=font['head'].modified=3406620153
     font.save(out)
     return out
 
@@ -53,7 +53,8 @@ def build(cand,subset_name,icons_dir=None):
     cache=ROOT/'build/.cache';cache.mkdir(parents=True,exist_ok=True)
     toolhash=digest(ROOT/'.python-version')+digest(ROOT/'uv.lock')+digest(ROOT/'scripts/build.py')+digest(ROOT/'scripts/common.py')
     import hashlib
-    for face,family in FACES.items():
+    faces=candidate_faces(path)
+    for face,family in faces.items():
         checkpoint()
         before=time.monotonic();source=path/'fonts'/face
         fingerprint=hashlib.sha256((digest(source)+toolhash).encode()).hexdigest()
@@ -65,7 +66,7 @@ def build(cand,subset_name,icons_dir=None):
             dump(ready,{'sha256':digest(cached)})
         target=out/f'{family.replace(" ","")}.ttf'
         font_output(cached,target,subset_name)
-        report['faces'][face]={'source_sha256':digest(source),'cache_hit':hit,'seconds':round(time.monotonic()-before,3),'ttf':target.name,'woff2':target.with_suffix('.woff2').name,'ttf_sha256':digest(target),'woff2_sha256':digest(target.with_suffix('.woff2'))}
+        report['faces'][face]={'source_sha256':digest(source),'cache_hit':hit,'full_ttf':str(cached.relative_to(ROOT)),'seconds':round(time.monotonic()-before,3),'ttf':target.name,'woff2':target.with_suffix('.woff2').name,'ttf_sha256':digest(target),'woff2_sha256':digest(target.with_suffix('.woff2'))}
         print(f'{face}: {report["faces"][face]["seconds"]:.3f}s (cached={hit})',flush=True)
     source=Path(icons_dir).expanduser().resolve() if icons_dir else path/'icons'
     # Replace only generated icon output so removed semantic names cannot linger.
@@ -74,9 +75,10 @@ def build(cand,subset_name,icons_dir=None):
     report['icons']['external']=bool(icons_dir)
     report['icons']['source']=str(source)
     notices=out/'licenses';shutil.copytree(ROOT/'licenses',notices,dirs_exist_ok=True)
-    for face,family in FACES.items():
+    for face,family in faces.items():
         for filename in ['COPYRIGHT.txt','OFL.txt']:
             notice=path/'fonts'/face/filename
+            if face=='sans-rounded' and not notice.is_file():notice=path/'fonts/sans'/filename
             if notice.is_file():
                 shutil.copyfile(notice,notices/(family.replace(' ','')+'-'+filename))
     report['seconds']=round(time.monotonic()-start,3)

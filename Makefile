@@ -16,7 +16,7 @@ inventory:
 build:
 	$(GUARD) $(PY) -I scripts/run.py build --cand "$(CAND)" --subset "$(SUBSET)" $(if $(ICONS_DIR),--icons-dir "$(ICONS_DIR)",)
 gate:
-	$(GUARD) $(PY) -I scripts/run.py gate --cand "$(CAND)" $(if $(ICONS_DIR),--icons-dir "$(ICONS_DIR)",)
+	$(GUARD) $(PY) -I scripts/run.py gate --cand "$(CAND)" $(if $(ICONS_DIR),--icons-dir "$(ICONS_DIR)",) $(if $(GATE_SUMMARY),--summary "$(GATE_SUMMARY)",)
 render:
 	$(GUARD) $(PY) -I scripts/run.py render --cand "$(CAND)" --out "$(OUT)" --refs "$(REFS)" --map "$(MAP)" $(if $(ICONS_DIR),--icons-dir "$(ICONS_DIR)",)
 verify:

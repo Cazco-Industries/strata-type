@@ -47,7 +47,7 @@ def font_probe(page,fonts):
         # generic-family success. Then check text cmap for each sheet separately.
         loaded=page.evaluate("[...document.fonts].filter(f=>/^p[012]$/.test(f.family)&&f.status==='loaded').length")
         if loaded!=3:raise ValueError(f'FontFace load count {loaded}, expected 3')
-        for index,face in enumerate(fonts.values()):
+        for index,face in enumerate(list(fonts.values())[:3]):
             with TTFont(face) as font:
                 cmap=font.getBestCmap()
                 if any(ord(c) not in cmap for c in FONT_TEST):raise ValueError('Probe glyph missing')
@@ -80,6 +80,44 @@ def text_coverage(page,fonts):
         if missing:raise ValueError(f'Would fall back for missing glyphs: {sorted(missing)}')
 
 
+def rounded_probe(page,path=None):
+    sample='72° −3° 104°F 18℃ 0123456789 08:00 100%'
+    result=page.evaluate('''async ({sample,custom})=>{
+        const c=document.createElement('canvas');c.width=2048;c.height=100;
+        const x=c.getContext('2d');
+        const family=custom?'p3':'ui-rounded';
+        if(custom)await document.fonts.load('400 48px p3',sample);
+        function width(f){x.font='400 48px '+f;return x.measureText(sample).width;}
+        function raster(f){x.clearRect(0,0,c.width,c.height);x.font='400 48px '+f;x.fillText(sample,4,70);
+          const d=x.getImageData(0,0,c.width,c.height).data;let hash=2166136261,ink=0;
+          for(let i=3;i<d.length;i+=4){hash=Math.imul(hash^d[i],16777619);if(d[i])ink++;}
+          return {hash:hash>>>0,ink};}
+        return {width:width(family),regular:width('system-ui'),mono:width('monospace'),serif:width('serif'),
+          rasters:custom?null:[family,'system-ui','monospace','serif','sans-serif','__missing_round_0__'].map(f=>({family:f,...raster(f)})),
+          loaded:!custom||[...document.fonts].some(f=>f.family==='p3'&&f.status==='loaded')};
+    }''',{'sample':sample,'custom':path is not None})
+    if not result['loaded']:raise ValueError('Rounded FontFace did not load')
+    if path is not None:
+        with TTFont(path) as font:
+            font.flavor=None;data=io.BytesIO();font.save(data)
+            axes={a.axisTag:a.defaultValue for a in font['fvar'].axes}
+        face=hb.Face(data.getvalue());widths=[]
+        for optical in [None,48]:
+            font=hb.Font(face);font.scale=(face.upem,face.upem)
+            location={**axes,'wght':400}
+            if optical is not None and 'opsz' in axes:location['opsz']=optical
+            font.set_variations(location);buffer=hb.Buffer();buffer.add_str(sample);buffer.guess_segment_properties()
+            hb.shape(font,buffer)
+            if any(info.codepoint==0 for info in buffer.glyph_infos):raise ValueError('Rounded probe missing a glyph')
+            widths.append(sum(p.x_advance for p in buffer.glyph_positions)*48/face.upem)
+        result['expected_widths']=widths
+        if min(abs(result['width']-w) for w in widths)>.65:raise ValueError('Rounded font fingerprint mismatch')
+    else:
+        rasters=result['rasters']
+        result['available']=rasters[0]['ink']>20 and all(rasters[0]['hash']!=r['hash'] for r in rasters[1:])
+    return result
+
+
 def symbol_probe(page):
     return page.evaluate('''(points)=>{
       const c=document.createElement('canvas');c.width=96;c.height=96;const x=c.getContext('2d');
@@ -98,9 +136,10 @@ def main():
     if out.exists() and any(out.iterdir()):raise ValueError('OUT must be empty, to prevent stale labels or leaked files')
     out.mkdir(parents=True,exist_ok=True)
     scratch=build/'render-html';scratch.mkdir(exist_ok=True)
-    keys=[a.cand]+(['ref:open','ref:system','ref:hugeicons','ref:symbols'] if a.refs=='1' else [])
+    keys=[a.cand]+(['ref:open','ref:system','ref:hugeicons','ref:symbols','ref:rounded'] if a.refs=='1' else [])
     mapping=labels(mapfile,keys)
     candidatefonts={face:build/buildinfo['faces'][face]['woff2'] for face in FACES}
+    if 'sans-rounded' in buildinfo['faces']:candidatefonts['sans-rounded']=build/buildinfo['faces']['sans-rounded']['woff2']
     svgpaths=sorted((build/'icons/svg').glob('*.svg'));svgs=[p.read_text() for p in svgpaths]
     rows=[];audit={'controls':{'open':'Pinned unmodified upstream binaries','system':'CSS system-ui/ui-serif/ui-monospace; installed rendering only'},'candidate':a.cand,'font_checks':{},'system_engine_check':{},'skipped':[],'output':str(out)}
     counters=defaultdict(int)
@@ -113,6 +152,8 @@ def main():
         if isinstance(fonts,dict):
             page.evaluate('async () => { await Promise.all([0,1,2].map(i=>document.fonts.load("400 32px p"+i))); }')
         text_coverage(page,fonts)
+        if page.locator('[data-face="3"]').count() and isinstance(fonts,dict):
+            audit['font_checks'][key+':rounded']=rounded_probe(page,fonts['sans-rounded'])
         # Asset failure must fail the command instead of generating an attractive fallback.
         if isinstance(fonts,dict):
             for i in range(3):
@@ -120,7 +161,7 @@ def main():
         filename=f'{label}-{number:02}.png';dest=out/filename
         page.screenshot(path=str(dest),full_page=True,animations='disabled');clean_png(dest)
         with Image.open(dest) as image:width,height=image.size
-        rows.append({'label':label,'image':filename,'sheet':kind,'width':width,'height':height,'scale':2})
+        rows.append({'label':label,'image':filename,'sheet':kind,'theme':theme,'width':width,'height':height,'scale':2})
         return dest
     def suite(browser,key,fonts,engine):
         page=browser.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
@@ -139,6 +180,10 @@ def main():
             if isinstance(fonts,dict):body=s.outlines(fonts[list(FACES)[face]],face)
             else:body='<div class="f'+str(face)+'">'+''.join('<div class="zoom">'+escape(c)+'</div>' for c in s.KEYS)+'</div>'
             save(page,key,fonts,body,'light','07',engine)
+        if isinstance(fonts,dict) and 'sans-rounded' in fonts:
+            for theme in ['light','dark','sky']:
+                save(page,key,fonts,s.rounded(),theme,'10',engine)
+                save(page,key,fonts,s.rounded_cards(),theme,'11',engine)
         page.close()
     def icon_sheets(browser,key,icons,fonts,engine):
         page=browser.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
@@ -175,6 +220,15 @@ def main():
                     if any(abs(row['width']-row['serif'])<.01 or abs(row['width']-row['mono'])<.01 for row in audit['system_engine_check']['webkit']):
                         raise ValueError('An installed system reference fell back in WebKit')
                     suite(webkit,'ref:system',SYSTEM,'webkit')
+                    rp=webkit.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
+                    rp.set_content(s.document(mapping['ref:rounded'],SYSTEM+['ui-rounded'],s.rounded()))
+                    audit['system_rounded_probe']=rounded_probe(rp)
+                    if audit['system_rounded_probe']['available']:
+                        for theme in ['light','dark','sky']:
+                            save(rp,'ref:rounded',SYSTEM+['ui-rounded'],s.rounded(),theme,'10','webkit')
+                            save(rp,'ref:rounded',SYSTEM+['ui-rounded'],s.rounded_cards(),theme,'11','webkit')
+                    else:audit['skipped'].append('WebKit ui-rounded raster matched a fallback family; skipped')
+                    rp.close()
                     # System references do not produce outline diagrams; raster zooms only.
                     audit['skipped'].append('Apple outline views forbidden; replaced with rendered text zooms without stored outlines')
                     good=[chr(r['cp']) for r in symbols if r['rendered']]

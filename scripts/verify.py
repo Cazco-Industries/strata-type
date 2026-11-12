@@ -5,7 +5,7 @@ import unittest
 import xml.etree.ElementTree as ET
 from PIL import Image,PngImagePlugin
 from fontTools.ttLib import TTFont,newTable
-from common import ROOT,rename_binary,FORBIDDEN
+from common import ROOT,rename_binary,FORBIDDEN,candidate_faces,ROUNDED_CORE,FACES
 from blindcheck import clean_png,check
 from icons import parse_svg,validate,huge_svg,build_icons
 from newlabel import labels
@@ -43,6 +43,45 @@ class Invariants(unittest.TestCase):
     def test_labels_are_unique_and_preserved(self):
         path=self.base/'map.json';first=labels(path,['one','two']);self.assertNotEqual(first['one'],first['two'])
         self.assertEqual(labels(path,['one'])['one'],first['one'])
+    def test_optional_rounded_discovery_and_numeric_coverage(self):
+        self.assertEqual(candidate_faces(self.base),FACES)
+        (self.base/'fonts/sans-rounded').mkdir(parents=True)
+        self.assertIn('sans-rounded',candidate_faces(self.base))
+        self.assertTrue(set(map(ord,'72°−3°104°F18℃08:00100%'))<=ROUNDED_CORE)
+        self.assertNotIn(ord('a'),ROUNDED_CORE)
+    def test_new_rounded_sources_invalidate_three_face_build(self):
+        import json
+        from unittest.mock import patch
+        from gate import checked_build
+        out=self.base/'build/probe';out.mkdir(parents=True)
+        (out/'build.json').write_text(json.dumps({'faces':dict.fromkeys(FACES)}))
+        (self.base/'fonts/sans-rounded').mkdir(parents=True)
+        with patch('gate.ROOT',self.base),patch('gate.candidate',return_value=self.base):
+            with self.assertRaisesRegex(ValueError,'Changed face set'):checked_build('probe')
+    def test_reviewer_identity_words_are_rejected(self):
+        from blindcheck import PATTERN
+        for word in ['lumen','quartz','opus','sol','claude','codex','gpt']:
+            self.assertIsNotNone(PATTERN.search(word.upper().encode()))
+    def test_review_assembly_excludes_engine_details(self):
+        import json
+        from review_set import assemble
+        stage=self.base/'stage';stage.mkdir()
+        filename='fern-pine-123-01.png'
+        Image.new('RGB',(8,8),'white').save(stage/filename)
+        row={'label':'fern-pine-123','image':filename,'sheet':'10','theme':'light','engine':'webkit','width':8,'height':8,'scale':2}
+        (stage/'index.json').write_text(json.dumps({'sheets':[row]}))
+        out=self.base/'round/renders';guide=out.parent/'SHEETS.md'
+        self.assertEqual(assemble([stage],out,guide),1)
+        self.assertNotIn('engine',json.loads((out/'index.json').read_text())['sheets'][0])
+        self.assertNotIn('webkit',guide.read_text())
+    def test_regenerated_outline_comparison_checks_components_and_points(self):
+        from compare_outlines import sources
+        a=self.base/'a';b=self.base/'b';a.mkdir();b.mkdir()
+        text='<glyph name="one"><advance width="10"/><outline><contour><point x="1" y="2" type="line"/></contour><component base="two" xOffset="3"/></outline></glyph>'
+        (a/'one.glif').write_text(text);(b/'one.glif').write_text(text.replace('x="1"','x="1.0"'))
+        self.assertEqual(sources(a,b)['glyph_records'],1)
+        (b/'one.glif').write_text(text.replace('xOffset="3"','xOffset="4"'))
+        with self.assertRaises(ValueError):sources(a,b)
     def test_iconfont_is_expanded_stroke_not_open_centerline(self):
         source=self.base/'input';source.mkdir();(source/'line.svg').write_text(GOOD)
         build_icons(source,self.base/'output')

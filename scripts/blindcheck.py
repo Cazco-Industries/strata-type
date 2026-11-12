@@ -11,7 +11,7 @@ def word_pattern(word):
     variants={'s':b'(?:s|\xc5\xbf)','i':b'(?:i|\xc4\xb0|\xc4\xb1)','k':b'(?:k|\xe2\x84\xaa)'}
     return b''.join(variants.get(char,char.encode()) for char in word.lower())
 
-PATTERN=re.compile(b'|'.join(word_pattern(word) for word in ['Strata','Inter','Source','Fira','SF','Lucide','Hugeicons','baseline','reference'])+b'|'+word_pattern('New')+b'[ _-]?'+word_pattern('York'),re.I)
+PATTERN=re.compile(b'|'.join(word_pattern(word) for word in ['Strata','Inter','Source','Fira','SF','Lucide','Hugeicons','baseline','reference','lumen','quartz','opus','sol','claude','codex','gpt'])+b'|'+word_pattern('New')+b'[ _-]?'+word_pattern('York'),re.I)
 
 
 def png_chunk(kind,data):

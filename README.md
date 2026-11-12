@@ -29,12 +29,16 @@ the free icon package has SHA-512 integrity and the open font control archive
 has SHA-256 integrity. Upstreams live in ignored `sources/upstream/`.
 
 `candidates/<id>/fonts/{sans,serif,mono}/` each contain one `.designspace` and
-its editable UFO masters. `icons/` contains semantic SVG names on a 24 grid.
+its editable UFO masters. An optional `fonts/sans-rounded/` directory contains
+exactly one Rounded numeric designspace and its masters. Standard build,
+name/RFN and interpolation gates include it. Rendering adds light/dark/sky
+numeric sheets and the same card with regular numerals. Its coverage gate checks
+the numeric repertoire rather than a full alphabet. `icons/` contains semantic
+SVG names on a 24 grid.
 `inventory/icons.json` records the read-only app scan, mappings, approximations,
 and library gaps. Baseline icon geometry comes from Lucide; it does not claim
 that reused shapes constitute the finished weather library. Baselines are
-upright only. Rounding, metrics harmonization, extra scripts, and new glyphs
-are design work for later.
+upright only. Metrics harmonization, extra scripts, and new glyphs remain candidate design work.
 
 To iterate, copy `candidates/baseline` to `candidates/<id>`, put your deterministic
 ufoLib2/fontTools edits in `<id>/transforms/`, run them explicitly with the
@@ -85,3 +89,21 @@ pausing below a 15 GiB reserve to preserve the 14 GiB floor. Do not disable it.
 Build timings exclude setup and report guard pauses separately. Intermediate
 masters are deleted by fontmake; content-addressed full TTFs are the iteration
 cache. Remove old `build/.cache/` entries when no longer needed.
+
+For a multi-label review, render each candidate into its own empty staging
+directory (under ignored `build/`), with `REFS=1` only on the baseline run.
+The WebKit `ui-rounded` numeric control receives its own opaque label when
+its raster probe distinguishes it from fallback families. Then assemble into
+an empty reviewer directory:
+
+```sh
+.venv/bin/python -I scripts/review_set.py --input build/stage-a --input build/stage-b \
+  --out /review/round-0/renders --guide /review/round-0/SHEETS.md
+```
+
+The guide lists every sheet without identities. Gate summaries can be kept
+lead-only with `make gate ... GATE_SUMMARY=/lead/gates/candidate.md`; raw reports
+remain under ignored `build/`. Deterministic candidate masters can be regenerated
+using their transform entry points with `--output-dir`, then checked with
+`scripts/compare_outlines.py sources BEFORE AFTER`. Its `binaries` mode compares
+compiled outline/variation/metrics/axis tables byte for byte.
