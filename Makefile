@@ -3,7 +3,7 @@ SUBSET ?= core
 REFS ?= 0
 PY := .venv/bin/python
 GUARD := $(PY) -I scripts/resource_guard.py --
-.PHONY: setup fetch prepare inventory build gate render verify
+.PHONY: setup fetch prepare inventory build gate render verify site site-agent-install site-agent-uninstall
 setup:
 	uv sync --frozen
 	$(PY) -I -m playwright install chromium webkit
@@ -21,3 +21,10 @@ render:
 	$(GUARD) $(PY) -I scripts/run.py render --cand "$(CAND)" --out "$(OUT)" --refs "$(REFS)" --map "$(MAP)" $(if $(ICONS_DIR),--icons-dir "$(ICONS_DIR)",) $(if $(IDENTITY),--identity "$(IDENTITY)",)
 verify:
 	$(GUARD) $(PY) -I scripts/run.py verify
+# Owner specimen site (opens from disk). FORCE=1 regenerates even if nothing changed.
+site:
+	$(PY) -I scripts/site.py $(if $(FORCE),--force,)
+site-agent-install:
+	$(PY) -I scripts/site.py agent-install
+site-agent-uninstall:
+	$(PY) -I scripts/site.py agent-uninstall

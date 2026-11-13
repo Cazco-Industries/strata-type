@@ -23,3 +23,5 @@ candidates/quartz-571/transforms/summarize.py
 candidates/quartz-571/transforms/rounding-masks.json
 candidates/r1-type/fonts/
 candidates/r1-type/transforms/__pycache__/
+# Owner specimen site: regenerated from build/ and the icon work dirs.
+site/

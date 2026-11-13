@@ -125,3 +125,16 @@ line-contact counts stay inline in `SHEETS.md`, with detailed JSON retained in
 the staging directories. `make render ... IDENTITY=<key>` selects a lead-only
 label-map key independently of the candidate directory. Card hero temperatures
 use proportional figures for every label; hourly rows remain tabular.
+
+## Specimen site
+
+`make site` writes `site/index.html` (ignored), which opens from disk in any
+browser. It shows the newest `build/r<N>-type` plus `lumen-146`, `quartz-571`
+and `baseline`, and the icon sets in `~/strata-ml/type-climb-work/r<N>-icons`.
+It only regenerates when a source changes (`FORCE=1` forces it). A build with
+a missing face or a font written in the last 2 minutes keeps the previous copy.
+`make site-agent-install` runs it every 10 minutes as the LaunchAgent
+`com.strata-type.site`, which skips UTC :00–:05/:15–:20/:30–:35/:45–:50 and
+any run with under 14 GiB free on `/`. It logs to
+`~/Library/Logs/strata-type-site.log`.
+`make site-agent-uninstall` removes it.
