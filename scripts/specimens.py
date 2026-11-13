@@ -168,7 +168,7 @@ def card_icons(icons):
 
 
 def card(icons=None):
-    return '''<p class="label">Mockup</p><div class="card"><p class="f0" data-face="0" style="font-size:15px">Thursday · Lakeside</p><p class="f1" data-face="1" data-headline style="font-size:48px;line-height:1.13;max-width:19ch">A quiet afternoon before the rain returns.</p><div class="f0 big hero-temperature" data-face="0">72°F</div><p class="f0" data-face="0" style="font-size:17px;line-height:1.55;max-width:58ch">Clouds build after 4 PM. A light breeze keeps the lake path comfortable through the afternoon.</p><div class="f0" data-face="0" style="font-size:23px">12 mph NNW &nbsp; 30.16 inHg &nbsp; 20% chance of rain</div><table class="f0" data-face="0"><tr><th>Now</th><th>4 PM</th><th>5 PM</th><th>6 PM</th></tr><tr><td>72°</td><td>71°</td><td>69°</td><td>68°</td></tr></table>'''+card_icons(icons)+'</div>'
+    return '''<p class="label">Mockup</p><div class="card"><p class="f0" data-face="0" style="font-size:15px">Thursday · Lakeside</p><p class="f1" data-face="1" data-headline style="font-size:48px;line-height:1.13;max-width:19ch;text-wrap:balance">A quiet afternoon before the rain returns.</p><div class="f0 big hero-temperature" data-face="0">72°F</div><p class="f0" data-face="0" style="font-size:17px;line-height:1.55;max-width:58ch">Clouds build after 4 PM. A light breeze keeps the lake path comfortable through the afternoon.</p><div class="f0" data-face="0" style="font-size:23px">12 mph NNW &nbsp; 30.16 inHg &nbsp; 20% chance of rain</div><table class="f0" data-face="0"><tr><th>Now</th><th>4 PM</th><th>5 PM</th><th>6 PM</th></tr><tr><td>72°</td><td>71°</td><td>69°</td><td>68°</td></tr></table>'''+card_icons(icons)+'</div>'
 
 
 def code():
