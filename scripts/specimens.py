@@ -118,7 +118,7 @@ def rounded():
     out+='<section style="font-size:24px"><table><tr>'+''.join(f'<td>{t}</td>' for t in ['08:00','09:00','10:00','11:00','12:00'])+'</tr><tr>'
     out+=''.join(f'<td>{t}°</td>' for t in ['72','73','74','71','69'])+'</tr><tr>'
     out+=''.join(f'<td>{t}%</td>' for t in ['10','8','15','35','80'])+'</tr></table></section>'
-    return out+'<section style="font-size:48px">0% &nbsp; 8% &nbsp; 100%<br>03:45 &nbsp; 18:30</section>'+repertoire()+'</div>'
+    return out+'<section style="font-size:48px">0% &nbsp; 8% &nbsp; 100%<br>03:45 &nbsp; 18:30</section><section style="font-size:32px">3 PM &nbsp; 12 mph &nbsp; 30.16 inHg</section>'+repertoire()+'</div>'
 
 
 def rounded_cards():
