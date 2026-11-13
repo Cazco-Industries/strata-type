@@ -145,7 +145,7 @@ def rounded_comparison():
 def card_icons(icons):
     if not icons:return ''
     # These are semantic aliases only; geometry always comes from this label.
-    aliases={'today':'calendar-days','radar':'radar','places':'map-pin','settings':'settings','alert':'alert-triangle'}
+    aliases={'today':'calendar-days','radar':'radar','places':'map-pin','settings':'settings','alert':'alert-triangle','alert-warning':'alert-triangle'}
     def icon(name,size):
         key=name if name in icons else aliases.get(name,name)
         if key not in icons:raise ValueError(f'Card needs its own {name} icon')
@@ -155,7 +155,7 @@ def card_icons(icons):
         out+=f'<div><p class="label">{text_size} px text · 16 / 20 px icons</p>'
         for icon_size in [16,20]:
             for name,text in [('rain','Rain likely after 3 PM'),('wind','12 mph NNW'),
-                              ('thunderstorm','Thunderstorms after 5 PM'),('alert','Weather alert')]:
+                              ('thunderstorm','Thunderstorms after 5 PM'),('alert-warning','Weather alert')]:
                 out+=f'<div class="fit-row" style="font-size:{text_size}px">{icon(name,icon_size)}<span>{text}</span></div>'
         out+='</div>'
     out+='</div>'
