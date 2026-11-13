@@ -11,6 +11,6 @@ if __name__ == '__main__':
     tempfile.tempdir=str(scratch)
     import importlib
     action = sys.argv.pop(1)
-    if action not in {'prepare', 'inventory', 'build', 'gate', 'render', 'verify'}:
+    if action not in {'prepare', 'inventory', 'build', 'gate', 'render', 'checks', 'icon_measure', 'verify'}:
         raise SystemExit('Unknown action')
     importlib.import_module(action).main()

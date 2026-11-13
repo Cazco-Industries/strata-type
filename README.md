@@ -14,6 +14,7 @@ make inventory                         # reads sibling strata-weather only
 make prepare                           # once: Glyphs → UFO, native Serif UFOs
 make build CAND=baseline SUBSET=core
 make gate CAND=baseline
+make checks CAND=baseline               # build/<id>/checks.{json,md}; exit 1 on FAIL
 make render CAND=baseline REFS=1 \
   OUT="$HOME/strata-ml/type-climb/renders/test" \
   MAP="$HOME/strata-ml/type-climb-lead/labels.map"
@@ -69,7 +70,25 @@ SVG and generated TSX violations fail immediately. Baseline coverage,
 interpolation and Fontbakery quality failures remain visible in `quality_status`;
 report generation succeeds so a baseline can be reviewed. Add `--strict` to
 `scripts/run.py gate` to reject every quality failure. No missing glyph is
-silently supplied from a different face. Metrics are measured, not harmonized.
+silently supplied from a different face. Specimens use an embedded synthetic
+tofu as their explicit last fallback, and report missing codepoints in the
+render audit. No system font supplies missing candidate glyphs. Metrics are
+measured, not harmonized.
+
+`make checks` measures the shaped outline ink width (not advance width) of
+`104°F`, `72°`, `18:30` and `−3°` at 96 px, weight 400 and automatic optical
+size, with a 1% Regular/Rounded limit. It also checks direct cmap and default
+shaped figure advances at named instances and axis min/default/max combinations:
+Sans, Rounded and Mono must be tabular; Serif is informational. A candidate
+without Rounded reports that comparison as not applicable. Checks fail their
+own target without preventing anonymous specimen rendering.
+
+For isolated icon measurements in both installed Playwright engines, run
+`.venv/bin/python -I scripts/resource_guard.py -- .venv/bin/python -I scripts/run.py icon_measure --cand ID --out build/ID/icon-measurements`.
+Pass the same `--icons-dir` used for the build. Results include coverage-weighted
+ink area, an integrated cross-stem width on the add icon, 50%-coverage bounding
+boxes and centroid offsets at 16/20/24/32 px and 1×/2× device scale. Comparison
+montages and measurements stay outside anonymous reviewer output.
 
 Rendering needs an **empty OUT** and a **lead-only JSON MAP outside OUT**.
 `newlabel.py --key <identity> --map /lead/map.json` mints opaque labels; the
@@ -98,7 +117,10 @@ the PNGs and is linked from the generated guide.
 CPU work pauses in UTC :00–:05, :15–:20, :30–:35 and :45–:50 windows, on the
 shared pause flag. Memory pressure ≥2 pauses between bounded units after data collection, so an interrupted allocation does not hold the machine under pressure. The guard checks disk continuously,
 pausing below a 15 GiB reserve to preserve the 14 GiB floor. Do not disable it.
-Build timings exclude setup and report guard pauses separately. Intermediate
+An explicitly authorized low-space run may set `STRATA_TYPE_DISK_RESERVE_GIB`
+for that invocation only (minimum 14.25, default 15). Such a run stops below its
+reserve; the normal guard continues to pause at 15 GiB. Build timings exclude
+setup and report guard pauses separately. Intermediate
 masters are deleted by fontmake; content-addressed full TTFs are the iteration
 cache. Remove old `build/.cache/` entries when no longer needed.
 

@@ -1,6 +1,9 @@
 """Self-contained specimens. The review directory receives raster images only."""
 import base64
-from html import escape
+import io
+from html import escape,unescape
+from fontTools.fontBuilder import FontBuilder
+from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.boundsPen import BoundsPen
@@ -12,13 +15,38 @@ PARAGRAPH='Clouds thin after noon. A mild breeze turns toward the lake as the ne
 MAP='<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1800"><rect width="1120" height="1800" fill="#7a958a"/><path d="M-40 180Q340 380 440 40T1100 500M0 720Q500 430 1100 850M200 1800Q530 800 1000 1100" stroke="#cad2b2" stroke-width="80" fill="none"/><path d="M-10 1600Q700 400 400 0" stroke="#75a3b3" stroke-width="150" fill="none"/><path d="M0 300H1120M0 600H1120M0 900H1120M0 1200H1120M240 0V1800M540 0V1800M840 0V1800" stroke="#ecddbe" stroke-width="10"/></svg>'
 
 
+def missing_font(text):
+    """An explicit last-resort tofu, never an installed system glyph.
+
+    A nonzero glyph ID is essential: browsers would try another installed font
+    if a cmap entry merely pointed at glyph zero (.notdef).
+    """
+    pen=TTGlyphPen(None)
+    for points in [[(100,0),(100,700),(500,700),(500,0)],
+                   [(160,60),(440,60),(440,640),(160,640)]]:
+        pen.moveTo(points[0])
+        for point in points[1:]:pen.lineTo(point)
+        pen.closePath()
+    box=pen.glyph();fb=FontBuilder(1000,isTTF=True)
+    fb.setupGlyphOrder(['.notdef','missing','space'])
+    fb.setupCharacterMap({ord(c):'space' if c.isspace() else 'missing' for c in text})
+    fb.setupGlyf({'.notdef':box,'missing':box,'space':TTGlyphPen(None).glyph()})
+    fb.setupHorizontalMetrics({'.notdef':(600,100),'missing':(600,100),'space':(250,0)})
+    fb.setupHorizontalHeader(ascent=800,descent=-200)
+    fb.setupNameTable({'familyName':'Specimen Missing','styleName':'Regular'})
+    fb.setupOS2(sTypoAscender=800,sTypoDescender=-200,usWinAscent=800,usWinDescent=200)
+    fb.setupPost();fb.setupMaxp();out=io.BytesIO();fb.font.save(out)
+    return base64.b64encode(out.getvalue()).decode()
+
+
 def document(label,fonts,body,theme='light'):
     rules=[]
     if isinstance(fonts,dict):
         for index,path in enumerate(fonts.values()):
             mime='font/woff2' if path.suffix=='.woff2' else 'font/ttf'
             rules.append(f'@font-face{{font-family:p{index};src:url(data:{mime};base64,{base64.b64encode(path.read_bytes()).decode()});font-style:normal;font-weight:100 900;font-display:block}}')
-        families=['p'+str(i) for i in range(len(fonts))]
+        rules.append('@font-face{font-family:specimen-missing;src:url(data:font/ttf;base64,'+missing_font(unescape(body))+');font-display:block}')
+        families=['p'+str(i)+',specimen-missing' for i in range(len(fonts))]
     else:families=fonts
     for index,family in enumerate(families):rules.append(f'.f{index}{{font-family:{family};font-optical-sizing:auto}}')
     mapurl='data:image/svg+xml;base64,'+base64.b64encode(MAP.encode()).decode()
@@ -38,6 +66,8 @@ def document(label,fonts,body,theme='light'):
     .icon-name{font-size:9px;line-height:1.3;text-align:center;overflow-wrap:anywhere;padding:0 3px}
     .comparison{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;line-height:1.3}
     .hero-temperature{font-variant-numeric:proportional-nums}
+    .repertoire .row{font-size:24px}
+    .icon-glyph{display:block;flex:none;width:1em;height:1em;line-height:1;font-weight:400;font-style:normal;font-synthesis:none}
     '''
     return '<!doctype html><html><head><meta charset="utf-8"><title>'+escape(label)+'</title><style>'+css+''.join(rules)+'</style></head><body class="'+theme+'"><h1 data-annotation>'+escape(label)+'</h1><main>'+body+'</main></body></html>'
 
@@ -59,7 +89,16 @@ def waterfall(face):
         out+=f'<div style="font-weight:{weight}">'
         for size in [13,15,17]:out+=f'<small>{size} / {weight}</small><p class="paragraph" style="font-size:{size}px">{PARAGRAPH}</p>'
         out+='</div>'
-    return out+'</div></section></div>'
+    return out+'</div></section>'+repertoire()+'</div>'
+
+
+def repertoire():
+    return ('<section class="repertoire"><p class="label">Minus / hyphen · U+2212 / U+002D</p>'
+            '<div class="row">−3° / -3° &nbsp; −0.25 / -0.25 &nbsp; −3.5° / -3.5°</div>'
+            '<p class="label">Single codepoint units / degree + letter</p>'
+            '<div class="row">℉ / °F &nbsp; ℃ / °C</div>'
+            '<p class="label">Confusables · missing characters appear as tofu</p>'
+            '<div class="row">0/O &nbsp; 1/l/I &nbsp; rn/m</div></section>')
 
 
 def weather():
@@ -79,7 +118,7 @@ def rounded():
     out+='<section style="font-size:24px"><table><tr>'+''.join(f'<td>{t}</td>' for t in ['08:00','09:00','10:00','11:00','12:00'])+'</tr><tr>'
     out+=''.join(f'<td>{t}°</td>' for t in ['72','73','74','71','69'])+'</tr><tr>'
     out+=''.join(f'<td>{t}%</td>' for t in ['10','8','15','35','80'])+'</tr></table></section>'
-    return out+'<section style="font-size:48px">0% &nbsp; 8% &nbsp; 100%<br>03:45 &nbsp; 18:30</section></div>'
+    return out+'<section style="font-size:48px">0% &nbsp; 8% &nbsp; 100%<br>03:45 &nbsp; 18:30</section>'+repertoire()+'</div>'
 
 
 def rounded_cards():
@@ -106,7 +145,7 @@ def rounded_comparison():
 def card_icons(icons):
     if not icons:return ''
     # These are semantic aliases only; geometry always comes from this label.
-    aliases={'today':'calendar-days','radar':'radar','places':'map-pin','settings':'settings'}
+    aliases={'today':'calendar-days','radar':'radar','places':'map-pin','settings':'settings','alert':'alert-triangle'}
     def icon(name,size):
         key=name if name in icons else aliases.get(name,name)
         if key not in icons:raise ValueError(f'Card needs its own {name} icon')
@@ -115,7 +154,8 @@ def card_icons(icons):
     for text_size in [13,15,17]:
         out+=f'<div><p class="label">{text_size} px text · 16 / 20 px icons</p>'
         for icon_size in [16,20]:
-            for name,text in [('rain','Rain likely after 3 PM'),('wind','12 mph NNW')]:
+            for name,text in [('rain','Rain likely after 3 PM'),('wind','12 mph NNW'),
+                              ('thunderstorm','Thunderstorms after 5 PM'),('alert','Weather alert')]:
                 out+=f'<div class="fit-row" style="font-size:{text_size}px">{icon(name,icon_size)}<span>{text}</span></div>'
         out+='</div>'
     out+='</div>'
@@ -166,7 +206,7 @@ def icon_font(path,icons):
     return ('<style>@font-face{font-family:q;src:url(data:font/woff2;base64,'+data+');font-display:block}</style>'
             '<h2>Icon font glyphs</h2><p class="label">16 / 20 / 24 / 32 px</p><div class="icons">'
             +''.join('<div class="tile"><div class="iconrow" data-font-family="q" style="font-family:q">'
-                     +''.join(f'<span style="font-size:{size}px">{chr(int(value["codepoint"],16))}</span>' for size in [16,20,24,32])
+                     +''.join(f'<span class="icon-glyph" style="font-size:{size}px">{chr(int(value["codepoint"],16))}</span>' for size in [16,20,24,32])
                      +f'</div><small class="icon-name">{escape(name)}</small></div>' for name,value in icons.items())+'</div>')
 
 

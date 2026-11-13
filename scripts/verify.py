@@ -94,6 +94,16 @@ class Invariants(unittest.TestCase):
             report=face_audit(page,fonts)
             self.assertEqual(len(report['pres']),7)
             self.assertTrue(all(abs(r['width']-r['generic']['monospace'])>.01 for r in report['pres']))
+            # This face lacks U+2212/U+2109. They must become explicit tofu,
+            # even on a machine whose installed fonts contain both characters.
+            body='<div class="f0" data-face="0">&#x2212;3.5° &#x2109; / °F</div>'
+            page.set_content(specimens.document('fern-pine-123',fonts,body))
+            missing=face_audit(page,fonts)['missing_glyphs']
+            self.assertEqual(missing[0]['codepoints'],['U+2109','U+2212'])
+            self.assertEqual(missing[0]['rendered_as'],'explicit tofu')
+            page.locator('.f0').evaluate('(el)=>el.style.fontFamily="p0,system-ui"')
+            with self.assertRaisesRegex(Exception,'Specimen family mismatch'):face_audit(page,fonts)
+            page.set_content(specimens.document('fern-pine-123',fonts,specimens.code()))
             page.locator('pre').first.evaluate('(el)=>el.style.fontFamily="monospace"')
             with self.assertRaisesRegex(Exception,'Specimen family mismatch'):face_audit(page,fonts)
             page.set_content(specimens.document('fern-pine-123',fonts,'<div class="f0" data-face="0"><span style="font-family:serif">A quiet sky</span></div>'))
@@ -190,6 +200,61 @@ class Invariants(unittest.TestCase):
         font=TTFont(self.base/'output/StrataIcons.woff2');glyph=font['glyf'][font.getBestCmap()[0xe000]]
         self.assertGreater(glyph.numberOfContours,0);self.assertGreater(glyph.yMax-glyph.yMin,70)
         self.assertGreater(glyph.xMax-glyph.xMin,700)
+        self.assertEqual(font['hmtx'][font.getBestCmap()[0xe000]][1],glyph.xMin)
+        self.assertAlmostEqual(glyph.yMax-glyph.yMin,1000*2/24,delta=1)
+    def test_missing_font_maps_to_nonzero_visible_tofu(self):
+        import base64,io
+        from specimens import missing_font
+        with TTFont(io.BytesIO(base64.b64decode(missing_font('−℉℃OlIrnm')))) as font:
+            for cp,name in font.getBestCmap().items():
+                self.assertNotEqual(font.getGlyphID(name),0)
+                self.assertGreater(font['glyf'][name].numberOfContours,0)
+        with TTFont(io.BytesIO(base64.b64decode(missing_font('\u00a0 ')))) as font:
+            for name in font.getBestCmap().values():
+                self.assertNotEqual(font.getGlyphID(name),0)
+                self.assertEqual(font['glyf'][name].numberOfContours,0)
+    def test_card_icon_pairs_include_storm_and_alert(self):
+        from specimens import card_icons
+        icons=dict.fromkeys(['rain','wind','thunderstorm','alert','today','radar','places','settings'],GOOD)
+        html=card_icons(icons)
+        self.assertEqual(html.count('Thunderstorms after 5 PM'),6)
+        self.assertEqual(html.count('Weather alert'),6)
+    def test_review_width_is_ink_not_advance_and_cmap_figures_are_checked(self):
+        from fontTools.fontBuilder import FontBuilder
+        from fontTools.pens.ttGlyphPen import TTGlyphPen
+        from checks import ink_width,tabular
+        order=['.notdef']+['u'+str(cp) for cp in range(48,58)]
+        glyphs={};metrics={}
+        for i,name in enumerate(order):
+            pen=TTGlyphPen(None);width=100 if i==1 else 200
+            pen.moveTo((100,0));pen.lineTo((100+width,0));pen.lineTo((100+width,700));pen.lineTo((100,700));pen.closePath()
+            glyphs[name]=pen.glyph();metrics[name]=(1000,100)
+        fb=FontBuilder(1000,isTTF=True);fb.setupGlyphOrder(order)
+        fb.setupCharacterMap({cp:'u'+str(cp) for cp in range(48,58)});fb.setupGlyf(glyphs);fb.setupHorizontalMetrics(metrics)
+        fb.setupHorizontalHeader(ascent=800,descent=-200)
+        fb.setupNameTable({'familyName':'Check fixture','styleName':'Regular'})
+        fb.setupOS2(sTypoAscender=800,sTypoDescender=-200,usWinAscent=800,usWinDescent=200)
+        fb.setupPost();fb.setupMaxp();path=self.base/'check.ttf';fb.save(path)
+        a,b=ink_width(path,'0'),ink_width(path,'1')
+        self.assertEqual(a['advance_px'],b['advance_px'])
+        self.assertAlmostEqual(a['ink_width_px'],9.6);self.assertAlmostEqual(b['ink_width_px'],19.2)
+        self.assertEqual(tabular(path,True)['status'],'PASS')
+        # Changing a cmap figure's advance must fail even without tnum/pnum.
+        fb.font['hmtx']['u49']=(900,100);fb.save(path)
+        self.assertEqual(tabular(path,True)['status'],'FAIL')
+        self.assertEqual(tabular(path,False)['status'],'INFO')
+    def test_disk_override_preserves_default_and_stops_below_reserve(self):
+        from unittest.mock import patch
+        from resource_guard import disk_reserve,reason
+        from types import SimpleNamespace
+        with patch.dict('os.environ',{},clear=True):
+            self.assertEqual(disk_reserve(),15*1024**3)
+        with patch.dict('os.environ',{'STRATA_TYPE_DISK_RESERVE_GIB':'14.25'}):
+            self.assertEqual(disk_reserve(),14.25*1024**3)
+            with patch('shutil.disk_usage',return_value=SimpleNamespace(free=14.2*1024**3)):
+                with self.assertRaisesRegex(OSError,'stopping'):reason()
+        with patch.dict('os.environ',{'STRATA_TYPE_DISK_RESERVE_GIB':'14'}):
+            with self.assertRaises(ValueError):disk_reserve()
     def test_free_package_is_parsed_as_data(self):
         self.assertEqual(validate(ET.fromstring(huge_svg('Sun03'))),[])
 

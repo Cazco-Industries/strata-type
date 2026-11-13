@@ -9,7 +9,7 @@ FONT_TEST='Hamburgefontsiv 0123456789'
 
 
 def face_audit(page,fonts,icon_font=None):
-    families=['p'+str(i) for i in range(len(fonts))] if isinstance(fonts,dict) else fonts
+    families=['p'+str(i)+',specimen-missing' for i in range(len(fonts))] if isinstance(fonts,dict) else fonts
     result=page.evaluate('''async ({families,sample}) => {
       await document.fonts.ready;
       const walker=document.createTreeWalker(document.querySelector('main'),NodeFilter.SHOW_TEXT);
@@ -24,11 +24,12 @@ def face_audit(page,fonts,icon_font=None):
         const css=getComputedStyle(el),actual=css.fontFamily.replaceAll('"','').replaceAll("'",'');
         if(actual.replaceAll(/\\s/g,'')!==expected.replaceAll(/\\s/g,''))
           throw Error('Specimen family mismatch in '+el.tagName+': '+actual+'; expected '+expected);
-        if(/^(p\\d+|q)$/.test(expected)){
-          await document.fonts.load(css.fontWeight+' '+css.fontSize+' '+expected,node.textContent);
-          if(![...document.fonts].some(f=>f.family===expected&&f.status==='loaded'))throw Error('Unloaded face '+expected);
+        const primary=expected.split(',')[0];
+        if(/^(p\\d+|q)$/.test(primary)){
+          await document.fonts.load(css.fontWeight+' '+css.fontSize+' '+primary,node.textContent);
+          if(![...document.fonts].some(f=>f.family===primary&&f.status==='loaded'))throw Error('Unloaded face '+primary);
         }
-        texts.push({face:face===undefined?null:Number(face),family:expected,text:node.textContent});
+        texts.push({face:face===undefined?null:Number(face),family:primary,text:node.textContent});
         // Use the actual first code line for every PRE. Other faces use a stable
         // mixed run (or the numeric/PUA repertoire) so one narrow glyph cannot
         // accidentally equal a generic glyph's advance.
@@ -49,14 +50,22 @@ def face_audit(page,fonts,icon_font=None):
       }
       return {texts,probes:[...probes.values()],pres};
     }''',{'families':families,'sample':FONT_TEST})
-    cmaps={}
+    cmaps={};missing_runs=[]
     for row in result.pop('texts'):
         path=icon_font if row['family']=='q' else (list(fonts.values())[row['face']] if isinstance(fonts,dict) else None)
         if path is None:continue
         if path not in cmaps:
             with TTFont(path,lazy=True) as font:cmaps[path]=set(font.getBestCmap())
         missing=sorted({f'U+{ord(c):04X}' for c in row['text'] if not c.isspace() and ord(c) not in cmaps[path]})
-        if missing:raise ValueError(f'Would fall back for missing glyphs in {row["family"]}: {missing}')
+        if missing:
+            if row['family']=='q':raise ValueError(f'Missing icon glyphs: {missing}')
+            # document() embeds a synthetic tofu with a nonzero glyph for every
+            # character in this sheet. Verify it loaded instead of permitting
+            # the browser's automatic installed-font fallback.
+            if not page.evaluate("[...document.fonts].some(f=>f.family==='specimen-missing'&&f.status==='loaded')"):
+                raise ValueError('Explicit missing-glyph font did not load')
+            missing_runs.append({'family':row['family'],'text':row['text'],'codepoints':missing,'rendered_as':'explicit tofu'})
+    result['missing_glyphs']=missing_runs
     result['status']='PASS'
     return result
 

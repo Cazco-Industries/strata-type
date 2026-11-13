@@ -141,7 +141,11 @@ def build_icons(source,out):
         pathops_path.simplify()
         pen=TTGlyphPen(None)
         pathops_path.draw(TransformPen(Cu2QuPen(pen,0.5,reverse_direction=True),(1000/24,0,0,-1000/24,0,850)))
-        glyph='i'+str(index);glyphs[glyph]=pen.glyph();metrics[glyph]=(1000,0)
+        glyph='i'+str(index);glyphs[glyph]=pen.glyph()
+        glyphs[glyph].recalcBounds(glyphs)
+        # Preserve the SVG viewBox origin: a zero bearing makes rasterizers
+        # translate xMin to zero and shifts inset icons left by ~0.17 em.
+        metrics[glyph]=(1000,glyphs[glyph].xMin)
         codepoint=0xe000+index;cmap[codepoint]=glyph;mapping[path.stem]={'codepoint':f'{codepoint:04X}','component':component,'svg':f'svg/{path.name}'}
     if len(widths)!=1:raise ValueError('Candidate uses inconsistent icon stroke widths')
     (react/'index.ts').write_text('\n'.join(exports)+'\n')

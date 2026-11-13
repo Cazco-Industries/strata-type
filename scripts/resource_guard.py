@@ -10,9 +10,19 @@ import time
 
 FLOOR = 14 * 1024**3
 
+
+def disk_reserve():
+    # A bounded per-run override never changes the normal 15 GiB reserve.
+    gib = float(os.environ.get('STRATA_TYPE_DISK_RESERVE_GIB', '15'))
+    if not 14.25 <= gib <= 1024:
+        raise ValueError('STRATA_TYPE_DISK_RESERVE_GIB must be at least 14.25')
+    return gib * 1024**3
+
 def reason(pressure=True):
-    if shutil.disk_usage('/').free < FLOOR + 1024**3:
-        return 'disk reserve below 15 GiB; preserving 14 GiB floor'
+    if shutil.disk_usage('/').free < disk_reserve():
+        if 'STRATA_TYPE_DISK_RESERVE_GIB' in os.environ:
+            raise OSError('Disk below per-run reserve; stopping to preserve the 14 GiB floor')
+        return 'disk below configured reserve; preserving 14 GiB floor'
     if Path.home().joinpath('strata-ml/ops/HEAVY_PAUSE').exists():
         return 'shared HEAVY_PAUSE flag'
     sample = subprocess.run(['/usr/sbin/sysctl', '-n', 'kern.memorystatus_vm_pressure_level'], capture_output=True, text=True)
