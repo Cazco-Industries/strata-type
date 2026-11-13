@@ -215,7 +215,7 @@ class Invariants(unittest.TestCase):
                 self.assertEqual(font['glyf'][name].numberOfContours,0)
     def test_card_icon_pairs_include_storm_and_alert(self):
         from specimens import card_icons
-        icons=dict.fromkeys(['rain','wind','thunderstorm','alert','today','radar','places','settings'],GOOD)
+        icons=dict.fromkeys(['rain','wind','thunderstorm','alert-warning','today','radar','places','settings'],GOOD)
         html=card_icons(icons)
         self.assertEqual(html.count('Thunderstorms after 5 PM'),6)
         self.assertEqual(html.count('Weather alert'),6)
