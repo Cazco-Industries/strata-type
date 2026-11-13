@@ -12,9 +12,13 @@ Stdlib + fontTools only. Run with the isolated interpreter:
     .venv/bin/python -I scripts/site.py --scheduled  # LaunchAgent mode (guarded)
     .venv/bin/python -I scripts/site.py agent-install | agent-uninstall | agent-status
 
-Sources are opened read-only. A build that is mid-write (a required face
-missing, a file written in the last two minutes, or a file that will not
-parse) keeps its previous generated copy.
+Sources are opened read-only. Change detection hashes the content of every
+font and SVG (a touched-but-identical file does not rebuild; an edit in place
+does). A build or icon set that is mid-write (a required face missing, ANY
+file or the directory itself touched in the last SETTLE seconds, or a file
+that will not parse) keeps its previous generated copy until it has been quiet
+for SETTLE seconds. In --scheduled mode a run that starts inside a quiet UTC
+window waits for the window to end instead of skipping the whole interval.
 """
 from __future__ import annotations
 
@@ -50,10 +54,10 @@ PLIST = Path.home() / 'Library' / 'LaunchAgents' / f'{LABEL}.plist'
 LOG = Path.home() / 'Library' / 'Logs' / 'strata-type-site.log'
 HEAVY_PAUSE = Path.home() / 'strata-ml' / 'ops' / 'HEAVY_PAUSE'
 FLOOR = 14 * 1024**3
-SETTLE = 120            # seconds a source file must be untouched before we copy it
+SETTLE = 180            # seconds a whole build / icon set must be untouched before we copy it
 ACTIVE_BUILD = 30 * 60  # a build touched this recently may still be gaining faces
 INTERVAL = 600
-STATE_VERSION = 3
+STATE_VERSION = 4
 
 # (key, file, display name, required)
 FACES = [
@@ -89,15 +93,50 @@ def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def stat_sig(paths: list[Path], base: Path) -> str:
+def content_sig(paths: list[Path], base: Path) -> str:
+    """Hash names and bytes, so an in-place edit is noticed whatever its mtime or size."""
     parts = []
     for p in sorted(paths):
-        st = p.stat()
-        parts.append(f'{p.relative_to(base)}|{st.st_mtime_ns}|{st.st_size}')
+        parts.append(f'{p.relative_to(base)}|{sha(p.read_bytes())}')
     return sha('\n'.join(parts).encode())
 
 
+def newest_touch(directory: Path, subdirs: tuple[str, ...] = ()) -> tuple[float, str]:
+    """Newest mtime of the directory itself and everything directly inside it.
+
+    Descends into the named subdirectories one level. This is the build's heartbeat:
+    a builder rewriting any file (fonts, build.json, gate output) or replacing one
+    atomically (which bumps the directory mtime) keeps the build "active".
+    """
+    best, who = directory.stat().st_mtime, '.'
+    for p in directory.iterdir():
+        try:
+            m = p.stat().st_mtime
+        except OSError:
+            continue
+        if m > best:
+            best, who = m, p.name
+        if p.is_dir() and p.name in subdirs:
+            for q in p.iterdir():
+                try:
+                    mq = q.stat().st_mtime
+                except OSError:
+                    continue
+                if mq > best:
+                    best, who = mq, f'{p.name}/{q.name}'
+    return best, who
+
+
 # ---------------------------------------------------------------- guard
+
+def quiet_wait() -> float:
+    """Seconds until the current quiet UTC window (:00-:05, :15-:20, ...) ends; 0 outside one."""
+    now = utcnow()
+    if now.minute % 15 > 5:
+        return 0.0
+    end = now.replace(minute=now.minute - now.minute % 15 + 6, second=2, microsecond=0)
+    return max(0.0, (end - now).total_seconds())
+
 
 def guard_reason() -> str | None:
     now = utcnow()
@@ -142,12 +181,12 @@ def scan_type(path: Path, now: float) -> dict | None:
     missing = [name for k, _, name, req in FACES if req and k not in files]
     if missing:
         problems.append('missing ' + ', '.join(missing))
-    young = [FACES_BY_KEY[k][1] for k, s in stats.items() if now - s.st_mtime < SETTLE]
-    if young:
-        problems.append('written in the last 2 min: ' + ', '.join(young))
+    touched, who = newest_touch(path)
+    if now - touched < SETTLE:
+        problems.append(f'build directory touched {int(now - touched)} s ago ({who}); waiting for {SETTLE} s of quiet')
         recent = True
     return {
-        'id': path.name, 'path': path, 'files': files, 'sig': stat_sig(list(files.values()), path),
+        'id': path.name, 'path': path, 'files': files, 'sig': content_sig(list(files.values()), path),
         'newest': newest, 'problems': problems, 'recent': recent,
     }
 
@@ -159,14 +198,14 @@ def scan_icons(path: Path, now: float) -> dict | None:
         return None
     layer_file = path / 'icon-layers.json'
     inputs = svgs + ([layer_file] if layer_file.is_file() else [])
-    mtimes = [p.stat().st_mtime for p in inputs] + [d.stat().st_mtime]
+    touched, who = newest_touch(path, ('icons',))
     problems, recent = [], False
-    if any(now - m < SETTLE for m in mtimes):
-        problems.append('icons written in the last 2 min')
+    if now - touched < SETTLE:
+        problems.append(f'icon set touched {int(now - touched)} s ago ({who}); waiting for {SETTLE} s of quiet')
         recent = True
     return {
         'id': path.name, 'path': path, 'svgs': svgs, 'layer_file': layer_file if layer_file.is_file() else None,
-        'sig': stat_sig(inputs, path), 'newest': max(p.stat().st_mtime for p in svgs),
+        'sig': content_sig(inputs, path), 'newest': max(p.stat().st_mtime for p in svgs),
         'problems': problems, 'recent': recent,
     }
 
@@ -646,11 +685,13 @@ def agent_status() -> int:
 # ---------------------------------------------------------------- main
 
 def main() -> int:
+    global SETTLE
     ap = argparse.ArgumentParser(description=__doc__.split('\n\n')[0])
     ap.add_argument('action', nargs='?', default='build',
                     choices=['build', 'agent-install', 'agent-uninstall', 'agent-status'])
     ap.add_argument('--force', action='store_true', help='regenerate even if sources are unchanged')
     ap.add_argument('--scheduled', action='store_true', help='LaunchAgent mode: skip in quiet windows and below the disk floor')
+    ap.add_argument('--settle', type=int, default=SETTLE, help='seconds a build must be untouched before it is copied')
     ap.add_argument('--type-root', type=Path, default=DEFAULT_TYPE_ROOT)
     ap.add_argument('--icon-root', type=Path, default=DEFAULT_ICON_ROOT)
     ap.add_argument('--out', type=Path, default=DEFAULT_OUT)
@@ -662,8 +703,15 @@ def main() -> int:
     if args.action == 'agent-status':
         return agent_status()
 
+    SETTLE = args.settle
     prefix = 'scheduled: ' if args.scheduled else ''
     if args.scheduled:
+        # The interval is fixed (:01, :11, ...), so half the starts land in a quiet window.
+        # Sleeping through the window (no CPU) beats skipping a whole interval.
+        wait = quiet_wait()
+        if wait:
+            log(f'{prefix}waiting {wait:.0f} s for the quiet window to end')
+            time.sleep(wait)
         signal.alarm(300)  # never let a stuck run block later intervals
         why = guard_reason()
         if why:
@@ -679,7 +727,11 @@ def main() -> int:
         except BlockingIOError:
             log(f'{prefix}skipped: another run holds the lock')
             return 0
-        result = generate(args.type_root.resolve(), args.icon_root.resolve(), args.out.resolve(), args.force)
+        try:
+            result = generate(args.type_root.resolve(), args.icon_root.resolve(), args.out.resolve(), args.force)
+        except Exception as exc:  # report once, readably; the previous site stays in place
+            log(f'{prefix}FAILED: {type(exc).__name__}: {exc}')
+            return 1
     log(prefix + result)
     if not args.scheduled and result != 'unchanged':
         print(f'Open file://{(args.out / "index.html").resolve()}')
