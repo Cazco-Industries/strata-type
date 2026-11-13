@@ -1,5 +1,6 @@
 """Assemble separately rendered anonymous sets into one initially empty folder."""
 import argparse
+from collections import Counter
 import json
 import os
 from pathlib import Path
@@ -25,7 +26,7 @@ DESCRIPTIONS={
 }
 
 
-def assemble(inputs,out,guide):
+def assemble(inputs,out,guide,images_only=False):
     if out.exists() and any(out.iterdir()):raise ValueError('Reviewer OUT must be empty')
     out.mkdir(parents=True,exist_ok=True)
     rows=[];names=set();findings=[]
@@ -41,11 +42,18 @@ def assemble(inputs,out,guide):
             if name in names:raise ValueError('Duplicate anonymous sheet')
             names.add(name);shutil.copyfile(folder/name,out/name);rows.append(row)
     rows.sort(key=lambda r:r['image'])
-    (out/'index.json').write_text(json.dumps({'sheets':rows},indent=2)+'\n')
-    (out/'findings.json').write_text(json.dumps({'headline_collisions':sorted(findings,key=lambda r:r['image'])},indent=2)+'\n')
+    if not images_only:
+        (out/'index.json').write_text(json.dumps({'sheets':rows},indent=2)+'\n')
+        (out/'findings.json').write_text(json.dumps({'headline_collisions':sorted(findings,key=lambda r:r['image'])},indent=2)+'\n')
     image_dir=Path(os.path.relpath(out,guide.parent))
     lines=['# Review sheets','','Each file starts with its opaque label and sheet number. Sizes are CSS pixels; images use 2× raster scale. Compare like sheets and surfaces.',
-           '',f'Headline line-contact results for every card surface are in [findings.json]({image_dir}/findings.json). A finding is a review result; it does not stop rendering. Icon rows use 13 / 15 / 17 px text and 16 / 20 px icons; tab labels use 13 px. Type-only cards omit icon rows.','']
+           '',('Headline line-contact results for every card surface are listed below.' if images_only else f'Headline line-contact results for every card surface are in [findings.json]({image_dir}/findings.json).')+' A finding is a review result; it does not stop rendering. Icon rows use 13 / 15 / 17 px text and 16 / 20 px icons; tab labels use 13 px. Type-only cards omit icon rows.','']
+    lines+=['| Label | Sheets | Headline surfaces checked | Surfaces with line contact |','| --- | ---: | ---: | --- |']
+    for label,count in sorted(Counter(row['label'] for row in rows).items()):
+        contacts=[row for row in findings if row['label']==label]
+        result=str(sum(bool(row['components']) for row in contacts)) if contacts else 'n/a'
+        lines.append(f'| {label} | {count} | {len(contacts)} | {result} |')
+    lines+=['']
     if findings:
         lines+=['| Label | Surface | Headline line contact |','| --- | --- | --- |']
         for row in sorted(findings,key=lambda r:r['image']):
@@ -63,7 +71,7 @@ def assemble(inputs,out,guide):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--input',type=Path,action='append',required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--guide',type=Path,required=True);a=p.parse_args()
-    print(f'Assembled {assemble(a.input,a.out,a.guide)} sheets; blind check PASS')
+    p=argparse.ArgumentParser();p.add_argument('--input',type=Path,action='append',required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--guide',type=Path,required=True);p.add_argument('--images-only',action='store_true',help='Keep the reviewer directory to PNGs and the guide; inline anonymous contacts in the guide');a=p.parse_args()
+    print(f'Assembled {assemble(a.input,a.out,a.guide,a.images_only)} sheets; blind check PASS')
 
 if __name__=='__main__':main()

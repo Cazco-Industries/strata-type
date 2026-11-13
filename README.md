@@ -119,3 +119,9 @@ remain under ignored `build/`. Deterministic candidate masters can be regenerate
 using their transform entry points with `--output-dir`, then checked with
 `scripts/compare_outlines.py sources BEFORE AFTER`. Its `binaries` mode compares
 compiled outline/variation/metrics/axis tables byte for byte.
+
+For a PNG-only reviewer folder, pass `--images-only` to `review_set.py`; anonymous
+line-contact counts stay inline in `SHEETS.md`, with detailed JSON retained in
+the staging directories. `make render ... IDENTITY=<key>` selects a lead-only
+label-map key independently of the candidate directory. Card hero temperatures
+use proportional figures for every label; hourly rows remain tabular.

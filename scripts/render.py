@@ -118,7 +118,7 @@ def symbol_probe(page):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--cand',required=True);p.add_argument('--out',required=True);p.add_argument('--map',required=True);p.add_argument('--refs',choices=['0','1'],default='0');p.add_argument('--icons-dir');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--cand',required=True);p.add_argument('--identity',help='Lead-only label-map key when different from the candidate directory');p.add_argument('--out',required=True);p.add_argument('--map',required=True);p.add_argument('--refs',choices=['0','1'],default='0');p.add_argument('--icons-dir');a=p.parse_args()
     if not a.out or not a.map:raise ValueError('OUT and MAP are required; MAP belongs outside OUT')
     start=time.monotonic();path,build,buildinfo,icon_source=checked_build(a.cand,a.icons_dir)
     out=Path(a.out).expanduser().resolve();mapfile=Path(a.map).expanduser().resolve()
@@ -126,7 +126,8 @@ def main():
     if out.exists() and any(out.iterdir()):raise ValueError('OUT must be empty, to prevent stale labels or leaked files')
     out.mkdir(parents=True,exist_ok=True)
     scratch=build/'render-html';scratch.mkdir(exist_ok=True)
-    keys=[a.cand]+(['ref:system','ref:hugeicons','ref:symbols','ref:rounded'] if a.refs=='1' else [])
+    identity=a.identity or a.cand
+    keys=[identity]+(['ref:system','ref:hugeicons','ref:symbols','ref:rounded'] if a.refs=='1' else [])
     mapping=labels(mapfile,keys)
     candidatefonts={face:build/buildinfo['faces'][face]['woff2'] for face in FACES}
     if 'sans-rounded' in buildinfo['faces']:candidatefonts['sans-rounded']=build/buildinfo['faces']['sans-rounded']['woff2']
@@ -150,9 +151,15 @@ def main():
                 if not page.evaluate(f'document.fonts.check("400 32px p{i}")'):raise ValueError('Font unloaded during specimen render')
         filename=f'{label}-{number:02}.png';dest=out/filename
         if page.evaluate('document.documentElement.scrollWidth')>1120:raise ValueError('Specimen overflows sheet width')
+        numerals=page.evaluate('''()=>({
+          heroes:[...document.querySelectorAll('.hero-temperature')].map(el=>getComputedStyle(el).fontVariantNumeric),
+          hourly:[...document.querySelectorAll('.card td,.card th')].map(el=>getComputedStyle(el).fontVariantNumeric)
+        })''')
+        if any(value!='proportional-nums' for value in numerals['heroes']):raise ValueError('Card hero must use proportional figures')
+        if any(value!='tabular-nums' for value in numerals['hourly']):raise ValueError('Card hourly rows must use tabular figures')
         contrast=contrast_audit(page,theme) if theme=='sky' or kind=='06' else None
         collisions=headline_collisions(page)
-        audit['sheet_checks'].append({'label':label,'image':filename,'sheet':kind,'theme':theme,'faces':faces,'contrast':contrast})
+        audit['sheet_checks'].append({'label':label,'image':filename,'sheet':kind,'theme':theme,'faces':faces,'contrast':contrast,'numerals':numerals})
         if collisions is not None:
             row={'label':label,'image':filename,'sheet':kind,'theme':theme,**collisions}
             audit['headline_collisions'].append(row);findings.append(row)
@@ -191,13 +198,13 @@ def main():
         page.close()
     with sync_playwright() as pw:
         with pw.chromium.launch() as chromium:
-            suite(chromium,a.cand,candidatefonts,'chromium',svgs)
-            icon_sheets(chromium,a.cand,list(svgs.items()),candidatefonts,'chromium')
+            suite(chromium,identity,candidatefonts,'chromium',svgs)
+            icon_sheets(chromium,identity,list(svgs.items()),candidatefonts,'chromium')
             # Also prove the stroke-expanded icon font loads and has every codepoint.
             page=chromium.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
             imap=json.loads((build/'icons/manifest.json').read_text())['icons']
             body=s.icon_font(build/'icons/StrataIcons.woff2',imap)
-            save(page,a.cand,candidatefonts,body,'light','09','chromium')
+            save(page,identity,candidatefonts,body,'light','09','chromium')
             if not page.evaluate('document.fonts.check("32px q")'):raise ValueError('Icon font fallback')
             page.close()
             if a.refs=='1':

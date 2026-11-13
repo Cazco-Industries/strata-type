@@ -15,6 +15,8 @@ from common import ROOT, UPSTREAM, dump, digest
 
 ET.register_namespace('', 'http://www.w3.org/2000/svg')
 DRAW={'path','circle','ellipse','line','polyline','polygon','rect','g'}
+# Weather icons group tintable parts; renderers tone layers, fonts ignore them.
+LAYERS={'sun','moon','cloud','rain','snow','ice','bolt','wind','fog','heat'}
 ATTR={'d','cx','cy','r','rx','ry','x','y','x1','x2','y1','y2','width','height','points','fill','stroke','stroke-width','stroke-linecap','stroke-linejoin','viewBox','xmlns','opacity'}
 
 
@@ -38,6 +40,10 @@ def validate(root):
         tag=el.tag.split('}')[-1]
         if el is not root and tag not in DRAW:errors.append(f'unsupported element {tag}')
         for key,value in el.attrib.items():
+            if key=='data-layer':
+                if tag!='g':errors.append('data-layer only on <g>')
+                elif value not in LAYERS:errors.append(f'unknown layer {value}')
+                continue
             if key not in ATTR:errors.append(f'unexpected attribute {key}')
             if key=='fill' and value!='none':errors.append('unexpected fill')
             if key=='stroke' and value!='currentColor':errors.append('unexpected stroke')

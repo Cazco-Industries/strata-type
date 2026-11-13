@@ -21,3 +21,5 @@ candidates/quartz-571/transforms/review.py
 candidates/quartz-571/transforms/contacts.py
 candidates/quartz-571/transforms/summarize.py
 candidates/quartz-571/transforms/rounding-masks.json
+candidates/r1-type/fonts/
+candidates/r1-type/transforms/__pycache__/

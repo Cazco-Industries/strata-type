@@ -37,6 +37,7 @@ def document(label,fonts,body,theme='light'):
     .tab{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:13px}
     .icon-name{font-size:9px;line-height:1.3;text-align:center;overflow-wrap:anywhere;padding:0 3px}
     .comparison{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;line-height:1.3}
+    .hero-temperature{font-variant-numeric:proportional-nums}
     '''
     return '<!doctype html><html><head><meta charset="utf-8"><title>'+escape(label)+'</title><style>'+css+''.join(rules)+'</style></head><body class="'+theme+'"><h1 data-annotation>'+escape(label)+'</h1><main>'+body+'</main></body></html>'
 
@@ -85,7 +86,7 @@ def rounded_cards():
     out='<p class="label">Mockup · same card, two numeral styles</p><div class="columns">'
     for face,title in [(3,'Rounded numerals'),(0,'Regular numerals')]:
         out+=f'<div><h2>{title}</h2><div class="card"><p class="f0" data-face="0">Thursday · Lakeside</p><p class="f1" data-face="1" style="font-size:32px">A quiet afternoon.</p>'
-        out+=f'<div class="f{face}" data-face="{face}" style="font-size:96px;line-height:1.15">72°</div><p class="f0" data-face="0">Clouds build after noon.</p>'
+        out+=f'<div class="f{face} hero-temperature" data-face="{face}" style="font-size:96px;line-height:1.15">72°</div><p class="f0" data-face="0">Clouds build after noon.</p>'
         out+=f'<div class="f{face}" data-face="{face}" style="font-size:24px;font-variant-numeric:tabular-nums"><table><tr><td>08:00</td><td>09:00</td><td>10:00</td></tr><tr><td>72°</td><td>71°</td><td>69°</td></tr><tr><td>10%</td><td>35%</td><td>80%</td></tr></table></div></div></div>'
     return out+'</div>'
 
@@ -127,7 +128,7 @@ def card_icons(icons):
 
 
 def card(icons=None):
-    return '''<p class="label">Mockup</p><div class="card"><p class="f0" data-face="0" style="font-size:15px">Thursday · Lakeside</p><p class="f1" data-face="1" data-headline style="font-size:48px;line-height:1.13;max-width:19ch">A quiet afternoon before the rain returns.</p><div class="f0 big" data-face="0">72°F</div><p class="f0" data-face="0" style="font-size:17px;line-height:1.55;max-width:58ch">Clouds build after 4 PM. A light breeze keeps the lake path comfortable through the afternoon.</p><div class="f0" data-face="0" style="font-size:23px">12 mph NNW &nbsp; 30.16 inHg &nbsp; 20% chance of rain</div><table class="f0" data-face="0"><tr><th>Now</th><th>4 PM</th><th>5 PM</th><th>6 PM</th></tr><tr><td>72°</td><td>71°</td><td>69°</td><td>68°</td></tr></table>'''+card_icons(icons)+'</div>'
+    return '''<p class="label">Mockup</p><div class="card"><p class="f0" data-face="0" style="font-size:15px">Thursday · Lakeside</p><p class="f1" data-face="1" data-headline style="font-size:48px;line-height:1.13;max-width:19ch">A quiet afternoon before the rain returns.</p><div class="f0 big hero-temperature" data-face="0">72°F</div><p class="f0" data-face="0" style="font-size:17px;line-height:1.55;max-width:58ch">Clouds build after 4 PM. A light breeze keeps the lake path comfortable through the afternoon.</p><div class="f0" data-face="0" style="font-size:23px">12 mph NNW &nbsp; 30.16 inHg &nbsp; 20% chance of rain</div><table class="f0" data-face="0"><tr><th>Now</th><th>4 PM</th><th>5 PM</th><th>6 PM</th></tr><tr><td>72°</td><td>71°</td><td>69°</td><td>68°</td></tr></table>'''+card_icons(icons)+'</div>'
 
 
 def code():

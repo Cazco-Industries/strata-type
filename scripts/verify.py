@@ -26,6 +26,20 @@ class Invariants(unittest.TestCase):
         self.assertEqual(validate(ET.fromstring(GOOD)),[])
         for svg in [GOOD.replace('fill="none"','fill="black"'),GOOD.replace('<path ','<path transform="rotate(2)" '),GOOD.replace('<path d="M3 12h18"/>','<script/>')]:
             self.assertTrue(validate(ET.fromstring(svg)))
+    def test_icon_layers_are_group_only_preserved_in_react_and_ignored_by_font(self):
+        from icons import LAYERS
+        self.assertEqual(LAYERS,{'sun','moon','cloud','rain','snow','ice','bolt','wind','fog','heat'})
+        layered=GOOD.replace('<path d="M3 12h18"/>','<g data-layer="cloud"><g data-layer="rain"><path d="M3 12h18"/></g></g>')
+        for layer in LAYERS:
+            self.assertEqual(validate(ET.fromstring(layered.replace('data-layer="cloud"',f'data-layer="{layer}"'))),[])
+        for svg in [GOOD.replace('<svg ','<svg data-layer="cloud" '),GOOD.replace('<path ','<path data-layer="rain" '),layered.replace('data-layer="cloud"','data-layer="unknown"')]:
+            self.assertTrue(validate(ET.fromstring(svg)))
+        for name,svg in [('layered',layered),('plain',layered.replace(' data-layer="cloud"','').replace(' data-layer="rain"',''))]:
+            source=self.base/name;source.mkdir();(source/'line.svg').write_text(svg)
+            build_icons(source,self.base/(name+'-output'))
+        self.assertEqual((self.base/'layered-output/StrataIcons.woff2').read_bytes(),(self.base/'plain-output/StrataIcons.woff2').read_bytes())
+        react=(self.base/'layered-output/react/LineIcon.tsx').read_text()
+        self.assertIn('<g data-layer="cloud"><g data-layer="rain">',react)
     def test_blind_png_roundtrip_and_metadata(self):
         image=Image.effect_noise((512,256),100).convert('RGB');path=self.base/'amber-reed-123.png'
         meta=PngImagePlugin.PngInfo();meta.add_text('face','Inter')
@@ -107,6 +121,20 @@ class Invariants(unittest.TestCase):
     def test_labels_are_unique_and_preserved(self):
         path=self.base/'map.json';first=labels(path,['one','two']);self.assertNotEqual(first['one'],first['two'])
         self.assertEqual(labels(path,['one'])['one'],first['one'])
+    def test_card_hero_figures_are_proportional_and_hourly_figures_tabular(self):
+        from playwright.sync_api import sync_playwright
+        import specimens
+        with sync_playwright() as pw, pw.chromium.launch() as browser:
+            page=browser.new_page()
+            for fonts in [['system-ui','ui-serif','ui-monospace','ui-rounded'],dict.fromkeys(['sans','serif','mono','sans-rounded'],self.base/'unused.woff2')]:
+                if isinstance(fonts,dict):
+                    # document() embeds bytes; CSS resolution is independent of the font data.
+                    (self.base/'unused.woff2').write_bytes(b'')
+                for body,count in [(specimens.card(),1),(specimens.rounded_cards(),2)]:
+                    page.set_content(specimens.document('fern-pine-123',fonts,body))
+                    self.assertEqual(page.locator('.hero-temperature').count(),count)
+                    self.assertEqual(page.locator('.hero-temperature').evaluate_all('(els)=>els.map(el=>getComputedStyle(el).fontVariantNumeric)'),['proportional-nums']*count)
+                    self.assertTrue(all(value=='tabular-nums' for value in page.locator('td,th').evaluate_all('(els)=>els.map(el=>getComputedStyle(el).fontVariantNumeric)')))
     def test_optional_rounded_discovery_and_numeric_coverage(self):
         self.assertEqual(candidate_faces(self.base),FACES)
         (self.base/'fonts/sans-rounded').mkdir(parents=True)
@@ -143,6 +171,11 @@ class Invariants(unittest.TestCase):
         self.assertNotIn('webkit',guide.read_text())
         self.assertIn('finding: 1 joined component',guide.read_text())
         self.assertEqual(json.loads((out/'findings.json').read_text())['headline_collisions'],[finding])
+        images=out.parent/'images-only/renders';image_guide=images.parent/'SHEETS.md'
+        self.assertEqual(assemble([stage],images,image_guide,images_only=True),1)
+        self.assertEqual({p.name for p in images.iterdir()},{filename})
+        self.assertIn('finding: 1 joined component',image_guide.read_text())
+        self.assertNotIn('findings.json',image_guide.read_text())
     def test_regenerated_outline_comparison_checks_components_and_points(self):
         from compare_outlines import sources
         a=self.base/'a';b=self.base/'b';a.mkdir();b.mkdir()
