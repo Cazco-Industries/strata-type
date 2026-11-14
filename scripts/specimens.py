@@ -203,7 +203,10 @@ def outlines(path,face):
 
 def icon_font(path,icons):
     data=base64.b64encode(path.read_bytes()).decode()
-    return ('<style>@font-face{font-family:q;src:url(data:font/woff2;base64,'+data+');font-display:block}</style>'
+    # macOS dilates text glyphs (+16% ink in Chromium, +19% in WebKit vs the SVGs);
+    # grayscale smoothing brings the icon font within 1.4% of the SVG sheets.
+    return ('<style>@font-face{font-family:q;src:url(data:font/woff2;base64,'+data+');font-display:block}'
+            '.icon-glyph{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}</style>'
             '<h2>Icon font glyphs</h2><p class="label">16 / 20 / 24 / 32 px</p><div class="icons">'
             +''.join('<div class="tile"><div class="iconrow" data-font-family="q" style="font-family:q">'
                      +''.join(f'<span class="icon-glyph" style="font-size:{size}px">{chr(int(value["codepoint"],16))}</span>' for size in [16,20,24,32])

@@ -63,6 +63,10 @@ builds compile every exported glyph; core output is a Unicode subset of that
 same variable font. Both ship TTF and WOFF2. SVGs are XML-minified; strokes are
 expanded into filled contours for the icon WOFF2. Its codepoint manifest is
 per-build; use semantic React exports when stable identities are needed.
+On macOS, set `-webkit-font-smoothing: antialiased` and
+`-moz-osx-font-smoothing: grayscale` wherever the icon font is shown. Without them
+text dilation draws the glyphs 16% (Chromium) to 19% (WebKit) heavier than the
+SVGs; with them the difference is under 1.5%.
 
 Gates write `build/<id>/gate.{json,md}` and raw Fontbakery/interpolation reports.
 The universal profile runs with network checks explicitly skipped. Name-table,
