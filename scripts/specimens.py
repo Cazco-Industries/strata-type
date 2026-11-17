@@ -175,9 +175,11 @@ def code():
     snippets=[('TS','type Hour = { temp: number; pop: number };\nconst dry = hours.filter(h => h.pop <= 20);\nconst label = dry.length !== 0 ? "walk" : "wait";\n// === !== => <= >= != -> ++ && ||'),('Python','def celsius(f):\n    return (f - 32) * 5 / 9\n\nfor hour in hours:\n    if hour["pop"] >= 60:\n        print(f"Rain at {hour[\'time\']}")'),('Shell','#!/bin/sh\nset -eu\nfor day in today tomorrow; do\n    printf "%s: 72 degrees\\n" "$day"\ndone')]
     out='<div class="f2" data-face="2">'
     for enabled in [True,False]:
-        out+=f'<section style="font-variant-ligatures:{"normal" if enabled else "none"};font-feature-settings:\'calt\' {1 if enabled else 0}, \'liga\' {1 if enabled else 0}"><h2 class="label">'+('01' if enabled else '02')+'</h2>'
+        out+=f'<section style="font-variant-ligatures:{"normal" if enabled else "none"};font-feature-settings:\'calt\' {1 if enabled else 0}, \'liga\' {1 if enabled else 0}"><h2 class="label">'+('01 · default features' if enabled else '02 · contextual alternates and ligatures off')+'</h2>'
         for language,snippet in snippets:out+=f'<small>{language}</small><pre>{escape(snippet)}</pre>'
         out+='</section>'
+    language,snippet=snippets[0]
+    out+=f'<section style="font-variant-ligatures:normal;font-feature-settings:\'calt\' 1, \'liga\' 1, \'dlig\' 1, \'ss11\' 1"><h2 class="label">03 · opt-in features on (dlig, ss11)</h2><small>{language}</small><pre>{escape(snippet)}</pre></section>'
     out+='<section class="terminal"><small>Terminal</small><pre>$ forecast --hourly\n08:00  72°   10%  NNW 12 mph\n09:00  73°    8%  NNW 11 mph\n10:00  74°   15%  NNW 12 mph\n$ echo "Ready"\nReady</pre></section></div>'
     return out
 
