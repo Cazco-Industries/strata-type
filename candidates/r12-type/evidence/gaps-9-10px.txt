@@ -1,0 +1,37 @@
+Strata Serif gap tables at 9 and 10 px: r10 / r11 / r12 (build/<cand>/StrataSerif.ttf).
+Headless browser, device scale 2, font-optical-sizing auto. Each character drawn alone at its shaped position;
+ink = coverage >= 0.5 between background and text colour; gap = smallest non-ink run between neighbours' ink on any shared row,
+in raster (2x) px, worst of sub-pixel phases 0, 1/4, 1/2, 3/4 px. 30 pairs: 'quiet sky', 'minimum', 'rain returns', '0123456789'.
+Summary line per font and size: per cell 'smallest (pairs under 2)', then the distinct pairs under 2 over all four cells.
+Detail rows: one digit per neighbour pair in string order ('.' = a pair with a space, '+' = 10 or more).
+
+r10         9px thr 0.5: light 400: 0 (15); light 600: 0 (22); dark 400: 0 (23); dark 600: 0 (26); distinct pairs under 2: 24 ['12', '23', '34', '45', '56', '78', '89', 'ai', 'et', 'im', 'in', 'ky', 'mi', 'ni', 'ns', 'qu', 'ra', 're', 'rn', 'sk', 'tu', 'ui', 'um', 'ur']; smallest 0
+    light 400 min  0  2132..21 | 121121 | 112..220111 | 322111222
+    light 600 min  0  2131..11 | 111121 | 111..111111 | 322011221
+    dark  400 min  0  2121..10 | 110121 | 111..110100 | 321011221
+    dark  600 min  0  1121..10 | 010120 | 001..110100 | 211000211
+r10        10px thr 0.5: light 400: 1 (14); light 600: 0 (22); dark 400: 0 (19); dark 600: 0 (23); distinct pairs under 2: 21 ['23', '34', '45', '56', '89', 'ai', 'et', 'im', 'in', 'ky', 'mi', 'ni', 'ns', 'ra', 're', 'rn', 'sk', 'tu', 'ui', 'um', 'ur']; smallest 0
+    light 400 min  1  2132..21 | 111131 | 212..221111 | 332112222
+    light 600 min  0  2131..21 | 111121 | 111..110111 | 321111221
+    dark  400 min  0  2122..20 | 111121 | 101..120111 | 332011221
+    dark  600 min  0  2121..10 | 111121 | 101..110100 | 221000221
+r11         9px thr 0.5: light 400: 2 (0); light 600: 3 (0); dark 400: 2 (0); dark 600: 2 (0); distinct pairs under 2: 0 []; smallest 2
+    light 400 min  2  4354..43 | 343443 | 433..442333 | 554343444
+    light 600 min  3  4344..33 | 333343 | 333..343333 | 543333443
+    dark  400 min  2  4343..42 | 333343 | 323..332323 | 543233443
+    dark  600 min  2  3343..32 | 233343 | 223..332322 | 443222333
+r11        10px thr 0.5: light 400: 2 (0); light 600: 2 (0); dark 400: 2 (0); dark 600: 2 (0); distinct pairs under 2: 0 []; smallest 2
+    light 400 min  2  4354..43 | 343353 | 434..442333 | 554333454
+    light 600 min  2  4353..33 | 333343 | 333..442333 | 544233443
+    dark  400 min  2  4344..42 | 333343 | 323..342323 | 554233444
+    dark  600 min  2  4343..32 | 333343 | 323..332232 | 543232433
+r12         9px thr 0.5: light 400: 2 (0); light 600: 3 (0); dark 400: 2 (0); dark 600: 2 (0); distinct pairs under 2: 0 []; smallest 2
+    light 400 min  2  4354..43 | 343443 | 433..442333 | 554343444
+    light 600 min  3  4344..33 | 333343 | 333..343333 | 543333443
+    dark  400 min  2  4344..32 | 333343 | 323..342323 | 543233443
+    dark  600 min  2  3343..32 | 233343 | 222..332322 | 443222333
+r12        10px thr 0.5: light 400: 2 (0); light 600: 2 (0); dark 400: 2 (0); dark 600: 2 (0); distinct pairs under 2: 0 []; smallest 2
+    light 400 min  2  4344..43 | 333343 | 323..342333 | 544233444
+    light 600 min  2  3243..32 | 332342 | 323..332323 | 443233343
+    dark  400 min  2  3243..32 | 222343 | 323..332222 | 443223343
+    dark  600 min  2  3243..32 | 222342 | 323..232222 | 442222333
