@@ -92,7 +92,7 @@ class Invariants(unittest.TestCase):
             page=browser.new_page(viewport={'width':1120,'height':900},device_scale_factor=2)
             page.set_content(specimens.document('fern-pine-123',fonts,specimens.code()))
             report=face_audit(page,fonts)
-            self.assertEqual(len(report['pres']),7)
+            self.assertEqual(len(report['pres']),8)
             self.assertTrue(all(abs(r['width']-r['generic']['monospace'])>.01 for r in report['pres']))
             # This face lacks U+2212/U+2109. They must become explicit tofu,
             # even on a machine whose installed fonts contain both characters.
