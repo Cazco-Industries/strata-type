@@ -1,0 +1,3 @@
+// ISC and MIT notices accompany this component set.
+import type { SVGProps } from "react";
+export function SleetIcon(props: SVGProps<SVGSVGElement>) { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.875} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><g data-layer="cloud"><path d="M6 11.5 H17.5 C19.6 11.5 21.25 10.0163 21.25 8.1087 C21.25 6.413 19.85 5.0141 18 4.8022 C17.25 2.8946 15.5 1.75 13.25 1.75 C10.35 1.75 8.25 3.6152 8 5.9891 C7.45 5.438 6.65 5.1413 5.75 5.1413 C4.05 5.1413 2.75 6.4978 2.75 8.3207 C2.75 10.1435 4.2 11.5 6 11.5 Z" /></g><g data-layer="rain"><path d="M7 15 V16.25 M17 15 V16.25" /></g><g data-layer="ice"><circle cx="7" cy="21.5" r="0.8" /><circle cx="17" cy="21.5" r="0.8" /></g></svg>; }

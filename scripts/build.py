@@ -9,7 +9,7 @@ import tempfile
 import time
 from fontTools import subset
 from fontTools.ttLib import TTFont
-from common import checkpoint, ROOT, ALL_FACES, CORE, candidate_faces, candidate, digest, dump, rename_binary
+from common import checkpoint, ROOT, ALL_FACES, CORE, candidate_faces, candidate, digest, dump, rename_binary, release_version
 from icons import build_icons
 
 
@@ -49,9 +49,10 @@ def font_output(source,dest,subset_name):
 def build(cand,subset_name,icons_dir=None):
     start=time.monotonic();path=candidate(cand);out=ROOT/'build'/cand
     out.mkdir(parents=True,exist_ok=True)
-    report={'candidate':cand,'subset':subset_name,'faces':{}}
+    report={'candidate':cand,'version':release_version(),'subset':subset_name,'faces':{}}
     cache=ROOT/'build/.cache';cache.mkdir(parents=True,exist_ok=True)
-    toolhash=digest(ROOT/'.python-version')+digest(ROOT/'uv.lock')+digest(ROOT/'scripts/build.py')+digest(ROOT/'scripts/common.py')
+    verhash=digest(ROOT/'VERSION') if (ROOT/'VERSION').is_file() else ''
+    toolhash=digest(ROOT/'.python-version')+digest(ROOT/'uv.lock')+digest(ROOT/'scripts/build.py')+digest(ROOT/'scripts/common.py')+verhash
     import hashlib
     faces=candidate_faces(path)
     for face,family in faces.items():

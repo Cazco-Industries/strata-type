@@ -166,3 +166,12 @@ copy until it has been quiet that long (the page says "being written").
 waits for the window to end, and a run with under 14 GiB free on `/` is skipped. It logs to
 `~/Library/Logs/strata-type-site.log`.
 `make site-agent-uninstall` removes it.
+
+## Documentation
+
+Reference documentation for release **`27.0.0.0`** (`r12-type` fonts + `r15-icons` library, packaged in [`dist/`](dist/)) lives under `docs/`:
+
+- [docs/README.md](docs/README.md) — Release `27.0.0.0` overview, annual versioning scheme (`27.xx.xx.xx`), rebuild commands, and license summary.
+- [docs/fonts.md](docs/fonts.md) — Font system reference (`Strata Sans`, `Strata Sans Rounded`, `Strata Serif`, `Strata Mono`).
+- [docs/icons.md](docs/icons.md) — Icon library specification and complete 71-icon catalog (`Strata Icons`, `r15-icons`).
+- [docs/naming-review.md](docs/naming-review.md) — Audit of font names, OpenType metadata (`name`/`fvar`/`STAT`), feature labels, all 71 icon names, and `data-layer` tokens.

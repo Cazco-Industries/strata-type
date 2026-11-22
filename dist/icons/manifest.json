@@ -1,0 +1,362 @@
+{
+  "version": "27.0.0.0",
+  "sha256": "cbc66867749c9b92e5438c40a1a993201dcb2ada81e134d943679284412b245b",
+  "stroke_width": 1.875,
+  "icons": {
+    "add": {
+      "codepoint": "E000",
+      "component": "AddIcon",
+      "svg": "svg/add.svg"
+    },
+    "air-quality": {
+      "codepoint": "E001",
+      "component": "AirQualityIcon",
+      "svg": "svg/air-quality.svg"
+    },
+    "alert-advisory": {
+      "codepoint": "E002",
+      "component": "AlertAdvisoryIcon",
+      "svg": "svg/alert-advisory.svg"
+    },
+    "alert-emergency": {
+      "codepoint": "E003",
+      "component": "AlertEmergencyIcon",
+      "svg": "svg/alert-emergency.svg"
+    },
+    "alert-warning": {
+      "codepoint": "E004",
+      "component": "AlertWarningIcon",
+      "svg": "svg/alert-warning.svg"
+    },
+    "alert-watch": {
+      "codepoint": "E005",
+      "component": "AlertWatchIcon",
+      "svg": "svg/alert-watch.svg"
+    },
+    "alert": {
+      "codepoint": "E006",
+      "component": "AlertIcon",
+      "svg": "svg/alert.svg"
+    },
+    "back": {
+      "codepoint": "E007",
+      "component": "BackIcon",
+      "svg": "svg/back.svg"
+    },
+    "bell": {
+      "codepoint": "E008",
+      "component": "BellIcon",
+      "svg": "svg/bell.svg"
+    },
+    "check": {
+      "codepoint": "E009",
+      "component": "CheckIcon",
+      "svg": "svg/check.svg"
+    },
+    "chevron-down": {
+      "codepoint": "E00A",
+      "component": "ChevronDownIcon",
+      "svg": "svg/chevron-down.svg"
+    },
+    "chevron-left": {
+      "codepoint": "E00B",
+      "component": "ChevronLeftIcon",
+      "svg": "svg/chevron-left.svg"
+    },
+    "chevron-right": {
+      "codepoint": "E00C",
+      "component": "ChevronRightIcon",
+      "svg": "svg/chevron-right.svg"
+    },
+    "chevron-up": {
+      "codepoint": "E00D",
+      "component": "ChevronUpIcon",
+      "svg": "svg/chevron-up.svg"
+    },
+    "clear-day": {
+      "codepoint": "E00E",
+      "component": "ClearDayIcon",
+      "svg": "svg/clear-day.svg"
+    },
+    "clear-night": {
+      "codepoint": "E00F",
+      "component": "ClearNightIcon",
+      "svg": "svg/clear-night.svg"
+    },
+    "clock": {
+      "codepoint": "E010",
+      "component": "ClockIcon",
+      "svg": "svg/clock.svg"
+    },
+    "close": {
+      "codepoint": "E011",
+      "component": "CloseIcon",
+      "svg": "svg/close.svg"
+    },
+    "cloudy": {
+      "codepoint": "E012",
+      "component": "CloudyIcon",
+      "svg": "svg/cloudy.svg"
+    },
+    "cold": {
+      "codepoint": "E013",
+      "component": "ColdIcon",
+      "svg": "svg/cold.svg"
+    },
+    "delete": {
+      "codepoint": "E014",
+      "component": "DeleteIcon",
+      "svg": "svg/delete.svg"
+    },
+    "dew-point": {
+      "codepoint": "E015",
+      "component": "DewPointIcon",
+      "svg": "svg/dew-point.svg"
+    },
+    "drizzle": {
+      "codepoint": "E016",
+      "component": "DrizzleIcon",
+      "svg": "svg/drizzle.svg"
+    },
+    "edit": {
+      "codepoint": "E017",
+      "component": "EditIcon",
+      "svg": "svg/edit.svg"
+    },
+    "external-link": {
+      "codepoint": "E018",
+      "component": "ExternalLinkIcon",
+      "svg": "svg/external-link.svg"
+    },
+    "flood": {
+      "codepoint": "E019",
+      "component": "FloodIcon",
+      "svg": "svg/flood.svg"
+    },
+    "fog": {
+      "codepoint": "E01A",
+      "component": "FogIcon",
+      "svg": "svg/fog.svg"
+    },
+    "freezing-rain": {
+      "codepoint": "E01B",
+      "component": "FreezingRainIcon",
+      "svg": "svg/freezing-rain.svg"
+    },
+    "hail": {
+      "codepoint": "E01C",
+      "component": "HailIcon",
+      "svg": "svg/hail.svg"
+    },
+    "heat": {
+      "codepoint": "E01D",
+      "component": "HeatIcon",
+      "svg": "svg/heat.svg"
+    },
+    "heavy-rain": {
+      "codepoint": "E01E",
+      "component": "HeavyRainIcon",
+      "svg": "svg/heavy-rain.svg"
+    },
+    "humidity": {
+      "codepoint": "E01F",
+      "component": "HumidityIcon",
+      "svg": "svg/humidity.svg"
+    },
+    "hurricane": {
+      "codepoint": "E020",
+      "component": "HurricaneIcon",
+      "svg": "svg/hurricane.svg"
+    },
+    "info": {
+      "codepoint": "E021",
+      "component": "InfoIcon",
+      "svg": "svg/info.svg"
+    },
+    "layers": {
+      "codepoint": "E022",
+      "component": "LayersIcon",
+      "svg": "svg/layers.svg"
+    },
+    "locate": {
+      "codepoint": "E023",
+      "component": "LocateIcon",
+      "svg": "svg/locate.svg"
+    },
+    "map": {
+      "codepoint": "E024",
+      "component": "MapIcon",
+      "svg": "svg/map.svg"
+    },
+    "menu": {
+      "codepoint": "E025",
+      "component": "MenuIcon",
+      "svg": "svg/menu.svg"
+    },
+    "more": {
+      "codepoint": "E026",
+      "component": "MoreIcon",
+      "svg": "svg/more.svg"
+    },
+    "partly-cloudy-day": {
+      "codepoint": "E027",
+      "component": "PartlyCloudyDayIcon",
+      "svg": "svg/partly-cloudy-day.svg"
+    },
+    "partly-cloudy-night": {
+      "codepoint": "E028",
+      "component": "PartlyCloudyNightIcon",
+      "svg": "svg/partly-cloudy-night.svg"
+    },
+    "pause": {
+      "codepoint": "E029",
+      "component": "PauseIcon",
+      "svg": "svg/pause.svg"
+    },
+    "places": {
+      "codepoint": "E02A",
+      "component": "PlacesIcon",
+      "svg": "svg/places.svg"
+    },
+    "play": {
+      "codepoint": "E02B",
+      "component": "PlayIcon",
+      "svg": "svg/play.svg"
+    },
+    "pressure": {
+      "codepoint": "E02C",
+      "component": "PressureIcon",
+      "svg": "svg/pressure.svg"
+    },
+    "radar": {
+      "codepoint": "E02D",
+      "component": "RadarIcon",
+      "svg": "svg/radar.svg"
+    },
+    "rain-day": {
+      "codepoint": "E02E",
+      "component": "RainDayIcon",
+      "svg": "svg/rain-day.svg"
+    },
+    "rain-night": {
+      "codepoint": "E02F",
+      "component": "RainNightIcon",
+      "svg": "svg/rain-night.svg"
+    },
+    "rain": {
+      "codepoint": "E030",
+      "component": "RainIcon",
+      "svg": "svg/rain.svg"
+    },
+    "refresh": {
+      "codepoint": "E031",
+      "component": "RefreshIcon",
+      "svg": "svg/refresh.svg"
+    },
+    "search": {
+      "codepoint": "E032",
+      "component": "SearchIcon",
+      "svg": "svg/search.svg"
+    },
+    "settings": {
+      "codepoint": "E033",
+      "component": "SettingsIcon",
+      "svg": "svg/settings.svg"
+    },
+    "share": {
+      "codepoint": "E034",
+      "component": "ShareIcon",
+      "svg": "svg/share.svg"
+    },
+    "showers": {
+      "codepoint": "E035",
+      "component": "ShowersIcon",
+      "svg": "svg/showers.svg"
+    },
+    "sleet": {
+      "codepoint": "E036",
+      "component": "SleetIcon",
+      "svg": "svg/sleet.svg"
+    },
+    "smoke": {
+      "codepoint": "E037",
+      "component": "SmokeIcon",
+      "svg": "svg/smoke.svg"
+    },
+    "snow-day": {
+      "codepoint": "E038",
+      "component": "SnowDayIcon",
+      "svg": "svg/snow-day.svg"
+    },
+    "snow-night": {
+      "codepoint": "E039",
+      "component": "SnowNightIcon",
+      "svg": "svg/snow-night.svg"
+    },
+    "snow": {
+      "codepoint": "E03A",
+      "component": "SnowIcon",
+      "svg": "svg/snow.svg"
+    },
+    "sunrise": {
+      "codepoint": "E03B",
+      "component": "SunriseIcon",
+      "svg": "svg/sunrise.svg"
+    },
+    "sunset": {
+      "codepoint": "E03C",
+      "component": "SunsetIcon",
+      "svg": "svg/sunset.svg"
+    },
+    "thermometer": {
+      "codepoint": "E03D",
+      "component": "ThermometerIcon",
+      "svg": "svg/thermometer.svg"
+    },
+    "thunderstorm": {
+      "codepoint": "E03E",
+      "component": "ThunderstormIcon",
+      "svg": "svg/thunderstorm.svg"
+    },
+    "today": {
+      "codepoint": "E03F",
+      "component": "TodayIcon",
+      "svg": "svg/today.svg"
+    },
+    "tornado": {
+      "codepoint": "E040",
+      "component": "TornadoIcon",
+      "svg": "svg/tornado.svg"
+    },
+    "umbrella": {
+      "codepoint": "E041",
+      "component": "UmbrellaIcon",
+      "svg": "svg/umbrella.svg"
+    },
+    "uv-index": {
+      "codepoint": "E042",
+      "component": "UvIndexIcon",
+      "svg": "svg/uv-index.svg"
+    },
+    "visibility": {
+      "codepoint": "E043",
+      "component": "VisibilityIcon",
+      "svg": "svg/visibility.svg"
+    },
+    "wind-gust": {
+      "codepoint": "E044",
+      "component": "WindGustIcon",
+      "svg": "svg/wind-gust.svg"
+    },
+    "wind": {
+      "codepoint": "E045",
+      "component": "WindIcon",
+      "svg": "svg/wind.svg"
+    },
+    "wintry-mix": {
+      "codepoint": "E046",
+      "component": "WintryMixIcon",
+      "svg": "svg/wintry-mix.svg"
+    }
+  }
+}
