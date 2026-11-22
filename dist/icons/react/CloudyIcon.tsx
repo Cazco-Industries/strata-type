@@ -1,0 +1,3 @@
+// ISC and MIT notices accompany this component set.
+import type { SVGProps } from "react";
+export function CloudyIcon(props: SVGProps<SVGSVGElement>) { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.875} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><g data-layer="cloud"><path d="M 6 17.475 H 17.5 C 19.6 17.475 21.25 15.4625 21.25 12.875 C 21.25 10.575 19.85 8.6775 18 8.39 C 17.25 5.8025 15.5 4.25 13.25 4.25 C 10.35 4.25 8.25 6.78 8 10 C 7.45 9.2525 6.65 8.85 5.75 8.85 C 4.05 8.85 2.75 10.69 2.75 13.1625 C 2.75 15.635 4.2 17.475 6 17.475 Z" /></g></svg>; }

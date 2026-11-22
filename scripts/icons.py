@@ -11,7 +11,7 @@ from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.pens.cu2quPen import Cu2QuPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.svgLib import SVGPath
-from common import ROOT, UPSTREAM, dump, digest
+from common import ROOT, UPSTREAM, dump, digest, release_version, opentype_revision
 
 ET.register_namespace('', 'http://www.w3.org/2000/svg')
 DRAW={'path','circle','ellipse','line','polyline','polygon','rect','g'}
@@ -149,13 +149,15 @@ def build_icons(source,out):
         codepoint=0xe000+index;cmap[codepoint]=glyph;mapping[path.stem]={'codepoint':f'{codepoint:04X}','component':component,'svg':f'svg/{path.name}'}
     if len(widths)!=1:raise ValueError('Candidate uses inconsistent icon stroke widths')
     (react/'index.ts').write_text('\n'.join(exports)+'\n')
+    ver=release_version();rev_val,rev_str=opentype_revision(ver)
     fb=FontBuilder(1000,isTTF=True);fb.setupGlyphOrder(list(glyphs));fb.setupCharacterMap(cmap)
     fb.setupGlyf(glyphs);fb.setupHorizontalMetrics(metrics);fb.setupHorizontalHeader(ascent=850,descent=-150)
-    fb.setupNameTable({'familyName':'Strata Icons','styleName':'Regular','uniqueFontIdentifier':'StrataIcons-Regular;1.000','fullName':'Strata Icons','psName':'StrataIcons-Regular','version':'Version 1.000','copyright':'ISC and MIT; notices accompany this font.'})
+    fb.setupNameTable({'familyName':'Strata Icons','styleName':'Regular','uniqueFontIdentifier':f'StrataIcons-Regular;{ver}','fullName':'Strata Icons Regular','psName':'StrataIcons-Regular','version':f'Version {rev_str};{ver}','copyright':'ISC and MIT; notices accompany this font.'})
     fb.setupOS2(sTypoAscender=850,sTypoDescender=-150,usWinAscent=1000,usWinDescent=150);fb.setupPost();fb.setupMaxp()
+    fb.font['head'].fontRevision=rev_val
     fb.font['head'].created=fb.font['head'].modified=3406620153
     fb.font.flavor='woff2';fb.save(out/'StrataIcons.woff2')
-    dump(out/'manifest.json',{'sha256':digest(source),'stroke_width':float(next(iter(widths))),'icons':mapping})
+    dump(out/'manifest.json',{'version':ver,'sha256':digest(source),'stroke_width':float(next(iter(widths))),'icons':mapping})
     notices=out/'licenses';notices.mkdir(exist_ok=True)
     for pattern in ['lucide-*','hugeicons-free-*']:
         for path in (ROOT/'licenses').glob(pattern):shutil.copyfile(path,notices/path.name)

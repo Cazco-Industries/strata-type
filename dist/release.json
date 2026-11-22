@@ -1,0 +1,60 @@
+{
+  "version": "27.0.0.0",
+  "opentypeRevision": "27.000",
+  "typeCandidate": "r12-type",
+  "iconSet": "r15-icons",
+  "fonts": {
+    "sans": {
+      "coreWoff2": "fonts/core/StrataSans.woff2",
+      "coreWoff2Bytes": 108628,
+      "coreWoff2Sha256": "ec420d3ae41927d1778bfd38d17a7b7e57046534433a1c540beaadd5d2cb80e7",
+      "coreTtf": "fonts/core/StrataSans.ttf",
+      "coreTtfBytes": 279352,
+      "coreTtfSha256": "eae9d1640b9c6cc07512c340afbc8a76868f180f7a6083923d2785e7a6ddb0c1",
+      "fullWoff2": "fonts/full/StrataSans.woff2",
+      "fullWoff2Bytes": 395484,
+      "fullWoff2Sha256": "31df09099fb4d51724eb9c202a5f8207b86b6467bf3d17c2017daae4fbe14156"
+    },
+    "serif": {
+      "coreWoff2": "fonts/core/StrataSerif.woff2",
+      "coreWoff2Bytes": 289164,
+      "coreWoff2Sha256": "de5ac6544531ddfb7578b5a6d920900f775616e951d00e7eaffa09f33f78b78e",
+      "coreTtf": "fonts/core/StrataSerif.ttf",
+      "coreTtfBytes": 658696,
+      "coreTtfSha256": "658904122d1465ccb7f67e889b18b56d63e5b79817c05b6beb87463d588cd4df",
+      "fullWoff2": "fonts/full/StrataSerif.woff2",
+      "fullWoff2Bytes": 648928,
+      "fullWoff2Sha256": "8b547e25361a84952946ce9060505ebe48b07132e67bf041863f390f4322a1eb"
+    },
+    "mono": {
+      "coreWoff2": "fonts/core/StrataMono.woff2",
+      "coreWoff2Bytes": 47884,
+      "coreWoff2Sha256": "59e86a4251822ada36399b5a17b01935e8645ce3ab6f7130806654b0712de965",
+      "coreTtf": "fonts/core/StrataMono.ttf",
+      "coreTtfBytes": 106996,
+      "coreTtfSha256": "49d379e38cb9e3473cf1f620e4b2bdfc4e30833966769be704c6b1cf65a161dd",
+      "fullWoff2": "fonts/full/StrataMono.woff2",
+      "fullWoff2Bytes": 120900,
+      "fullWoff2Sha256": "2423de73935a2b92a0caf4d505414b63e1e3d87a361a8010f742c9e895a5be50"
+    },
+    "sans-rounded": {
+      "coreWoff2": "fonts/core/StrataSansRounded.woff2",
+      "coreWoff2Bytes": 74688,
+      "coreWoff2Sha256": "f5a8503dad6f4f2e341538b4d814814f330ab33a004c22b85fb50abadebc7f4a",
+      "coreTtf": "fonts/core/StrataSansRounded.ttf",
+      "coreTtfBytes": 149020,
+      "coreTtfSha256": "ca3de483c3701918ca27019973a8178b07aeb4d8e3377debd7be96a18fb85b8e",
+      "fullWoff2": "fonts/full/StrataSansRounded.woff2",
+      "fullWoff2Bytes": 74476,
+      "fullWoff2Sha256": "ca1d5f76665770b813330f1d37fd29559a3de82e4545d05d1c24f5f04f069e9b"
+    }
+  },
+  "icons": {
+    "count": 71,
+    "strokeWidth": 1.875,
+    "woff2": "icons/StrataIcons.woff2",
+    "woff2Bytes": 8104,
+    "woff2Sha256": "5f6b7b93a41955f18896746637fdf772ba12c2cc578a7ab05d27c72a55a5b656",
+    "manifest": "icons/manifest.json"
+  }
+}

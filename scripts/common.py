@@ -48,12 +48,94 @@ def digest(path):
     return h.hexdigest()
 
 
+def release_version():
+    path = ROOT / 'VERSION'
+    return path.read_text().strip() if path.is_file() else '27.0.0.0'
+
+
+def opentype_revision(version=None):
+    """Map annual YY.minor.patch.build (e.g. 27.0.0.0) to OpenType 16.16 major.mmm."""
+    ver = (version or release_version()).split('+')[0]
+    parts = [int(p) for p in ver.split('.')]
+    major = parts[0]
+    minor = parts[1] if len(parts) > 1 else 0
+    patch = parts[2] if len(parts) > 2 else 0
+    if not (0 <= minor <= 99 and 0 <= patch <= 9):
+        raise ValueError(f'Annual version out of OpenType 16.16 range: {ver}')
+    rev_str = f'{major}.{minor:02d}{patch}'
+    return float(rev_str), rev_str
+
+
+def ensure_stat(font):
+    if 'fvar' not in font:
+        return
+    names = font['name']
+    if 'STAT' in font and font['STAT'].table.AxisValueArray and font['STAT'].table.AxisValueArray.AxisValue:
+        # Align Serif STAT optical band naming with fvar ("SmText") to stay <= 31 chars.
+        stat_name_ids = {av.ValueNameID for av in font['STAT'].table.AxisValueArray.AxisValue}
+        for n in names.names:
+            if n.nameID in stat_name_ids and n.toUnicode() == 'SmallText':
+                n.string = 'SmText'.encode(n.getEncoding(), errors='replace')
+        return
+    from fontTools.otlLib.builder import buildStatTable
+    weight_labels = {
+        100: 'Thin', 200: 'ExtraLight', 300: 'Light', 400: 'Regular',
+        500: 'Medium', 600: 'SemiBold', 700: 'Bold', 800: 'ExtraBold', 900: 'Black',
+    }
+    inst_coords = [inst.coordinates for inst in font['fvar'].instances]
+    stat_axes = []
+    for axis in font['fvar'].axes:
+        tag = axis.axisTag
+        axis_name = names.getDebugName(axis.axisNameID) or tag
+        if tag == 'wght':
+            vals = sorted({int(round(c['wght'])) for c in inst_coords if 'wght' in c})
+            has_bold = 700 in vals
+            entries = []
+            for v in vals:
+                label = weight_labels.get(v, str(v))
+                if v == 400:
+                    entry = dict(value=400, name=label, flags=0x2)
+                    if has_bold:
+                        entry['linkedValue'] = 700
+                    entries.append(entry)
+                else:
+                    entries.append(dict(value=v, name=label))
+            stat_axes.append(dict(tag='wght', name=axis_name, values=entries))
+        elif tag == 'opsz':
+            vals = sorted({float(c['opsz']) for c in inst_coords if 'opsz' in c})
+            if 32.0 in vals:
+                entries = [
+                    dict(nominalValue=14, rangeMinValue=axis.minValue, rangeMaxValue=24, name='Text', flags=0x2),
+                    dict(nominalValue=32, rangeMinValue=24, rangeMaxValue=axis.maxValue, name='Display'),
+                ]
+            else:
+                entries = [
+                    dict(nominalValue=axis.defaultValue, rangeMinValue=axis.minValue, rangeMaxValue=axis.maxValue, name='Text', flags=0x2),
+                ]
+            stat_axes.append(dict(tag='opsz', name=axis_name, values=entries))
+    if stat_axes:
+        buildStatTable(font, stat_axes, elidedFallbackName='Regular', macNames=False)
+
+
 def rename_binary(font, family):
     names = font['name']
+    ver = release_version()
+    rev_val, rev_str = opentype_revision(ver)
+    if 'head' in font:
+        font['head'].fontRevision = rev_val
     ps_ids = {instance.postscriptNameID for instance in font['fvar'].instances if instance.postscriptNameID != 65535} if 'fvar' in font else set()
-    style = names.getDebugName(17) or names.getDebugName(2) or 'Regular'
+    default_style = None
+    if 'fvar' in font:
+        dflt = {a.axisTag: a.defaultValue for a in font['fvar'].axes}
+        for inst in font['fvar'].instances:
+            if dict(inst.coordinates) == dflt:
+                default_style = names.getDebugName(inst.subfamilyNameID)
+                break
+    style = default_style or names.getDebugName(17) or names.getDebugName(2) or 'Regular'
     style = FORBIDDEN.sub('', style).strip() or 'Regular'
     ps_style = re.sub(r'[^A-Za-z0-9]', '', style)
+    ps_name = family.replace(' ', '') + '-' + ps_style
+    has_id5 = False
     for n in names.names:
         value = n.toUnicode()
         value = re.sub(r'Inter(?: Variable)?', family, value, flags=re.I)
@@ -64,10 +146,19 @@ def rename_binary(font, family):
             value = 'Copyright notices retained verbatim in the accompanying licenses directory.'
         elif n.nameID in (1, 16, 21):
             value = family
-        elif n.nameID in (3, 6, 25):
-            value = family.replace(' ', '') + ('-'+ps_style if n.nameID != 25 else '')
-        elif n.nameID == 4:
+        elif n.nameID == 3:
+            value = f'{ps_name};{ver}'
+        elif n.nameID == 4 or n.nameID == 18:
             value = family + ' ' + style
+        elif n.nameID == 5:
+            value = f'Version {rev_str};{ver}'
+            has_id5 = True
+        elif n.nameID == 6:
+            value = ps_name
+        elif n.nameID == 17:
+            value = style
+        elif n.nameID == 25:
+            value = family.replace(' ', '')
         elif n.nameID == 13:
             value = 'Licensed under the SIL Open Font License, Version 1.1. See accompanying notices.'
         elif n.nameID == 14:
@@ -77,6 +168,9 @@ def rename_binary(font, family):
         if n.nameID in ps_ids:
             value = re.sub(r'[^A-Za-z0-9-]', '', value)
         n.string = value.encode(n.getEncoding(), errors='replace')
+    if not has_id5:
+        names.setName(f'Version {rev_str};{ver}', 5, 3, 1, 0x409)
+    ensure_stat(font)
     assert not any(FORBIDDEN.search(n.toUnicode()) for n in names.names)
 
 

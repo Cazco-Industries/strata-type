@@ -1,0 +1,3 @@
+// ISC and MIT notices accompany this component set.
+import type { SVGProps } from "react";
+export function AlertEmergencyIcon(props: SVGProps<SVGSVGElement>) { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.875} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><path d="M7 17.25 V12 A5 5 0 0 1 17 12 V17.25 M5.75 17.25 H18.25 Q19.25 17.25 19.25 18.25 V20.25 Q19.25 21.25 18.25 21.25 H5.75 Q4.75 21.25 4.75 20.25 V18.25 Q4.75 17.25 5.75 17.25 Z M12 2.25 V3.75 M4.25 4.75 L5.25 5.75 M19.75 4.75 L18.75 5.75 M2.25 11.25 H3.75 M20.25 11.25 H21.75" /></svg>; }

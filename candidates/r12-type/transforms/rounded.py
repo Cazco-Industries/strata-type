@@ -956,6 +956,7 @@ def make(sans_dir):
     for w, nm in ((100, 'Thin'), (200, 'ExtraLight'), (300, 'Light'), (400, 'Regular'), (500, 'Medium'),
                   (600, 'SemiBold'), (700, 'Bold'), (800, 'ExtraBold'), (900, 'Black')):
         i = InstanceDescriptor(); i.familyName = 'Strata Sans Rounded'; i.styleName = nm
+        i.postScriptFontName = f'StrataSansRounded-{nm}'
         i.userLocation = {'Optical size': 14, 'Weight': w}
         ds.addInstance(i)
     ds.write(dest / 'StrataSansRounded.designspace')
